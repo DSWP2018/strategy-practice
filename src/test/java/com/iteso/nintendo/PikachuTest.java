@@ -1,8 +1,6 @@
 package com.iteso.nintendo;
 
-import org.junit.Before;
-import org.junit.Test;
-import static org.junit.Assert.assertEquals;
+import com.iteso.nintendo.pokemons.Pikachu;
 
 /**
  * Created by rvillalobos on 2/24/18.

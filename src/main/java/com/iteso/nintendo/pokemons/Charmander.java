@@ -1,4 +1,9 @@
-package com.iteso.nintendo;
+package com.iteso.nintendo.pokemons;
+
+import com.iteso.nintendo.attacks.Attack;
+import com.iteso.nintendo.attacks.AttackResult;
+import com.iteso.nintendo.attacks.FlameBurst;
+import com.iteso.nintendo.attacks.Growl;
 
 /**
  * Created by rvillalobos on 2/24/18.
@@ -15,11 +20,7 @@ public class Charmander extends PokemonCharacter {
     /**
      * Damage from 1 - 20.
      */
-    public static final int MAIN_ATTACK_DAMAGE = 3;
-    /**
-     * Damage from 1 -25.
-     */
-    public static final int SECOND_ATTACK_DAMAGE = 17;
+
 
     /**
      * Pikachu constructor.
@@ -28,12 +29,11 @@ public class Charmander extends PokemonCharacter {
         setType("fire");
         setName("Charmander");
         setHasEvolution(true);
-        setSecondAttack("Big fire");
-        setMainAttack("Small fire");
+        setMainAttack(new FlameBurst());
+        setSecondAttack(new Growl());
         setHitPoints(HIT_POINTS);
         setDefenseMultiplier(DEFENSE_MULTIPLIER);
-        setMainAttackDamage(MAIN_ATTACK_DAMAGE);
-        setSecondAttackDamage(SECOND_ATTACK_DAMAGE);
+
     }
 
     @Override
@@ -57,34 +57,23 @@ public class Charmander extends PokemonCharacter {
     }
 
     @Override
-    public final String secondAttack() {
-
-        String attackMessage = new String("Attacking opponent with "
-                + getSecondAttack()
-                + " causing a damage of " + getSecondAttackDamage());
-        return attackMessage;
-
-
+    public final AttackResult secondAttack() {
+        AttackResult res =  this.getSecondAttack().attackOpponent();
+        return res;
     }
 
     @Override
-    public final String mainAttack() {
-        String attackMessage = new String("Attacking opponent with "
-                + getMainAttack()
-                + " causing a damage of " + getMainAttackDamage());
-        return attackMessage;
-
+    public final AttackResult mainAttack() {
+        AttackResult res =  this.getMainAttack().attackOpponent();
+        return res;
     }
 
     @Override
-    public final void setNewAttack(final int attack, final int attackDamage,
-                                   final String newAttack) {
-        if (attack == 1) {
+    public final void setNewAttack(final int attackNumber, Attack newAttack) {
+        if (attackNumber == 1) {
             setMainAttack(newAttack);
-            setMainAttackDamage(attackDamage);
         } else {
             setSecondAttack(newAttack);
-            setSecondAttackDamage(attackDamage);
         }
     }
 
