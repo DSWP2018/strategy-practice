@@ -3,7 +3,7 @@ package com.iteso.nintendo;
 /**
  * Created by rvillalobos on 2/24/18.
  */
-public class Pikachu extends PokemonCharacter {
+public class Jolteon extends PokemonCharacter {
     /**
      * Hit Points are the maximum life of pokemon.
      */
@@ -11,14 +11,14 @@ public class Pikachu extends PokemonCharacter {
     /**
      * Defense multiplier value between 0-1.
      */
-    public static final double DEFENSE_MULTIPLIER = 0.4;
+    public static final double DEFENSE_MULTIPLIER = 0.5;
 
     /**
      * Pikachu constructor.
      */
-    public Pikachu() {
+    public Jolteon() {
         setType(new Electric());
-        setName("Pikachu");
+        setName("Jolteon");
         setHasEvolution(true);
         setSecondAttack(new ImpactTrueno());
         setMainAttack(new QuickAttack());

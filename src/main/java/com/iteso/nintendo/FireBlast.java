@@ -1,10 +1,10 @@
 package com.iteso.nintendo;
 
-public class AcidArmor implements Attack {
+public class FireBlast implements Attack {
     private static int attackDamage = 10;
-    private static String name = "AcidArmor";
+    private static String name = "FireBlast";
 
-    public AcidArmor(){
+    public FireBlast(){
 
     }
 

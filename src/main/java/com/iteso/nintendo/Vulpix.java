@@ -3,7 +3,7 @@ package com.iteso.nintendo;
 /**
  * Created by rvillalobos on 2/24/18.
  */
-public class Pikachu extends PokemonCharacter {
+public class Vulpix extends PokemonCharacter {
     /**
      * Hit Points are the maximum life of pokemon.
      */
@@ -11,16 +11,16 @@ public class Pikachu extends PokemonCharacter {
     /**
      * Defense multiplier value between 0-1.
      */
-    public static final double DEFENSE_MULTIPLIER = 0.4;
+    public static final double DEFENSE_MULTIPLIER = 0.2;
 
     /**
      * Pikachu constructor.
      */
-    public Pikachu() {
+    public Vulpix() {
         setType(new Electric());
-        setName("Pikachu");
+        setName("Vulpix");
         setHasEvolution(true);
-        setSecondAttack(new ImpactTrueno());
+        setSecondAttack(new BigFire());
         setMainAttack(new QuickAttack());
         setHitPoints(HIT_POINTS);
         setDefenseMultiplier(DEFENSE_MULTIPLIER);

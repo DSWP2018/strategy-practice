@@ -1,9 +1,22 @@
 package com.iteso.nintendo;
 
+/**
+ * BigFire Attack.
+ */
 public class BigFire implements Attack {
-    private static int attackDamage = 17;
+    /**
+     * Damage.
+     */
+    private static final int attackDamage = 17;
+
+    /**
+     * Name Attack.
+     */
     private static String name = "BigFire";
 
+    /**
+     * Constructor.
+     */
     public BigFire(){
 
     }

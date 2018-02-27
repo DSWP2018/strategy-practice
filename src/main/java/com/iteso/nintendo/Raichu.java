@@ -3,7 +3,7 @@ package com.iteso.nintendo;
 /**
  * Created by rvillalobos on 2/24/18.
  */
-public class Pikachu extends PokemonCharacter {
+public class Raichu extends PokemonCharacter {
     /**
      * Hit Points are the maximum life of pokemon.
      */
@@ -16,9 +16,9 @@ public class Pikachu extends PokemonCharacter {
     /**
      * Pikachu constructor.
      */
-    public Pikachu() {
+    public Raichu() {
         setType(new Electric());
-        setName("Pikachu");
+        setName("Raichu");
         setHasEvolution(true);
         setSecondAttack(new ImpactTrueno());
         setMainAttack(new QuickAttack());

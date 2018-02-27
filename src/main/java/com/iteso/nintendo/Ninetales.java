@@ -3,7 +3,7 @@ package com.iteso.nintendo;
 /**
  * Created by rvillalobos on 2/24/18.
  */
-public class Pikachu extends PokemonCharacter {
+public class Ninetales extends PokemonCharacter {
     /**
      * Hit Points are the maximum life of pokemon.
      */
@@ -11,17 +11,17 @@ public class Pikachu extends PokemonCharacter {
     /**
      * Defense multiplier value between 0-1.
      */
-    public static final double DEFENSE_MULTIPLIER = 0.4;
+    public static final double DEFENSE_MULTIPLIER = 0.6;
 
     /**
      * Pikachu constructor.
      */
-    public Pikachu() {
+    public Ninetales() {
         setType(new Electric());
-        setName("Pikachu");
+        setName("Ninetales");
         setHasEvolution(true);
-        setSecondAttack(new ImpactTrueno());
-        setMainAttack(new QuickAttack());
+        setSecondAttack(new FireBlast());
+        setMainAttack(new BigFire());
         setHitPoints(HIT_POINTS);
         setDefenseMultiplier(DEFENSE_MULTIPLIER);
     }

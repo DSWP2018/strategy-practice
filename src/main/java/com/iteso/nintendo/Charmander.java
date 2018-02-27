@@ -18,7 +18,7 @@ public class Charmander extends PokemonCharacter {
      * Pikachu constructor.
      */
     public Charmander() {
-        setType("fire");
+        setType(new Fire());
         setName("Charmander");
         setHasEvolution(true);
         setSecondAttack(new BigFire());
@@ -34,16 +34,48 @@ public class Charmander extends PokemonCharacter {
     }
 
     @Override
-    public final String defend(final int attack) {
+    public final String defend(final Attack attack) {
         int damage;
+        String defendMessage;
+        if(getType() instanceof Electric){
+            damage = (int) (attack.getAttackDamage() * (getDefenseMultiplier() + 2));
 
-        damage = (int) (attack * getDefenseMultiplier());
-        int newHP = getHitPoints() - damage;
+            int newHP = getHitPoints() - damage;
 
-        String defendMessage = new String("Defending attack, damage caused is "
-                + damage + " new HP is " + newHP);
+            defendMessage = new String("Defending attack, damage caused is "
+                    + damage + " new HP is " + newHP);
 
-        setHitPoints(newHP);
+            setHitPoints(newHP);
+        }
+        else if(getType() instanceof Fire) {
+            damage = (int) ((attack.getAttackDamage() - 3) * (getDefenseMultiplier() + 1));
+
+            int newHP = getHitPoints() - damage;
+
+            defendMessage = new String("Defending attack, damage caused is "
+                    + damage + " new HP is " + newHP);
+
+            setHitPoints(newHP);
+        }
+        else if(getType() instanceof Water){
+            damage = (int) ((attack.getAttackDamage() - 2) * getDefenseMultiplier());
+
+            int newHP = getHitPoints() - damage;
+
+            defendMessage = new String("Defending attack, damage caused is "
+                    + damage + " new HP is " + newHP);
+
+            setHitPoints(newHP);
+        }else{
+            damage = (int) (attack.getAttackDamage() * getDefenseMultiplier());
+
+            int newHP = getHitPoints() - damage;
+
+            defendMessage = new String("Defending attack, damage caused is "
+                    + damage + " new HP is " + newHP);
+
+            setHitPoints(newHP);
+        }
         return defendMessage;
 
     }
