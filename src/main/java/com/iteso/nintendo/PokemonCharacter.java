@@ -25,7 +25,9 @@ public abstract class PokemonCharacter {
      * Second attack.
      */
       private Attack secondAttack = null;
-
+    /**
+     * defense Multiplier.
+     */
     private double defenseMultiplier = 0;
     /**
      * Pokemon life.

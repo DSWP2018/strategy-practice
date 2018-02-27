@@ -1,5 +1,8 @@
 package com.iteso.nintendo;
 
+/**
+ *
+ */
 public class ThunderAttack implements Attack{
     /**
      *
@@ -22,12 +25,12 @@ public class ThunderAttack implements Attack{
     }
 
     @Override
-    public String getAttackName() {
+    public final String getAttackName() {
         return this.ATTACK_NAME;
     }
 
     @Override
-    public int getAttackDamage() {
+    public final int getAttackDamage() {
         return this.ATTACK_DAMAGE;
     }
 }

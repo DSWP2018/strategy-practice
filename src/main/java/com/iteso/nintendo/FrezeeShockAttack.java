@@ -1,7 +1,7 @@
 package com.iteso.nintendo;
 
 /**
- * 
+ *
  */
 public class FrezeeShockAttack implements Attack {
     /**
@@ -18,7 +18,7 @@ public class FrezeeShockAttack implements Attack {
      * @return string of the attack
      */
     @Override
-    public String attackOpponent() {
+    public final String  attackOpponent() {
         return "Attacking opponent with "
                 + ATTACK_NAME
                 + " causing a damage of " + ATTACK_DAMAGE;
@@ -28,7 +28,7 @@ public class FrezeeShockAttack implements Attack {
      *
      * @return attack name
      */
-    public String getAttackName(){
+    public final String getAttackName() {
         return this.ATTACK_NAME;
     }
 
@@ -36,7 +36,7 @@ public class FrezeeShockAttack implements Attack {
      *
      * @return damage
      */
-    public int getAttackDamage(){
+    public final int getAttackDamage() {
         return this.ATTACK_DAMAGE;
     }
 }

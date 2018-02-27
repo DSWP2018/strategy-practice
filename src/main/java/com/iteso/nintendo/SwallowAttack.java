@@ -1,5 +1,8 @@
 package com.iteso.nintendo;
 
+/**
+ *
+ */
 public class SwallowAttack implements Attack {
 
     /**
@@ -16,19 +19,19 @@ public class SwallowAttack implements Attack {
      * @return string of the attack
      */
     @Override
-    public String attackOpponent() {
+    public final String attackOpponent() {
         return "Attacking opponent with "
                 + ATTACK_NAME
                 + " causing a damage of " + ATTACK_DAMAGE;
     }
 
     @Override
-    public String getAttackName() {
+    public final String getAttackName() {
         return this.ATTACK_NAME;
     }
 
     @Override
-    public int getAttackDamage() {
+    public final int getAttackDamage() {
         return this.ATTACK_DAMAGE;
     }
 }
