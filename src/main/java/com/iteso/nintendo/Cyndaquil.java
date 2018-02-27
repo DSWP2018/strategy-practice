@@ -6,22 +6,22 @@ import com.iteso.nintendo.impl.Thunder;
 /**
  * Created by rvillalobos on 2/24/18.
  */
-public class Pikachu extends PokemonCharacter {
+public class Cyndaquil extends PokemonCharacter {
     /**
      * Hit Points are the maximum life of pokemon.
      */
-    public static final int HIT_POINTS = 100;
+    public static final int HIT_POINTS = 116;
     /**
      * Defense multiplier value between 0-1.
      */
-    public static final double DEFENSE_MULTIPLIER = 0.4;
+    public static final double DEFENSE_MULTIPLIER = 0.96;
 
     /**
      * Pikachu constructor.
      */
-    public Pikachu() {
-        setType("electric");
-        setName("Pikachu");
+    public Cyndaquil() {
+        setType("fuego");
+        setName("Cyndaquil");
         setHasEvolution(true);
         setHitPoints(HIT_POINTS);
         setDefenseMultiplier(DEFENSE_MULTIPLIER);

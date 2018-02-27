@@ -6,22 +6,22 @@ import com.iteso.nintendo.impl.Thunder;
 /**
  * Created by rvillalobos on 2/24/18.
  */
-public class Pikachu extends PokemonCharacter {
+public class Rayquaza extends PokemonCharacter {
     /**
      * Hit Points are the maximum life of pokemon.
      */
-    public static final int HIT_POINTS = 100;
+    public static final int HIT_POINTS = 284;
     /**
      * Defense multiplier value between 0-1.
      */
-    public static final double DEFENSE_MULTIPLIER = 0.4;
+    public static final double DEFENSE_MULTIPLIER = 1.7;
 
     /**
      * Pikachu constructor.
      */
-    public Pikachu() {
-        setType("electric");
-        setName("Pikachu");
+    public Rayquaza() {
+        setType("dragon");
+        setName("Rayquaza");
         setHasEvolution(true);
         setHitPoints(HIT_POINTS);
         setDefenseMultiplier(DEFENSE_MULTIPLIER);

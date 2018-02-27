@@ -6,22 +6,22 @@ import com.iteso.nintendo.impl.Thunder;
 /**
  * Created by rvillalobos on 2/24/18.
  */
-public class Pikachu extends PokemonCharacter {
+public class Dragonite extends PokemonCharacter {
     /**
      * Hit Points are the maximum life of pokemon.
      */
-    public static final int HIT_POINTS = 100;
+    public static final int HIT_POINTS = 263;
     /**
      * Defense multiplier value between 0-1.
      */
-    public static final double DEFENSE_MULTIPLIER = 0.4;
+    public static final double DEFENSE_MULTIPLIER = 1.8;
 
     /**
      * Pikachu constructor.
      */
-    public Pikachu() {
-        setType("electric");
-        setName("Pikachu");
+    public Dragonite() {
+        setType("dragon");
+        setName("Dragonite");
         setHasEvolution(true);
         setHitPoints(HIT_POINTS);
         setDefenseMultiplier(DEFENSE_MULTIPLIER);
