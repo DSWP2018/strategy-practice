@@ -1,9 +1,13 @@
 package com.iteso.nintendo;
 
 public class Terremoto implements Attacks {
-    String attack = "Earthquake";
-    String attackOponnent = "Attacking opponent with ";
-    int attackDamage = 120;
+    public static final int ATTACK_DAMAGE = 120;
+    public static final String ATTACK = "Earthquake";
+    public static final String ATTACK_OPPONENT = "Attacking opponent with ";
+
+    String attack = ATTACK;
+    String attackOponnent = ATTACK_OPPONENT;
+    int attackDamage = ATTACK_DAMAGE;
 
     @Override
     public String attackName() {

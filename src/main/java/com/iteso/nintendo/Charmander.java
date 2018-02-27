@@ -20,20 +20,24 @@ public class Charmander extends PokemonCharacter{
      * Damage from 1 -25.
      */
     public static final int SECOND_ATTACK_DAMAGE = 17;
+    private Attacks quickAttack;
+    private Attacks flamethrower;
 
     /**
      * Pikachu constructor.
      */
     public Charmander() {
+        quickAttack = new AtaqueRapido();
+        flamethrower = new Lanzallamas();
         setType("fire");
         setName("Charmander");
         setHasEvolution(true);
-        setSecondAttack("Big fire");
-        setMainAttack("Small fire");
+        setSecondAttack(quickAttack.attackName());
+        setMainAttack(flamethrower.attackName());
         setHitPoints(HIT_POINTS);
         setDefenseMultiplier(DEFENSE_MULTIPLIER);
-        setMainAttackDamage(MAIN_ATTACK_DAMAGE);
-        setSecondAttackDamage(SECOND_ATTACK_DAMAGE);
+        setMainAttackDamage(flamethrower.attackDamage());
+        setSecondAttackDamage(quickAttack.attackDamage());
     }
 
     @Override
@@ -59,9 +63,7 @@ public class Charmander extends PokemonCharacter{
     @Override
     public final String secondAttack() {
 
-        String attackMessage = new String("Attacking opponent with "
-                + getSecondAttack()
-                + " causing a damage of " + getSecondAttackDamage());
+        String attackMessage = new String(quickAttack.attackOpponent()+" damage: "+quickAttack.attackDamage());
         return attackMessage;
 
 
@@ -69,11 +71,8 @@ public class Charmander extends PokemonCharacter{
 
     @Override
     public final String mainAttack() {
-        String attackMessage = new String("Attacking opponent with "
-                + getMainAttack()
-                + " causing a damage of " + getMainAttackDamage());
+        String attackMessage = new String(flamethrower.attackOpponent()+" damage: "+flamethrower.attackDamage());
         return attackMessage;
-
     }
 
     @Override

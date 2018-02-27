@@ -19,6 +19,7 @@ public class Squirtle extends PokemonCharacter {
     public static final int SECOND_ATTACK_DAMAGE = 15;
     private Attacks quickAttack;
     private Attacks terremoto;
+
     /**
      * Pikachu constructor.
      */
@@ -32,8 +33,8 @@ public class Squirtle extends PokemonCharacter {
         setMainAttack(terremoto.attackName()); //
         setHitPoints(HIT_POINTS);
         setDefenseMultiplier(DEFENSE_MULTIPLIER);
-        setMainAttackDamage(quickAttack.attackDamage()); //
-        setSecondAttackDamage(terremoto.attackDamage()); //
+        setMainAttackDamage(terremoto.attackDamage()); //
+        setSecondAttackDamage(quickAttack.attackDamage()); //
     }
 
     @Override
@@ -43,21 +44,38 @@ public class Squirtle extends PokemonCharacter {
 
     @Override
     public String defend(int attackDamage) {
-        return null;
+        int damage;
+
+        damage = (int) (attackDamage * getDefenseMultiplier());
+        int newHP = getHitPoints() - damage;
+
+        String defendMessage = new String("Defending attack, damage caused is "
+                + damage + " new HP is " + newHP);
+
+        setHitPoints(newHP);
+        return defendMessage;
     }
 
     @Override
     public String secondAttack() {
-        return null;
+        String attackMessage = new String(quickAttack.attackOpponent() + " damage: " + quickAttack.attackDamage());
+        return attackMessage;
     }
 
     @Override
     public String mainAttack() {
-        return null;
+        String attackMessage = new String(terremoto.attackOpponent() + " damage: " + terremoto.attackDamage());
+        return attackMessage;
     }
 
     @Override
     public void setNewAttack(int attack, int attackDamage, String newAttack) {
-
+        if (attack == 1) {
+            setMainAttack(newAttack);
+            setMainAttackDamage(attackDamage);
+        } else {
+            setSecondAttack(newAttack);
+            setSecondAttackDamage(attackDamage);
+        }
     }
 }

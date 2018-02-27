@@ -1,9 +1,13 @@
 package com.iteso.nintendo;
 
 public class Lanzallamas implements Attacks {
-    String attack = "Flamethrower";
-    String attackOponnent = "Attacking opponent with ";
-    int attackDamage = 80;
+    public static final int ATTACK_DAMAGE = 80;
+    public static final String ATTACK = "Flamethrower";
+    public static final String ATTACK_OPPONENT = "Attacking opponent with ";
+
+    String attack = ATTACK;
+    String attackOponnent = ATTACK_OPPONENT;
+    int attackDamage = ATTACK_DAMAGE;
 
     @Override
     public String attackName() {

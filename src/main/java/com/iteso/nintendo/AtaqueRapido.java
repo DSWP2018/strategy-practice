@@ -1,9 +1,13 @@
 package com.iteso.nintendo;
 
 public class AtaqueRapido implements Attacks{
-    String attack = "Quick Attack";
-    String attackOponnent = "Attacking opponent with ";
-    int attackDamage = 40;
+    public static final int ATTACK_DAMAGE = 40;
+    public static final String ATTACK = "Quick Attack";
+    public static final String ATTACK_OPPONENT = "Attacking opponent with ";
+
+    String attack = ATTACK;
+    String attackOponnent = ATTACK_OPPONENT;
+    int attackDamage = ATTACK_DAMAGE;
 
     @Override
     public String attackName() {

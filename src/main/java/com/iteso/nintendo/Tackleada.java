@@ -1,8 +1,8 @@
 package com.iteso.nintendo;
 
-public class FuriaDragon implements Attacks{
-    public static final int ATTACK_DAMAGE = 85;
-    public static final String ATTACK = "Dragon fury";
+public class Tackleada implements Attacks{
+    public static final int ATTACK_DAMAGE = 60;
+    public static final String ATTACK = "Tackle";
     public static final String ATTACK_OPPONENT = "Attacking opponent with ";
 
     String attack = ATTACK;
