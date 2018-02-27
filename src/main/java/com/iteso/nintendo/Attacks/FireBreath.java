@@ -9,7 +9,7 @@ public class FireBreath implements Attack {
     /**
      * Valor del damage.
      */
-    static final int damage = 15;
+    static final int DAMAGE = 15;
     /**
      * Atributo de nombre del ataque.
      */
@@ -18,7 +18,7 @@ public class FireBreath implements Attack {
     /**
      * Atributo de daño del ataque.
      */
-    private int attackDamage = damage;
+    private int attackDamage = DAMAGE;
 
     @Override
     public final String attackOpponent() {
@@ -28,19 +28,35 @@ public class FireBreath implements Attack {
         return attackMessage;
     }
 
+    /**
+     * Metodo para obtener el daño que ejerce este ataque.
+     * @return daño del ataque.
+     */
     public final int getAttackDamage() {
         return attackDamage;
     }
 
+    /**
+     * Metoo para obtener el nombre del ataque.
+     * @return nombre del ataque.
+     */
     public final String getAttackName() {
         return attackName;
     }
 
-    public final void setAttackName(String attackName) {
-        this.attackName = attackName;
+    /**
+     * Metodo para establecer el nombre del ataque.
+     * @param myAttackName nombre del ataque.
+     */
+    public final void setAttackName(final String myAttackName) {
+        attackName = myAttackName;
     }
 
-    public final void setAttackDamage(int attackDamage) {
-        this.attackDamage = attackDamage;
+    /**
+     * Metodo para establecer el daño del ataque.
+     * @param myAttackDamage daño del ataque.
+     */
+    public final void setAttackDamage(final int myAttackDamage) {
+        attackDamage = myAttackDamage;
     }
 }
