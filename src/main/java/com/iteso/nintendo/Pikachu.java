@@ -5,6 +5,16 @@ package com.iteso.nintendo;
  */
 public class Pikachu extends PokemonCharacter {
     /**
+     * First attack.
+     */
+    public final Sparks sparks = new Sparks();
+    /**
+     * Second attack.
+     */
+    public final Tackle tackle = new Tackle();
+
+
+    /**
      * Hit Points are the maximum life of pokemon.
      */
     public static final int HIT_POINTS = 100;
@@ -28,12 +38,10 @@ public class Pikachu extends PokemonCharacter {
         setType("electric");
         setName("Pikachu");
         setHasEvolution(true);
-        setSecondAttack("Impact Trueno");
-        setMainAttack("Quick Attack");
+        setSecondAttack(tackle);
+        setMainAttack(sparks);
         setHitPoints(HIT_POINTS);
         setDefenseMultiplier(DEFENSE_MULTIPLIER);
-        setMainAttackDamage(MAIN_ATTACK_DAMAGE);
-        setSecondAttackDamage(SECOND_ATTACK_DAMAGE);
     }
 
     @Override
@@ -58,35 +66,17 @@ public class Pikachu extends PokemonCharacter {
 
     @Override
     public final String secondAttack() {
-
-        String attackMessage = new String("Attacking opponent with "
-                + getSecondAttack()
-                + " causing a damage of " + getSecondAttackDamage());
-        return attackMessage;
-
-
+        return getSecondAttack().attackOpponent();
     }
 
     @Override
     public final String mainAttack() {
-        String attackMessage = new String("Attacking opponent with "
-                + getMainAttack()
-                + " causing a damage of " + getMainAttackDamage());
-        return attackMessage;
+        return getMainAttack().attackOpponent();
 
     }
 
     @Override
-    public final void setNewAttack(final int attack, final int attackDamage,
-                                   final String newAttack) {
-        if (attack == 1) {
-            setMainAttack(newAttack);
-            setMainAttackDamage(attackDamage);
-        } else {
-            setSecondAttack(newAttack);
-            setSecondAttackDamage(attackDamage);
-        }
+    public String attackOpponent() {
+        return null;
     }
-
-
 }
