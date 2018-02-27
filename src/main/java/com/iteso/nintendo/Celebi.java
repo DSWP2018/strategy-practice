@@ -1,9 +1,6 @@
 package com.iteso.nintendo;
 
-/**
- * Created by rvillalobos on 2/24/18.
- */
-public class Charmander extends PokemonCharacter {
+public class Celebi extends PokemonCharacter {
     /**
      * Hit Points are the maximum life of pokemon.
      */
@@ -11,17 +8,17 @@ public class Charmander extends PokemonCharacter {
     /**
      * Defense multiplier value between 0-1.
      */
-    public static final double DEFENSE_MULTIPLIER = 0.6;
+    public static final double DEFENSE_MULTIPLIER = 0.3;
 
     /**
      * Pikachu constructor.
      */
-    public Charmander() {
+    public Celebi() {
         setType("electric");
-        setName("Charmander");
+        setName("Celebi");
         setHasEvolution(true);
-        setMainAttack(new FireAttack());
-        setSecondAttack(new AirAttack());
+        setMainAttack(new AirAttack());
+        setSecondAttack(new WaterAttack());
         setHitPoints(HIT_POINTS);
         setDefenseMultiplier(DEFENSE_MULTIPLIER);
     }
@@ -48,14 +45,21 @@ public class Charmander extends PokemonCharacter {
 
     @Override
     public final String secondAttack() {
-        return getSecondAttack().attackOpponent();
+
+        String attackMessage = new String("Attacking opponent with "
+                + getSecondAttack()
+                + " causing a damage of " + getSecondAttackDamage());
+        return attackMessage;
+
+
     }
 
     @Override
     public final String mainAttack() {
-        return getMainAttack().attackOpponent();
+        String attackMessage = new String("Attacking opponent with "
+                + getMainAttack()
+                + " causing a damage of " + getMainAttackDamage());
+        return attackMessage;
 
     }
-
-
 }

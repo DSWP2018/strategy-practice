@@ -1,9 +1,6 @@
 package com.iteso.nintendo;
 
-/**
- * Created by rvillalobos on 2/24/18.
- */
-public class Charmander extends PokemonCharacter {
+public class Sylveon extends PokemonCharacter {
     /**
      * Hit Points are the maximum life of pokemon.
      */
@@ -11,17 +8,17 @@ public class Charmander extends PokemonCharacter {
     /**
      * Defense multiplier value between 0-1.
      */
-    public static final double DEFENSE_MULTIPLIER = 0.6;
+    public static final double DEFENSE_MULTIPLIER = 0.8;
 
     /**
      * Pikachu constructor.
      */
-    public Charmander() {
+    public Sylveon() {
         setType("electric");
-        setName("Charmander");
+        setName("Sylveon");
         setHasEvolution(true);
-        setMainAttack(new FireAttack());
-        setSecondAttack(new AirAttack());
+        setMainAttack(new SoundAttack());
+        setSecondAttack(new WaterAttack());
         setHitPoints(HIT_POINTS);
         setDefenseMultiplier(DEFENSE_MULTIPLIER);
     }
@@ -56,6 +53,4 @@ public class Charmander extends PokemonCharacter {
         return getMainAttack().attackOpponent();
 
     }
-
-
 }
