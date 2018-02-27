@@ -15,11 +15,9 @@ public class Charmander extends PokemonCharacter {
     /**
      * Damage from 1 - 20.
      */
-    public static final int MAIN_ATTACK_DAMAGE = 3;
-    /**
-     * Damage from 1 -25.
-     */
-    public static final int SECOND_ATTACK_DAMAGE = 17;
+    private final Attack mainAttack = new BigFire();
+
+    private final Attack secondAttack = new SmallFire();
 
     /**
      * Pikachu constructor.
@@ -28,12 +26,8 @@ public class Charmander extends PokemonCharacter {
         setType("fire");
         setName("Charmander");
         setHasEvolution(true);
-        setSecondAttack("Big fire");
-        setMainAttack("Small fire");
         setHitPoints(HIT_POINTS);
         setDefenseMultiplier(DEFENSE_MULTIPLIER);
-        setMainAttackDamage(MAIN_ATTACK_DAMAGE);
-        setSecondAttackDamage(SECOND_ATTACK_DAMAGE);
     }
 
     @Override
@@ -59,34 +53,18 @@ public class Charmander extends PokemonCharacter {
     @Override
     public final String secondAttack() {
 
-        String attackMessage = new String("Attacking opponent with "
-                + getSecondAttack()
-                + " causing a damage of " + getSecondAttackDamage());
-        return attackMessage;
-
+        return secondAttack.performAttack();
 
     }
 
     @Override
     public final String mainAttack() {
-        String attackMessage = new String("Attacking opponent with "
-                + getMainAttack()
-                + " causing a damage of " + getMainAttackDamage());
-        return attackMessage;
+
+        return mainAttack.performAttack();
 
     }
 
-    @Override
-    public final void setNewAttack(final int attack, final int attackDamage,
-                                   final String newAttack) {
-        if (attack == 1) {
-            setMainAttack(newAttack);
-            setMainAttackDamage(attackDamage);
-        } else {
-            setSecondAttack(newAttack);
-            setSecondAttackDamage(attackDamage);
-        }
-    }
+
 
 
 }
