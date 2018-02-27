@@ -12,14 +12,6 @@ public class Pikachu extends PokemonCharacter {
      * Defense multiplier value between 0-1.
      */
     public static final double DEFENSE_MULTIPLIER = 0.4;
-    /**
-     * Damage from 1 - 20.
-     */
-    public static final int MAIN_ATTACK_DAMAGE = 5;
-    /**
-     * Damage from 1 -25.
-     */
-    public static final int SECOND_ATTACK_DAMAGE = 15;
 
     /**
      * Pikachu constructor.
@@ -28,12 +20,10 @@ public class Pikachu extends PokemonCharacter {
         setType("electric");
         setName("Pikachu");
         setHasEvolution(true);
-        setSecondAttack("Impact Trueno");
-        setMainAttack("Quick Attack");
+        setSecondAttack(new ImpactTrueno());
+        setMainAttack(new QuickAttack());
         setHitPoints(HIT_POINTS);
         setDefenseMultiplier(DEFENSE_MULTIPLIER);
-        setMainAttackDamage(MAIN_ATTACK_DAMAGE);
-        setSecondAttackDamage(SECOND_ATTACK_DAMAGE);
     }
 
     @Override
@@ -57,34 +47,21 @@ public class Pikachu extends PokemonCharacter {
     }
 
     @Override
-    public final String secondAttack() {
-
-        String attackMessage = new String("Attacking opponent with "
-                + getSecondAttack()
-                + " causing a damage of " + getSecondAttackDamage());
-        return attackMessage;
-
-
+    public String secondAttack() {
+        return getSecondAttack().attackOpponent();
     }
 
     @Override
-    public final String mainAttack() {
-        String attackMessage = new String("Attacking opponent with "
-                + getMainAttack()
-                + " causing a damage of " + getMainAttackDamage());
-        return attackMessage;
-
+    public String mainAttack() {
+        return getMainAttack().attackOpponent();
     }
 
     @Override
-    public final void setNewAttack(final int attack, final int attackDamage,
-                                   final String newAttack) {
-        if (attack == 1) {
+    public void setNewAttack(int attack, Attack newAttack) {
+        if(attack == 1){
             setMainAttack(newAttack);
-            setMainAttackDamage(attackDamage);
-        } else {
+        }else {
             setSecondAttack(newAttack);
-            setSecondAttackDamage(attackDamage);
         }
     }
 
