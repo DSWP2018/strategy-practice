@@ -3,7 +3,7 @@ package com.iteso.nintendo;
 /**
  * Created by rvillalobos on 2/24/18.
  */
-public class Charmander extends PokemonCharacter {
+public class Charmeleon extends PokemonCharacter {
     /**
      * Hit Points are the maximum life of pokemon.
      */
@@ -16,9 +16,9 @@ public class Charmander extends PokemonCharacter {
     /**
      * Pikachu constructor.
      */
-    public Charmander() {
+    public Charmeleon() {
         setType("fire");
-        setName("Charmander");
+        setName("Charmeleon");
         setHasEvolution(true);
         setSecondAttack(new Big_Fire_Attack());
         setMainAttack(new Small_Fire_Attack());

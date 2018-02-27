@@ -3,30 +3,30 @@ package com.iteso.nintendo;
 /**
  * Created by rvillalobos on 2/24/18.
  */
-public class Charmander extends PokemonCharacter {
+public class Magnemite extends PokemonCharacter {
     /**
      * Hit Points are the maximum life of pokemon.
      */
-    public static final int HIT_POINTS = 77;
+    public static final int HIT_POINTS = 100;
     /**
      * Defense multiplier value between 0-1.
      */
-    public static final double DEFENSE_MULTIPLIER = 0.3;
-
+    public static final double DEFENSE_MULTIPLIER = 0.4;
     /**
-     * Pikachu constructor.
+     * Raichu constructor.
      */
-    public Charmander() {
-        setType("fire");
-        setName("Charmander");
+    public Magnemite() {
+        setType("electric");
+        setName("Magnemite");
         setHasEvolution(true);
-        setSecondAttack(new Big_Fire_Attack());
-        setMainAttack(new Small_Fire_Attack());
+        setSecondAttack(new Impact_Trueno_Attack());
+        setMainAttack(new Quick_Attack());
         setHitPoints(HIT_POINTS);
         setDefenseMultiplier(DEFENSE_MULTIPLIER);
         /*setMainAttackDamage(MAIN_ATTACK_DAMAGE);
         setSecondAttackDamage(SECOND_ATTACK_DAMAGE);*/
     }
+
     @Override
     public final String evolve() {
         return null;
