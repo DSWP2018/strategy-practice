@@ -4,36 +4,28 @@ package com.iteso.nintendo;
  * Created by rvillalobos on 2/24/18.
  */
 public class Pikachu extends PokemonCharacter {
+    public Terremoto terremoto;
+    public GiroBola girobola;
     /**
      * Hit Points are the maximum life of pokemon.
      */
-    public static final int HIT_POINTS = 100;
+    public static final int HIT_POINTS = 77;
     /**
      * Defense multiplier value between 0-1.
      */
-    public static final double DEFENSE_MULTIPLIER = 0.4;
-    /**
-     * Damage from 1 - 20.
-     */
-    public static final int MAIN_ATTACK_DAMAGE = 5;
-    /**
-     * Damage from 1 -25.
-     */
-    public static final int SECOND_ATTACK_DAMAGE = 15;
+    public static final double DEFENSE_MULTIPLIER = 0.3;
 
     /**
      * Pikachu constructor.
      */
     public Pikachu() {
-        setType("electric");
-        setName("Pikachu");
+        setType("fire");
+        setName("Charmander");
         setHasEvolution(true);
-        setSecondAttack("Impact Trueno");
-        setMainAttack("Quick Attack");
+        setSecondAttack(terremoto);
+        setMainAttack(girobola);
         setHitPoints(HIT_POINTS);
         setDefenseMultiplier(DEFENSE_MULTIPLIER);
-        setMainAttackDamage(MAIN_ATTACK_DAMAGE);
-        setSecondAttackDamage(SECOND_ATTACK_DAMAGE);
     }
 
     @Override
@@ -60,8 +52,8 @@ public class Pikachu extends PokemonCharacter {
     public final String secondAttack() {
 
         String attackMessage = new String("Attacking opponent with "
-                + getSecondAttack()
-                + " causing a damage of " + getSecondAttackDamage());
+                + terremoto.getAttackName()
+                + " causing a damage of " + terremoto.getAttackDamage());
         return attackMessage;
 
 
@@ -70,23 +62,14 @@ public class Pikachu extends PokemonCharacter {
     @Override
     public final String mainAttack() {
         String attackMessage = new String("Attacking opponent with "
-                + getMainAttack()
-                + " causing a damage of " + getMainAttackDamage());
+                + girobola.getAttackName()
+                + " causing a damage of " + girobola.getAttackDamage());
         return attackMessage;
 
     }
 
     @Override
-    public final void setNewAttack(final int attack, final int attackDamage,
-                                   final String newAttack) {
-        if (attack == 1) {
-            setMainAttack(newAttack);
-            setMainAttackDamage(attackDamage);
-        } else {
-            setSecondAttack(newAttack);
-            setSecondAttackDamage(attackDamage);
-        }
+    public void setNewAttack(Attack attack) {
+
     }
-
-
 }

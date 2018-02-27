@@ -14,4 +14,3 @@
 - Make sure checkstyle and pmd reports are clean
 
 
-

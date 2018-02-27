@@ -1,10 +1,6 @@
 package com.iteso.nintendo;
 
-/**
- * Created by rvillalobos on 2/24/18.
- */
-public class Charmander extends PokemonCharacter {
-
+public class Wartortle extends PokemonCharacter {
     public Terremoto terremoto;
     public GiroBola girobola;
     /**
@@ -19,7 +15,7 @@ public class Charmander extends PokemonCharacter {
     /**
      * Pikachu constructor.
      */
-    public Charmander() {
+    public Wartortle() {
         setType("fire");
         setName("Charmander");
         setHasEvolution(true);
