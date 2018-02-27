@@ -3,24 +3,24 @@ package com.iteso.nintendo;
 /**
  * Created by rvillalobos on 2/24/18.
  */
-public class Charmander extends PokemonCharacter {
+public class Bulbasaur extends PokemonCharacter {
     /**
      * Hit Points are the maximum life of pokemon.
      */
-    public static final int HIT_POINTS = 77;
+    public static final int HIT_POINTS = 71;
     /**
      * Defense multiplier value between 0-1.
      */
-    public static final double DEFENSE_MULTIPLIER = 0.3;
+    public static final double DEFENSE_MULTIPLIER = 0.5;
 
     /**
      * Pikachu constructor.
      */
-    public Charmander() {
-        setType("fire");
-        setName("Charmander");
+    public Bulbasaur() {
+        setType("grass");
+        setName("Bulbasaur");
         setHasEvolution(true);
-        setNewAttack(mainAttack, new Ember());
+        setNewAttack(mainAttack, new VineWhip());
         setNewAttack(secondAttack, new Tackle());
         setHitPoints(HIT_POINTS);
         setDefenseMultiplier(DEFENSE_MULTIPLIER);
