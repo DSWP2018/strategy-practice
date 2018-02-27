@@ -35,12 +35,16 @@ public class Bubble implements Attack {
      *
      * @return attack damage
      */
-    public final int getAttackDamage(){
+    public final int getAttackDamage() {
         return this.ATTACK_DAMAGE;
     }
 
+    /**
+     *
+     * @return Name attack
+     */
     @Override
-    public String getNameAttack() {
+    public final String getNameAttack() {
         return this.ATTACK_NAME;
     }
 }

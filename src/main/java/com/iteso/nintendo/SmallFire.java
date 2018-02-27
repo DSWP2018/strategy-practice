@@ -1,24 +1,49 @@
 package com.iteso.nintendo;
 
+/**
+ * Small fire.
+ */
 public class SmallFire implements Attack {
+    /**
+     * Attack damage.
+     */
     public static final int ATTACK_DAMAGE = 3;
+    /**
+     * Attack name.
+     */
     public static final String ATTACK_NAME = "Small Fire";
 
+    /**
+     *
+     * @return Attack
+     */
     @Override
-    public String attackOpponent() {
+    public final String attackOpponent() {
         return "Aventar bolita de fuego";
     }
 
+    /**
+     *
+     * @return Animation
+     */
     @Override
-    public String animation() {
+    public final String animation() {
         return "Mover manitas lento";
     }
 
-    public int getAttackDamage(){
+    /**
+     *
+     * @return Attack damage
+     */
+    public final int getAttackDamage() {
         return this.ATTACK_DAMAGE;
     }
 
-    public String getNameAttack(){
+    /**
+     *
+     * @return Name attack
+     */
+    public final String getNameAttack() {
         return this.ATTACK_NAME;
     }
 }

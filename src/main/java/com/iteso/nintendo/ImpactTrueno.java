@@ -1,25 +1,50 @@
 package com.iteso.nintendo;
 
+/**
+ * Impact trueno.
+ */
 public class ImpactTrueno implements Attack {
+    /**
+     * Attack damage.
+     */
     public static final int ATTACK_DAMAGE = 15;
+    /**
+     * Attack name.
+     */
     public static final String ATTACK_NAME = "ImpactTrueno";
 
+    /**
+     *
+     * @return Attack
+     */
     @Override
-    public String attackOpponent() {
+    public final String attackOpponent() {
         return "Aventar rayote";
     }
 
+    /**
+     *
+     * @return Animation
+     */
     @Override
-    public String animation() {
+    public final String animation() {
         return "Externder dos manita";
     }
 
-    public int getAttackDamage(){
+    /**
+     *
+     * @return Attack damage
+     */
+    public final int getAttackDamage() {
         return this.ATTACK_DAMAGE;
     }
 
+    /**
+     *
+     * @return Attack name
+     */
     @Override
-    public String getNameAttack() {
+    public final String getNameAttack() {
         return this.ATTACK_NAME;
     }
 }
