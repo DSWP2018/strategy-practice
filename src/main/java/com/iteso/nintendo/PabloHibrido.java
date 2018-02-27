@@ -3,15 +3,15 @@ package com.iteso.nintendo;
 /**
  * Created by rvillalobos on 2/24/18.
  */
-public class Charmander extends PokemonCharacter {
+public class PabloHibrido extends PokemonCharacter {
     /**
      * Hit Points are the maximum life of pokemon.
      */
-    public static final int HIT_POINTS = 77;
+    public static final int HIT_POINTS = 60;
     /**
      * Defense multiplier value between 0-1.
      */
-    public static final double DEFENSE_MULTIPLIER = 0.3;
+    public static final double DEFENSE_MULTIPLIER = 0.6;
     /**
      * Main Attack.
      */
@@ -24,12 +24,12 @@ public class Charmander extends PokemonCharacter {
     /**
      * Pikachu constructor.
      */
-    public Charmander() {
-        mainAttack = new SmallFire();
+    public PabloHibrido() {
+        mainAttack = new ImpactTrueno();
         secondAttack = new BigFire();
 
-        setType("fire");
-        setName("Charmander");
+        setType("hybrid");
+        setName("Pablo el hibrido");
         setHasEvolution(true);
         setSecondAttack(secondAttack);
         setMainAttack(mainAttack);

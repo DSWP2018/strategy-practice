@@ -3,11 +3,11 @@ package com.iteso.nintendo;
 /**
  * Created by rvillalobos on 2/24/18.
  */
-public class Charmander extends PokemonCharacter {
+public class SeniorBurbujas extends PokemonCharacter {
     /**
      * Hit Points are the maximum life of pokemon.
      */
-    public static final int HIT_POINTS = 77;
+    public static final int HIT_POINTS = 70;
     /**
      * Defense multiplier value between 0-1.
      */
@@ -24,12 +24,12 @@ public class Charmander extends PokemonCharacter {
     /**
      * Pikachu constructor.
      */
-    public Charmander() {
-        mainAttack = new SmallFire();
+    public SeniorBurbujas() {
+        mainAttack = new Bubble();
         secondAttack = new BigFire();
 
-        setType("fire");
-        setName("Charmander");
+        setType("water");
+        setName("Senior burbujas");
         setHasEvolution(true);
         setSecondAttack(secondAttack);
         setMainAttack(mainAttack);

@@ -3,15 +3,15 @@ package com.iteso.nintendo;
 /**
  * Created by rvillalobos on 2/24/18.
  */
-public class Charmander extends PokemonCharacter {
+public class JoseElectrico extends PokemonCharacter {
     /**
      * Hit Points are the maximum life of pokemon.
      */
-    public static final int HIT_POINTS = 77;
+    public static final int HIT_POINTS = 120;
     /**
      * Defense multiplier value between 0-1.
      */
-    public static final double DEFENSE_MULTIPLIER = 0.3;
+    public static final double DEFENSE_MULTIPLIER = 0.1;
     /**
      * Main Attack.
      */
@@ -24,12 +24,12 @@ public class Charmander extends PokemonCharacter {
     /**
      * Pikachu constructor.
      */
-    public Charmander() {
-        mainAttack = new SmallFire();
-        secondAttack = new BigFire();
+    public JoseElectrico() {
+        mainAttack = new QuickAttack();
+        secondAttack = new ImpactTrueno();
 
-        setType("fire");
-        setName("Charmander");
+        setType("electric");
+        setName("Jose Electrico");
         setHasEvolution(true);
         setSecondAttack(secondAttack);
         setMainAttack(mainAttack);

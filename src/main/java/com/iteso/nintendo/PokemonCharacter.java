@@ -3,7 +3,7 @@ package com.iteso.nintendo;
 /**
  * Created by rvillalobos on 2/24/18.
  */
-public abstract class PokemonCharacter {
+public abstract class PokemonCharacter{
 
     /**
      * Pokemon name.
@@ -20,11 +20,11 @@ public abstract class PokemonCharacter {
     /**
      * Main attack name.
      */
-    private String mainAttack = null;
+    private Attack mainAttack = null;
     /**
      * Second attack name.
      */
-      private String secondAttack = null;
+      private Attack secondAttack = null;
     /**
      * Damage caused by main attack.
      */
@@ -85,12 +85,9 @@ public abstract class PokemonCharacter {
 
     /**
      * Method to change pokemon attack.
-     * @param attack Which attack to change.
-     * @param attackDamage New damage.
-     * @param newAttack New attack name.
+     * @param newAttack New attack to change.
      */
-    public abstract void setNewAttack(int attack,
-                                      int attackDamage, String newAttack);
+    public abstract void setNewAttack(Attack newAttack);
 
     /**
      * Pokemon type.
@@ -128,7 +125,7 @@ public abstract class PokemonCharacter {
      * Get name of main attack.
      * @return main attack name.
      */
-    public final String getMainAttack() {
+    public final Attack getMainAttack() {
         return mainAttack;
     }
 
@@ -136,7 +133,7 @@ public abstract class PokemonCharacter {
      * Set name of main attack.
      * @param newMainAttack new main attack name.
      */
-    public final void setMainAttack(final String newMainAttack) {
+    public final void setMainAttack(final Attack newMainAttack) {
         this.mainAttack = newMainAttack;
     }
 
@@ -144,7 +141,7 @@ public abstract class PokemonCharacter {
      * Get name of second attack.
      * @return name of second attack.
      */
-    public final String getSecondAttack() {
+    public final Attack getSecondAttack() {
         return secondAttack;
     }
 
@@ -152,7 +149,7 @@ public abstract class PokemonCharacter {
      * Set name of second attack.
      * @param newSecondAttack new second attack name.
      */
-    public final void setSecondAttack(final String newSecondAttack) {
+    public final void setSecondAttack(final Attack newSecondAttack) {
         this.secondAttack = newSecondAttack;
     }
 

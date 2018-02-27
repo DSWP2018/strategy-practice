@@ -13,27 +13,30 @@ public class Pikachu extends PokemonCharacter {
      */
     public static final double DEFENSE_MULTIPLIER = 0.4;
     /**
-     * Damage from 1 - 20.
+     * Main Attack.
      */
-    public static final int MAIN_ATTACK_DAMAGE = 5;
+    public final Attack mainAttack;
     /**
-     * Damage from 1 -25.
+     * Second Attack.
      */
-    public static final int SECOND_ATTACK_DAMAGE = 15;
+    public final Attack secondAttack;
 
     /**
      * Pikachu constructor.
      */
     public Pikachu() {
-        setType("electric");
-        setName("Pikachu");
+        mainAttack = new QuickAttack();
+        secondAttack = new ImpactTrueno();
+
+        setType("fire");
+        setName("Charmander");
         setHasEvolution(true);
-        setSecondAttack("Impact Trueno");
-        setMainAttack("Quick Attack");
+        setSecondAttack(secondAttack);
+        setMainAttack(mainAttack);
         setHitPoints(HIT_POINTS);
         setDefenseMultiplier(DEFENSE_MULTIPLIER);
-        setMainAttackDamage(MAIN_ATTACK_DAMAGE);
-        setSecondAttackDamage(SECOND_ATTACK_DAMAGE);
+        setMainAttackDamage(mainAttack.getAttackDamage());
+        setSecondAttackDamage(secondAttack.getAttackDamage());
     }
 
     @Override
@@ -77,16 +80,16 @@ public class Pikachu extends PokemonCharacter {
     }
 
     @Override
-    public final void setNewAttack(final int attack, final int attackDamage,
-                                   final String newAttack) {
-        if (attack == 1) {
+    public final void setNewAttack(final Attack newAttack) {
+        if (mainAttack == null) {
             setMainAttack(newAttack);
-            setMainAttackDamage(attackDamage);
+            setMainAttackDamage(newAttack.getAttackDamage());
         } else {
             setSecondAttack(newAttack);
-            setSecondAttackDamage(attackDamage);
+            setSecondAttackDamage(newAttack.getAttackDamage());
         }
     }
 
 
 }
+
