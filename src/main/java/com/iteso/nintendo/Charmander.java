@@ -21,6 +21,9 @@ public class Charmander extends PokemonCharacter {
      */
     public static final int SECOND_ATTACK_DAMAGE = 17;
 
+    public FireBallAttack fire;
+    public PoisonAttack poison;
+
     /**
      * Pikachu constructor.
      */
@@ -28,8 +31,8 @@ public class Charmander extends PokemonCharacter {
         setType("fire");
         setName("Charmander");
         setHasEvolution(true);
-        setSecondAttack("Big fire");
-        setMainAttack("Small fire");
+        setSecondAttack(poison);
+        setMainAttack(fire);
         setHitPoints(HIT_POINTS);
         setDefenseMultiplier(DEFENSE_MULTIPLIER);
         setMainAttackDamage(MAIN_ATTACK_DAMAGE);
@@ -79,13 +82,6 @@ public class Charmander extends PokemonCharacter {
     @Override
     public final void setNewAttack(final int attack, final int attackDamage,
                                    final String newAttack) {
-        if (attack == 1) {
-            setMainAttack(newAttack);
-            setMainAttackDamage(attackDamage);
-        } else {
-            setSecondAttack(newAttack);
-            setSecondAttackDamage(attackDamage);
-        }
     }
 
 

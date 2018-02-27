@@ -16,10 +16,14 @@ public class Pikachu extends PokemonCharacter {
      * Damage from 1 - 20.
      */
     public static final int MAIN_ATTACK_DAMAGE = 5;
+
     /**
-     * Damage from 1 -25.
+     * Damage from 1 - 20.
      */
-    public static final int SECOND_ATTACK_DAMAGE = 15;
+    public static final int SECOND_ATTACK_DAMAGE = 4;
+
+    public ThunderpunchAttack thunder;
+    public DigAttack rock;
 
     /**
      * Pikachu constructor.
@@ -28,8 +32,8 @@ public class Pikachu extends PokemonCharacter {
         setType("electric");
         setName("Pikachu");
         setHasEvolution(true);
-        setSecondAttack("Impact Trueno");
-        setMainAttack("Quick Attack");
+        setMainAttack(thunder);
+        setSecondAttack(rock);
         setHitPoints(HIT_POINTS);
         setDefenseMultiplier(DEFENSE_MULTIPLIER);
         setMainAttackDamage(MAIN_ATTACK_DAMAGE);
@@ -57,17 +61,6 @@ public class Pikachu extends PokemonCharacter {
     }
 
     @Override
-    public final String secondAttack() {
-
-        String attackMessage = new String("Attacking opponent with "
-                + getSecondAttack()
-                + " causing a damage of " + getSecondAttackDamage());
-        return attackMessage;
-
-
-    }
-
-    @Override
     public final String mainAttack() {
         String attackMessage = new String("Attacking opponent with "
                 + getMainAttack()
@@ -76,17 +69,19 @@ public class Pikachu extends PokemonCharacter {
 
     }
 
-    @Override
-    public final void setNewAttack(final int attack, final int attackDamage,
-                                   final String newAttack) {
-        if (attack == 1) {
-            setMainAttack(newAttack);
-            setMainAttackDamage(attackDamage);
-        } else {
-            setSecondAttack(newAttack);
-            setSecondAttackDamage(attackDamage);
-        }
-    }
+	@Override
+	public String secondAttack() {
+		String attackMessage = new String("Attacking opponent with "
+                + getSecondAttack()
+                + " causing a damage of " + getSecondAttackDamage());
+        return attackMessage;
+	}
+
+	@Override
+	public void setNewAttack(int attack, int attackDamage, String newAttack) {
+		// TODO Auto-generated method stub
+
+	}
 
 
 }
