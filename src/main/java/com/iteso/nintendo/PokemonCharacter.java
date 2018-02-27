@@ -8,7 +8,7 @@ public abstract class PokemonCharacter {
     /**
      * Pokemon name.
      */
-      private String name = null;
+    private String name = null;
     /**
      * Pokemon type.
      */
@@ -16,7 +16,7 @@ public abstract class PokemonCharacter {
     /**
      * Indicator of evolution.
      */
-      private boolean hasEvolution = false;
+    private boolean hasEvolution = false;
     /**
      * Main attack name.
      */
@@ -32,7 +32,7 @@ public abstract class PokemonCharacter {
     /**
      * Pokemon life.
      */
-      private int hitPoints = 0;
+    private int hitPoints = 0;
 
     /**
      * Get pokemon name.

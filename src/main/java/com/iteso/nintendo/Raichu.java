@@ -19,7 +19,7 @@ public class Raichu extends PokemonCharacter {
     public Raichu() {
         setType("electric");
         setName("Raichu");
-        setHasEvolution(true);
+        setHasEvolution(false);
         setNewAttack(mainAttack, new Thunderbolt());
         setNewAttack(secondAttack, new Tackle());
         setHitPoints(HIT_POINTS);

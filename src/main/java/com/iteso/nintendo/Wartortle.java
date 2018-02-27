@@ -3,24 +3,24 @@ package com.iteso.nintendo;
 /**
  * Created by rvillalobos on 2/24/18.
  */
-public class Bulbasaur extends PokemonCharacter {
+public class Wartortle extends PokemonCharacter {
     /**
      * Hit Points are the maximum life of pokemon.
      */
-    public static final int HIT_POINTS = 71;
+    public static final int HIT_POINTS = 182;
     /**
      * Defense multiplier value between 0-1.
      */
-    public static final double DEFENSE_MULTIPLIER = 0.5;
+    public static final double DEFENSE_MULTIPLIER = 1.2;
 
     /**
      * Pikachu constructor.
      */
-    public Bulbasaur() {
-        setType("grass");
-        setName("Bulbasaur");
+    public Wartortle() {
+        setType("water");
+        setName("Wartortle");
         setHasEvolution(true);
-        setNewAttack(mainAttack, new VineWhip());
+        setNewAttack(mainAttack, new WaterGun());
         setNewAttack(secondAttack, new Tackle());
         setHitPoints(HIT_POINTS);
         setDefenseMultiplier(DEFENSE_MULTIPLIER);
@@ -45,4 +45,12 @@ public class Bulbasaur extends PokemonCharacter {
         return defendMessage;
 
     }
+
+    @Override
+    public final void setNewAttack(AttackBehavior oldAtk,
+                                   AttackBehavior newAtk) {
+        oldAtk = newAtk;
+    }
+
+
 }

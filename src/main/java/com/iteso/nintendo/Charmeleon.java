@@ -3,11 +3,11 @@ package com.iteso.nintendo;
 /**
  * Created by rvillalobos on 2/24/18.
  */
-public class Squirtle extends PokemonCharacter {
+public class Charmeleon extends PokemonCharacter {
     /**
      * Hit Points are the maximum life of pokemon.
      */
-    public static final int HIT_POINTS = 82;
+    public static final int HIT_POINTS = 177;
     /**
      * Defense multiplier value between 0-1.
      */
@@ -16,11 +16,11 @@ public class Squirtle extends PokemonCharacter {
     /**
      * Pikachu constructor.
      */
-    public Squirtle() {
-        setType("water");
-        setName("Squirtle");
+    public Charmeleon() {
+        setType("fire");
+        setName("Charmeleon");
         setHasEvolution(true);
-        setNewAttack(mainAttack, new WaterGun());
+        setNewAttack(mainAttack, new Ember());
         setNewAttack(secondAttack, new Tackle());
         setHitPoints(HIT_POINTS);
         setDefenseMultiplier(DEFENSE_MULTIPLIER);
