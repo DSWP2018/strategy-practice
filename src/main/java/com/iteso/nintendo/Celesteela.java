@@ -1,11 +1,8 @@
 package com.iteso.nintendo;
 
-/**
- * Created by rvillalobos on 2/24/18.
- */
-public class Charmander extends PokemonCharacter {
-	Attack combate=new Combate();
+public class Celesteela extends PokemonCharacter{
 	Attack mordisco=new Mordisco();
+	Attack cascada=new Cascada();
     /**
      * Hit Points are the maximum life of pokemon.
      */
@@ -26,12 +23,12 @@ public class Charmander extends PokemonCharacter {
     /**
      * Pikachu constructor.
      */
-    public Charmander() {
+    public Celesteela() {
         setType("fire");
-        setName("Charmander");
+        setName("Celesteela");
         setHasEvolution(true);
-        setSecondAttack(mordisco);
-        setMainAttack(combate);
+        setSecondAttack(cascada);
+        setMainAttack(mordisco);
         setHitPoints(HIT_POINTS);
         setDefenseMultiplier(DEFENSE_MULTIPLIER);
         setMainAttackDamage();
@@ -59,12 +56,12 @@ public class Charmander extends PokemonCharacter {
     }
 
     public final String secondAttack() {
-        return combate.getAttack();
+        return mordisco.getAttack();
     }
 
     @Override
     public final String mainAttack() {
-        return mordisco.getAttack();
+        return cascada.getAttack();
     }
 
     @Override

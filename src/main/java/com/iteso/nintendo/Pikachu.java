@@ -4,6 +4,9 @@ package com.iteso.nintendo;
  * Created by rvillalobos on 2/24/18.
  */
 public class Pikachu extends PokemonCharacter {
+	Attack combate=new Combate();
+	Attack mordisco=new Mordisco();
+
     /**
      * Hit Points are the maximum life of pokemon.
      */
@@ -28,12 +31,12 @@ public class Pikachu extends PokemonCharacter {
         setType("electric");
         setName("Pikachu");
         setHasEvolution(true);
-        setSecondAttack("Impact Trueno");
-        setMainAttack("Quick Attack");
+        setSecondAttack(mordisco);
+        setMainAttack(combate);
         setHitPoints(HIT_POINTS);
         setDefenseMultiplier(DEFENSE_MULTIPLIER);
-        setMainAttackDamage(MAIN_ATTACK_DAMAGE);
-        setSecondAttackDamage(SECOND_ATTACK_DAMAGE);
+        setMainAttackDamage();
+        setSecondAttackDamage();
     }
 
     @Override
@@ -58,35 +61,23 @@ public class Pikachu extends PokemonCharacter {
 
     @Override
     public final String secondAttack() {
-
-        String attackMessage = new String("Attacking opponent with "
-                + getSecondAttack()
-                + " causing a damage of " + getSecondAttackDamage());
-        return attackMessage;
-
-
+        return combate.getAttack();
     }
 
     @Override
     public final String mainAttack() {
-        String attackMessage = new String("Attacking opponent with "
-                + getMainAttack()
-                + " causing a damage of " + getMainAttackDamage());
-        return attackMessage;
-
+        return mordisco.getAttack();
     }
 
     @Override
-    public final void setNewAttack(final int attack, final int attackDamage,
-                                   final String newAttack) {
+    public final void setNewAttack(final int attack,
+                                   final Attack newAttack) {
         if (attack == 1) {
             setMainAttack(newAttack);
-            setMainAttackDamage(attackDamage);
+            setMainAttackDamage();
         } else {
             setSecondAttack(newAttack);
-            setSecondAttackDamage(attackDamage);
+            setSecondAttackDamage();
         }
     }
-
-
 }

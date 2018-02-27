@@ -1,11 +1,8 @@
 package com.iteso.nintendo;
 
-/**
- * Created by rvillalobos on 2/24/18.
- */
-public class Charmander extends PokemonCharacter {
+public class Dewpider extends PokemonCharacter{
 	Attack combate=new Combate();
-	Attack mordisco=new Mordisco();
+	Attack cascada=new Cascada();
     /**
      * Hit Points are the maximum life of pokemon.
      */
@@ -26,11 +23,11 @@ public class Charmander extends PokemonCharacter {
     /**
      * Pikachu constructor.
      */
-    public Charmander() {
+    public Dewpider() {
         setType("fire");
-        setName("Charmander");
+        setName("Dewpider");
         setHasEvolution(true);
-        setSecondAttack(mordisco);
+        setSecondAttack(cascada);
         setMainAttack(combate);
         setHitPoints(HIT_POINTS);
         setDefenseMultiplier(DEFENSE_MULTIPLIER);
@@ -64,7 +61,7 @@ public class Charmander extends PokemonCharacter {
 
     @Override
     public final String mainAttack() {
-        return mordisco.getAttack();
+        return cascada.getAttack();
     }
 
     @Override
@@ -78,6 +75,7 @@ public class Charmander extends PokemonCharacter {
             setSecondAttackDamage();
         }
     }
+
 
 
 }
