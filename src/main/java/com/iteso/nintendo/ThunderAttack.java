@@ -3,7 +3,7 @@ package com.iteso.nintendo;
 /**
  *
  */
-public class ThunderAttack implements Attack{
+public class ThunderAttack implements Attack {
     /**
      *
      */
@@ -18,7 +18,7 @@ public class ThunderAttack implements Attack{
      * @return string of the attack
      */
     @Override
-    public String attackOpponent() {
+    public final String attackOpponent() {
         return "Attacking opponent with "
                 + ATTACK_NAME
                 + " causing a damage of " + ATTACK_DAMAGE;
