@@ -3,7 +3,7 @@ package com.iteso.nintendo;
 /**
  * Created by rvillalobos on 2/24/18.
  */
-public class Pikachu extends PokemonCharacter {
+public class Eevee extends PokemonCharacter {
     /**
      * Hit Points are the maximum life of pokemon.
      */
@@ -11,22 +11,22 @@ public class Pikachu extends PokemonCharacter {
     /**
      * Defense multiplier value between 0-1.
      */
-    public static final double DEFENSE_MULTIPLIER = 0.4;
+    public static final double DEFENSE_MULTIPLIER = 0.5;
     /**
      * Damage from 1 - 20.
      */
-    public static final int MAIN_ATTACK_DAMAGE = 5;
+    public static final int MAIN_ATTACK_DAMAGE = 4;
     /**
      * Damage from 1 -25.
      */
-    public static final int SECOND_ATTACK_DAMAGE = 15;
+    public static final int SECOND_ATTACK_DAMAGE = 10;
 
     /**
      * Pikachu constructor.
      */
-    public Pikachu(Attack mainAttack, Attack secondAttack) {
-        setType("electric");
-        setName("Pikachu");
+    public Eevee(Attack mainAttack, Attack secondAttack) {
+        setType("Normal");
+        setName("Eeve");
         setHasEvolution(true);
         setSecondAttack(secondAttack);
         setMainAttack(mainAttack);
@@ -65,7 +65,7 @@ public class Pikachu extends PokemonCharacter {
 
     @Override
     public final String mainAttack() {
-       return getMainAttack().attackOpponent();
+        return getMainAttack().attackOpponent();
 
     }
 

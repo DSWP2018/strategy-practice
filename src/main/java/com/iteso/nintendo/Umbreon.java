@@ -3,30 +3,30 @@ package com.iteso.nintendo;
 /**
  * Created by rvillalobos on 2/24/18.
  */
-public class Pikachu extends PokemonCharacter {
+public class Umbreon extends PokemonCharacter {
     /**
      * Hit Points are the maximum life of pokemon.
      */
-    public static final int HIT_POINTS = 100;
+    public static final int HIT_POINTS = 77;
     /**
      * Defense multiplier value between 0-1.
      */
-    public static final double DEFENSE_MULTIPLIER = 0.4;
+    public static final double DEFENSE_MULTIPLIER = 0.3;
     /**
      * Damage from 1 - 20.
      */
-    public static final int MAIN_ATTACK_DAMAGE = 5;
+    public static final int MAIN_ATTACK_DAMAGE = 3;
     /**
      * Damage from 1 -25.
      */
-    public static final int SECOND_ATTACK_DAMAGE = 15;
+    public static final int SECOND_ATTACK_DAMAGE = 17;
 
     /**
      * Pikachu constructor.
      */
-    public Pikachu(Attack mainAttack, Attack secondAttack) {
-        setType("electric");
-        setName("Pikachu");
+    public Umbreon(Attack mainAttack, Attack secondAttack) {
+        setType("fire");
+        setName("Umbreon");
         setHasEvolution(true);
         setSecondAttack(secondAttack);
         setMainAttack(mainAttack);
@@ -60,13 +60,11 @@ public class Pikachu extends PokemonCharacter {
     public final String secondAttack() {
         return getSecondAttack().attackOpponent();
 
-
     }
 
     @Override
     public final String mainAttack() {
-       return getMainAttack().attackOpponent();
-
+        return getMainAttack().attackOpponent();
     }
 
     @Override
