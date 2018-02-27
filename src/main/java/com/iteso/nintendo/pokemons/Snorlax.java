@@ -15,5 +15,5 @@ public class Snorlax {
         mainAttack = new Sleep();
         secondAttack = new Bite();
     }
-    
+
 }
