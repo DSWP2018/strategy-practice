@@ -1,10 +1,10 @@
 package com.iteso.nintendo;
-
+/**Clase ancientpower. */
 public class AncientPowerAttack implements Attack {
-    private static final String ATTACK_NAME = "Ancient Power";
-    private  static final int ATTACK_DAMAGE= 17;
-    private static final String DEFENSE_NAME = "protect";
-    private static final int DEFENSE_POINTS = 100;
+    /**Declarar variables */
+    private static final String ATTACK_NAME = "Ancient Power"; /**attack name. */
+    private  static final int ATTACK_DAMAGE= 17; /**attack damage. */
+
     @Override
     public String attackOpponent() {
         return "Attacking opponent with " + ATTACK_NAME + " causing a damage of " + ATTACK_DAMAGE;
