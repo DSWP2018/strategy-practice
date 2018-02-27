@@ -29,12 +29,12 @@ public class Squirtle extends PokemonCharacter {
         setType("Water");
         setName("Squirtle");
         setHasEvolution(true);
-        setSecondAttack(quickAttack.attackName()); //
-        setMainAttack(terremoto.attackName()); //
+        setSecondAttack(quickAttack); //
+        setMainAttack(terremoto); //
         setHitPoints(HIT_POINTS);
         setDefenseMultiplier(DEFENSE_MULTIPLIER);
-        setMainAttackDamage(terremoto.attackDamage()); //
-        setSecondAttackDamage(quickAttack.attackDamage()); //
+        setMainAttackDamage(terremoto); //
+        setSecondAttackDamage(quickAttack); //
     }
 
     @Override
@@ -69,7 +69,7 @@ public class Squirtle extends PokemonCharacter {
     }
 
     @Override
-    public void setNewAttack(int attack, int attackDamage, String newAttack) {
+    public void setNewAttack(int attack, Attacks attackDamage, Attacks newAttack) {
         if (attack == 1) {
             setMainAttack(newAttack);
             setMainAttackDamage(attackDamage);

@@ -32,12 +32,12 @@ public class Charmander extends PokemonCharacter{
         setType("fire");
         setName("Charmander");
         setHasEvolution(true);
-        setSecondAttack(quickAttack.attackName());
-        setMainAttack(flamethrower.attackName());
+        setSecondAttack(quickAttack);
+        setMainAttack(flamethrower);
         setHitPoints(HIT_POINTS);
         setDefenseMultiplier(DEFENSE_MULTIPLIER);
-        setMainAttackDamage(flamethrower.attackDamage());
-        setSecondAttackDamage(quickAttack.attackDamage());
+        setMainAttackDamage(flamethrower);
+        setSecondAttackDamage(quickAttack);
     }
 
     @Override
@@ -76,8 +76,7 @@ public class Charmander extends PokemonCharacter{
     }
 
     @Override
-    public final void setNewAttack(final int attack, final int attackDamage,
-                                   final String newAttack) {
+    public void setNewAttack(int attack, Attacks attackDamage, Attacks newAttack) {
         if (attack == 1) {
             setMainAttack(newAttack);
             setMainAttackDamage(attackDamage);

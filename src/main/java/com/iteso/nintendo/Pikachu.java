@@ -32,12 +32,12 @@ public class Pikachu extends PokemonCharacter {
         setType("electric");
         setName("Pikachu");
         setHasEvolution(true);
-        setSecondAttack(thunderVolt.attackName());
-        setMainAttack(quickAttack.attackName());
+        setSecondAttack(thunderVolt);
+        setMainAttack(quickAttack);
         setHitPoints(HIT_POINTS);
         setDefenseMultiplier(DEFENSE_MULTIPLIER);
-        setMainAttackDamage(quickAttack.attackDamage());
-        setSecondAttackDamage(thunderVolt.attackDamage());
+        setMainAttackDamage(quickAttack);
+        setSecondAttackDamage(thunderVolt);
     }
 
     @Override
@@ -74,8 +74,7 @@ public class Pikachu extends PokemonCharacter {
     }
 
     @Override
-    public final void setNewAttack(final int attack, final int attackDamage,
-                                   final String newAttack) {
+    public void setNewAttack(int attack, Attacks attackDamage, Attacks newAttack) {
         if (attack == 1) {
             setMainAttack(newAttack);
             setMainAttackDamage(attackDamage);
