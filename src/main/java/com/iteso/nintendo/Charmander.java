@@ -13,10 +13,12 @@ public class Charmander extends PokemonCharacter {
      */
     public static final double DEFENSE_MULTIPLIER = 0.3;
     /**
-     * Damage from 1 - 20.
+     * Ataque principal.
      */
     private final Attack mainAttack = new BigFire();
-
+    /**
+     * Ataque principal.
+     */
     private final Attack secondAttack = new SmallFire();
 
     /**

@@ -1,12 +1,23 @@
 package com.iteso.nintendo;
 
-public class BigFire implements Attack{
+/**
+ * Created by FedericoIbarra.
+ * */
+
+public class BigFire implements Attack {
+
+    /**
+     * Nombre del ataque.
+     */
     private String attackName = "Big Fire";
 
-    private int attackDamage = 17;
+    /**
+     * Daño del ataque.
+     */
+    private final int attackDamage = 17;
 
     @Override
-    public String performAttack() {
+    public final String performAttack() {
 
         String messagge = new String("Attacking opponent with "
                 + attackName

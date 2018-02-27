@@ -1,13 +1,22 @@
 package com.iteso.nintendo;
+/**
+ * CREATED by FedericoIbarra.
+ */
 
 public class SmallFire implements Attack {
+    /**
+     * Nombre del ataque.
+     */
 
     private String attackName = "Small Fire";
+    /**
+     * Daño del ataque.
+     */
 
-    private int attackDamage = 3;
+    private final int attackDamage = 3;
 
     @Override
-    public String performAttack() {
+    public final String performAttack() {
 
         String messagge = new String("Attacking opponent with "
                 + attackName

@@ -1,13 +1,22 @@
 package com.iteso.nintendo;
+/**
+ * CREATED by FedericoIbarra.
+ */
 
-public class ImpactTrueno implements Attack{
+public class ImpactTrueno implements Attack {
+    /**
+     * Nombre del ataque.
+     */
 
     private String attackName = "Impact Trueno";
+    /**
+     * Daño del ataque.
+     */
 
-    private int attackDamage = 12;
+    private final int attackDamage = 12;
 
     @Override
-    public String performAttack() {
+    public final String performAttack() {
 
         String messagge = new String("Attacking opponent with "
                 + attackName

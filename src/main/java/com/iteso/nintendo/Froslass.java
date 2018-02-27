@@ -20,9 +20,13 @@ public class Froslass extends PokemonCharacter {
      * Damage from 1 -25.
      */
     public static final int SECOND_ATTACK_DAMAGE = 15;
-
+    /**
+     * Ataque principal.
+     */
     private final HurracarranaAttack mainAttack = new HurracarranaAttack();
-
+    /**
+     * Ataque secundario.
+     */
     private final ImpactTrueno secondAttack = new ImpactTrueno();
 
     /**

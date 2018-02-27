@@ -1,13 +1,22 @@
 package com.iteso.nintendo;
+/**
+ * CREATED by FedericoIbarra.
+ */
 
-public class QuickAttack implements Attack{
+public class QuickAttack implements Attack {
+    /**
+     * Nombre del ataque.
+     */
 
     private String attackName = "Quick Attack";
+    /**
+     * Daño del ataque.
+     */
 
-    private int attackDamage = 15;
+    private final int attackDamage = 15;
 
     @Override
-    public String performAttack() {
+    public final String performAttack() {
 
         String messagge = new String("Attacking opponent with "
                 + attackName
