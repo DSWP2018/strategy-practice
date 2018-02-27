@@ -1,8 +1,12 @@
 package com.iteso.nintendo.Pokemons;
 
-import com.iteso.nintendo.Definitions.*;
+import com.iteso.nintendo.Definitions.Attack;
+import com.iteso.nintendo.Definitions.PokemonCharacter;
 
-public class Mudkip extends PokemonCharacter{
+/**
+ * Clase que extiende PokemonCharacter.
+ */
+public class Mudkip extends PokemonCharacter {
     /**
      * Hit Points are the maximum life of pokemon.
      */
@@ -13,9 +17,11 @@ public class Mudkip extends PokemonCharacter{
     public static final double DEFENSE_MULTIPLIER = 0.4;
 
     /**
-     * Pikachu constructor.
+     * Mudkip constructor.
+     * @param mainAttack ataque principal.
+     * @param secondAttack ataque secundario.
      */
-    public Mudkip(Attack mainAttack, Attack secondAttack) {
+    public Mudkip(final Attack mainAttack, final Attack secondAttack) {
         setType("Water");
         setName("Mudkip");
         setHasEvolution(true);
@@ -31,7 +37,7 @@ public class Mudkip extends PokemonCharacter{
     }
 
     @Override
-    public final String defend(Attack attack) {
+    public final String defend(final Attack attack) {
         int damage;
 
         damage = (int) (attack.getAttackDamage() * getDefenseMultiplier());

@@ -1,9 +1,10 @@
 package com.iteso.nintendo.Pokemons;
 
-import com.iteso.nintendo.Definitions.*;
+import com.iteso.nintendo.Definitions.Attack;
+import com.iteso.nintendo.Definitions.PokemonCharacter;
 
 /**
- * Created by rvillalobos on 2/24/18.
+ * Clase que extiende PokemonCharacter.
  */
 public class Pikachu extends PokemonCharacter {
     /**
@@ -17,8 +18,10 @@ public class Pikachu extends PokemonCharacter {
 
     /**
      * Pikachu constructor.
+     * @param mainAttack ataque principal.
+     * @param secondAttack ataque secundario.
      */
-    public Pikachu(Attack mainAttack, Attack secondAttack) {
+    public Pikachu(final Attack mainAttack, final Attack secondAttack) {
         setType("Electric");
         setName("Pikachu");
         setHasEvolution(true);
@@ -34,7 +37,7 @@ public class Pikachu extends PokemonCharacter {
     }
 
     @Override
-    public final String defend(Attack attack) {
+    public final String defend(final Attack attack) {
         int damage;
 
         damage = (int) (attack.getAttackDamage() * getDefenseMultiplier());

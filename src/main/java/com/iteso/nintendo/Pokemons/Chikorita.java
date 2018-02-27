@@ -1,8 +1,12 @@
 package com.iteso.nintendo.Pokemons;
 
-import com.iteso.nintendo.Definitions.*;
+import com.iteso.nintendo.Definitions.Attack;
+import com.iteso.nintendo.Definitions.PokemonCharacter;
 
-public class Chikorita extends PokemonCharacter{
+/**
+ * Clase que extiende PokemonCharacter.
+ */
+public class Chikorita extends PokemonCharacter {
     /**
      * Hit Points are the maximum life of pokemon.
      */
@@ -13,9 +17,11 @@ public class Chikorita extends PokemonCharacter{
     public static final double DEFENSE_MULTIPLIER = 0.2;
 
     /**
-     * Pikachu constructor.
+     * Chikorita constructor.
+     * @param mainAttack ataque principal.
+     * @param secondAttack ataque secundario.
      */
-    public Chikorita(Attack mainAttack, Attack secondAttack) {
+    public Chikorita(final Attack mainAttack, final Attack secondAttack) {
         setType("Grass");
         setName("Chikorita");
         setHasEvolution(true);
@@ -31,7 +37,7 @@ public class Chikorita extends PokemonCharacter{
     }
 
     @Override
-    public final String defend(Attack attack) {
+    public final String defend(final Attack attack) {
         int damage;
 
         damage = (int) (attack.getAttackDamage() * getDefenseMultiplier());

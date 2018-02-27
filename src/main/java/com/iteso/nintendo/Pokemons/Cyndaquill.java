@@ -1,8 +1,12 @@
 package com.iteso.nintendo.Pokemons;
 
-import com.iteso.nintendo.Definitions.*;
+import com.iteso.nintendo.Definitions.Attack;
+import com.iteso.nintendo.Definitions.PokemonCharacter;
 
-public class Cyndaquill extends PokemonCharacter{
+/**
+ * Clase que extiende PokemonCharacter.
+ */
+public class Cyndaquill extends PokemonCharacter {
     /**
      * Hit Points are the maximum life of pokemon.
      */
@@ -13,9 +17,11 @@ public class Cyndaquill extends PokemonCharacter{
     public static final double DEFENSE_MULTIPLIER = 0.6;
 
     /**
-     * Pikachu constructor.
+     * Cyndaquill constructor.
+     * @param mainAttack ataque principal.
+     * @param secondAttack ataque secundario.
      */
-    public Cyndaquill(Attack mainAttack, Attack secondAttack) {
+    public Cyndaquill(final Attack mainAttack, final Attack secondAttack) {
         setType("Fire");
         setName("Cyndaquill");
         setHasEvolution(true);
@@ -31,7 +37,7 @@ public class Cyndaquill extends PokemonCharacter{
     }
 
     @Override
-    public final String defend(Attack attack) {
+    public final String defend(final Attack attack) {
         int damage;
 
         damage = (int) (attack.getAttackDamage() * getDefenseMultiplier());

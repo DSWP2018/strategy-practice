@@ -1,7 +1,11 @@
 package com.iteso.nintendo.Pokemons;
 
-import com.iteso.nintendo.Definitions.*;
+import com.iteso.nintendo.Definitions.Attack;
+import com.iteso.nintendo.Definitions.PokemonCharacter;
 
+/**
+ * Clase que extiende PokemonCharacter.
+ */
 public class Torterra extends PokemonCharacter {
     /**
      * Hit Points are the maximum life of pokemon.
@@ -13,9 +17,11 @@ public class Torterra extends PokemonCharacter {
     public static final double DEFENSE_MULTIPLIER = 1;
 
     /**
-     * Pikachu constructor.
+     * Torterra constructor.
+     * @param mainAttack ataque principal.
+     * @param secondAttack ataque secundario.
      */
-    public Torterra(Attack mainAttack, Attack secondAttack) {
+    public Torterra(final Attack mainAttack, final Attack secondAttack) {
         setType("Earth");
         setName("Torterra");
         setHasEvolution(true);
@@ -31,7 +37,7 @@ public class Torterra extends PokemonCharacter {
     }
 
     @Override
-    public final String defend(Attack attack) {
+    public final String defend(final Attack attack) {
         int damage;
 
         damage = (int) (attack.getAttackDamage() * getDefenseMultiplier());

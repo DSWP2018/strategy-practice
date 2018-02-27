@@ -1,9 +1,10 @@
 package com.iteso.nintendo.Pokemons;
 
-import com.iteso.nintendo.Definitions.*;
+import com.iteso.nintendo.Definitions.Attack;
+import com.iteso.nintendo.Definitions.PokemonCharacter;
 
 /**
- * Created by rvillalobos on 2/24/18.
+ * Clase que extiende PokemonCharacter.
  */
 public class Charmander extends PokemonCharacter {
     /**
@@ -16,9 +17,11 @@ public class Charmander extends PokemonCharacter {
     public static final double DEFENSE_MULTIPLIER = 0.3;
 
     /**
-     * Pikachu constructor.
+     * Charmander constructor.
+     * @param mainAttack ataque principal.
+     * @param secondAttack ataque secundario.
      */
-    public Charmander(Attack mainAttack, Attack secondAttack) {
+    public Charmander(final Attack mainAttack, final Attack secondAttack) {
         setType("Fire");
         setName("Charmander");
         setHasEvolution(true);
@@ -34,7 +37,7 @@ public class Charmander extends PokemonCharacter {
     }
 
     @Override
-    public final String defend(Attack attack) {
+    public final String defend(final Attack attack) {
         int damage;
 
         damage = (int) (attack.getAttackDamage() * getDefenseMultiplier());

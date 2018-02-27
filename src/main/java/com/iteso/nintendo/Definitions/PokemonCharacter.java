@@ -1,7 +1,5 @@
 package com.iteso.nintendo.Definitions;
 
-import com.iteso.nintendo.Definitions.Attack;
-
 /**
  * Created by rvillalobos on 2/24/18.
  */
@@ -60,7 +58,7 @@ public abstract class PokemonCharacter {
 
     /**
      * Method to defend an attack.
-     * @param attackDamage Amount of damage to defend.
+     * @param attack Amount of damage to defend.
      * @return Result of defense.
      */
     public abstract String defend(Attack attack);

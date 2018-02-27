@@ -1,8 +1,12 @@
 package com.iteso.nintendo.Pokemons;
 
-import com.iteso.nintendo.Definitions.*;
+import com.iteso.nintendo.Definitions.Attack;
+import com.iteso.nintendo.Definitions.PokemonCharacter;
 
-public class Squirtle extends PokemonCharacter{
+/**
+ * Clase que extiende PokemonCharacter.
+ */
+public class Squirtle extends PokemonCharacter {
     /**
      * Hit Points are the maximum life of pokemon.
      */
@@ -13,9 +17,11 @@ public class Squirtle extends PokemonCharacter{
     public static final double DEFENSE_MULTIPLIER = 0.4;
 
     /**
-     * Pikachu constructor.
+     * Squirtle constructor.
+     * @param mainAttack ataque principal.
+     * @param secondAttack ataque secundario.
      */
-    public Squirtle(Attack mainAttack, Attack secondAttack) {
+    public Squirtle(final Attack mainAttack, final Attack secondAttack) {
         setType("Water");
         setName("Squirtle");
         setHasEvolution(true);
@@ -31,7 +37,7 @@ public class Squirtle extends PokemonCharacter{
     }
 
     @Override
-    public final String defend(Attack attack) {
+    public final String defend(final Attack attack) {
         int damage;
 
         damage = (int) (attack.getAttackDamage() * getDefenseMultiplier());
