@@ -3,12 +3,12 @@ package com.iteso.nintendo;
 /**
  * Created by rvillalobos on 2/24/18.
  */
-public abstract class PokemonCharacter {
+public abstract class PokemonCharacter implements Attack {
 
     /**
      * Pokemon name.
      */
-      private String name = null;
+    private String name = null;
     /**
      * Pokemon type.
      */
@@ -16,7 +16,7 @@ public abstract class PokemonCharacter {
     /**
      * Indicator of evolution.
      */
-      private boolean hasEvolution = false;
+    private boolean hasEvolution = false;
     /**
      * Main attack name.
      */
@@ -24,7 +24,7 @@ public abstract class PokemonCharacter {
     /**
      * Second attack name.
      */
-      private String secondAttack = null;
+    private String secondAttack = null;
     /**
      * Damage caused by main attack.
      */
@@ -32,7 +32,7 @@ public abstract class PokemonCharacter {
     /**
      * Damage caused by second attack.
      */
-      private int secondAttackDamage = 0;
+    private int secondAttackDamage = 0;
     /**
      * Multiplier to calculate damage received.
      */
@@ -40,7 +40,7 @@ public abstract class PokemonCharacter {
     /**
      * Pokemon life.
      */
-      private int hitPoints = 0;
+    private int hitPoints = 0;
 
     /**
      * Get pokemon name.
@@ -89,8 +89,7 @@ public abstract class PokemonCharacter {
      * @param attackDamage New damage.
      * @param newAttack New attack name.
      */
-    public abstract void setNewAttack(int attack,
-                                      int attackDamage, String newAttack);
+    public abstract void setNewAttack(int attack, int attackDamage, String newAttack);
 
     /**
      * Pokemon type.

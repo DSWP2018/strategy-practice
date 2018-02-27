@@ -89,4 +89,13 @@ public class Charmander extends PokemonCharacter {
     }
 
 
+    @Override
+    public String attack() {
+        return null;
+    }
+
+    @Override
+    public void setDefenseMultiplier(int defenseMultiplier) {
+
+    }
 }
