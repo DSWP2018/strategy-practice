@@ -15,11 +15,11 @@ public class Charmander extends PokemonCharacter {
     /**
      * Main Attack.
      */
-    public final Attack mainAttack;
+    private final Attack mainAttack;
     /**
      * Second Attack.
      */
-    public final Attack secondAttack;
+    private final Attack secondAttack;
 
     /**
      * Pikachu constructor.

@@ -1,20 +1,41 @@
 package com.iteso.nintendo;
 
+/**
+ * Bubble.
+ */
 public class Bubble implements Attack {
+    /**
+     * Attack damage.
+     */
     public static final int ATTACK_DAMAGE = 7;
+    /**
+     * Attack name.
+     */
     public static final String ATTACK_NAME = "Bubble";
 
+    /**
+     *
+     * @return How pokemon attacks
+     */
     @Override
-    public String attackOpponent() {
+    public final String attackOpponent() {
         return "Aventar burbujas";
     }
 
+    /**
+     *
+     * @return pokemon animation
+     */
     @Override
-    public String animation() {
+    public final String animation() {
         return "Agitar manitas";
     }
 
-    public int getAttackDamage(){
+    /**
+     *
+     * @return attack damage
+     */
+    public final int getAttackDamage(){
         return this.ATTACK_DAMAGE;
     }
 
