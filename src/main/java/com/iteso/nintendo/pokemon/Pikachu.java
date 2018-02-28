@@ -1,9 +1,16 @@
-package com.iteso.nintendo;
+package com.iteso.nintendo.pokemon;
+
+import com.iteso.nintendo.attack.QuickAttack;
+import com.iteso.nintendo.type.Water;
+import com.iteso.nintendo.attack.Attack;
+import com.iteso.nintendo.attack.ImpactTrueno;
+import com.iteso.nintendo.type.Electric;
+import com.iteso.nintendo.type.Fire;
 
 /**
  * Created by rvillalobos on 2/24/18.
  */
-public class Magnemite extends PokemonCharacter {
+public class Pikachu extends PokemonCharacter {
     /**
      * Hit Points are the maximum life of pokemon.
      */
@@ -16,9 +23,9 @@ public class Magnemite extends PokemonCharacter {
     /**
      * Pikachu constructor.
      */
-    public Magnemite() {
+    public Pikachu() {
         setType(new Electric());
-        setName("Magnemite");
+        setName("Pikachu");
         setHasEvolution(true);
         setSecondAttack(new ImpactTrueno());
         setMainAttack(new QuickAttack());

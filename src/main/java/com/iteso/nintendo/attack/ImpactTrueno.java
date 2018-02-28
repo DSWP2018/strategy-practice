@@ -1,4 +1,6 @@
-package com.iteso.nintendo;
+package com.iteso.nintendo.attack;
+
+import com.iteso.nintendo.attack.Attack;
 
 public class ImpactTrueno implements Attack {
 

@@ -1,9 +1,16 @@
-package com.iteso.nintendo;
+package com.iteso.nintendo.pokemon;
+
+import com.iteso.nintendo.type.Water;
+import com.iteso.nintendo.attack.Attack;
+import com.iteso.nintendo.attack.ImpactTrueno;
+import com.iteso.nintendo.attack.QuickAttack;
+import com.iteso.nintendo.type.Electric;
+import com.iteso.nintendo.type.Fire;
 
 /**
  * Created by rvillalobos on 2/24/18.
  */
-public class Pikachu extends PokemonCharacter {
+public class Raichu extends PokemonCharacter {
     /**
      * Hit Points are the maximum life of pokemon.
      */
@@ -16,9 +23,9 @@ public class Pikachu extends PokemonCharacter {
     /**
      * Pikachu constructor.
      */
-    public Pikachu() {
+    public Raichu() {
         setType(new Electric());
-        setName("Pikachu");
+        setName("Raichu");
         setHasEvolution(true);
         setSecondAttack(new ImpactTrueno());
         setMainAttack(new QuickAttack());

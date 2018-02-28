@@ -1,6 +1,6 @@
-package com.iteso.nintendo;
+package com.iteso.nintendo.type;
 
-public class Grass implements PokemonType {
+public class Fire implements PokemonType {
     String type;
     @Override
     public String getType() {

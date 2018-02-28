@@ -1,10 +1,13 @@
-package com.iteso.nintendo;
+package com.iteso.nintendo.attack;
 
-public class FireBlast implements Attack {
-    private static int attackDamage = 10;
-    private static String name = "FireBlast";
+import com.iteso.nintendo.attack.Attack;
 
-    public FireBlast(){
+public class QuickAttack implements Attack {
+
+    private static int attackDamage = 5;
+    private static String name = "QuickAttack";
+
+    public QuickAttack(){
 
     }
 

@@ -1,4 +1,11 @@
-package com.iteso.nintendo;
+package com.iteso.nintendo.pokemon;
+
+import com.iteso.nintendo.attack.QuickAttack;
+import com.iteso.nintendo.type.Water;
+import com.iteso.nintendo.attack.Attack;
+import com.iteso.nintendo.attack.ImpactTrueno;
+import com.iteso.nintendo.type.Electric;
+import com.iteso.nintendo.type.Fire;
 
 /**
  * Created by rvillalobos on 2/24/18.

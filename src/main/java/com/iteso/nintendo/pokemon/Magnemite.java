@@ -1,9 +1,16 @@
-package com.iteso.nintendo;
+package com.iteso.nintendo.pokemon;
+
+import com.iteso.nintendo.attack.QuickAttack;
+import com.iteso.nintendo.type.Water;
+import com.iteso.nintendo.attack.Attack;
+import com.iteso.nintendo.attack.ImpactTrueno;
+import com.iteso.nintendo.type.Electric;
+import com.iteso.nintendo.type.Fire;
 
 /**
  * Created by rvillalobos on 2/24/18.
  */
-public class Vulpix extends PokemonCharacter {
+public class Magnemite extends PokemonCharacter {
     /**
      * Hit Points are the maximum life of pokemon.
      */
@@ -11,16 +18,16 @@ public class Vulpix extends PokemonCharacter {
     /**
      * Defense multiplier value between 0-1.
      */
-    public static final double DEFENSE_MULTIPLIER = 0.2;
+    public static final double DEFENSE_MULTIPLIER = 0.4;
 
     /**
      * Pikachu constructor.
      */
-    public Vulpix() {
+    public Magnemite() {
         setType(new Electric());
-        setName("Vulpix");
+        setName("Magnemite");
         setHasEvolution(true);
-        setSecondAttack(new BigFire());
+        setSecondAttack(new ImpactTrueno());
         setMainAttack(new QuickAttack());
         setHitPoints(HIT_POINTS);
         setDefenseMultiplier(DEFENSE_MULTIPLIER);

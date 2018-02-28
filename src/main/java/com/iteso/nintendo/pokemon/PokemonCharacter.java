@@ -1,4 +1,7 @@
-package com.iteso.nintendo;
+package com.iteso.nintendo.pokemon;
+
+import com.iteso.nintendo.type.PokemonType;
+import com.iteso.nintendo.attack.Attack;
 
 /**
  * Created by rvillalobos on 2/24/18.
@@ -59,7 +62,7 @@ public abstract class PokemonCharacter {
 
     /**
      * Method to defend an attack.
-     * @param attack Attack to defend.
+     * @param attack attack to defend.
      * @return Result of defense.
      */
     public abstract String defend(Attack attack);

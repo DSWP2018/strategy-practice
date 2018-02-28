@@ -1,11 +1,23 @@
-package com.iteso.nintendo;
+package com.iteso.nintendo.attack;
 
-public class QuickAttack implements Attack {
+/**
+ * BigFire attack.
+ */
+public class BigFire implements Attack {
+    /**
+     * Damage.
+     */
+    private static final int attackDamage = 17;
 
-    private static int attackDamage = 5;
-    private static String name = "QuickAttack";
+    /**
+     * Name attack.
+     */
+    private static String name = "BigFire";
 
-    public QuickAttack(){
+    /**
+     * Constructor.
+     */
+    public BigFire(){
 
     }
 
