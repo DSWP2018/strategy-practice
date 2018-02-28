@@ -3,7 +3,7 @@ package com.iteso.nintendo;
 public class Thunderbolt implements AttackBehavior{
 
     private final int damage = 90;
-    private final String type = "electric";
+    private final iType type = new Electric();
     private final String name = "Thunderbolt";
 
     public String attackOpponent(PokemonCharacter opponent) {
@@ -19,4 +19,6 @@ public class Thunderbolt implements AttackBehavior{
     public String getName(){
         return name;
     }
+
+    public String getType(){return type.getName();}
 }

@@ -17,11 +17,11 @@ public class Wartortle extends PokemonCharacter {
      * Pikachu constructor.
      */
     public Wartortle() {
-        setType("water");
+        setType(new Water());
         setName("Wartortle");
         setHasEvolution(true);
-        setNewAttack(mainAttack, new WaterGun());
-        setNewAttack(secondAttack, new Tackle());
+        setNewMainAttack(new WaterGun());
+        setNewSecondAttack(new Tackle());
         setHitPoints(HIT_POINTS);
         setDefenseMultiplier(DEFENSE_MULTIPLIER);
     }
@@ -30,27 +30,4 @@ public class Wartortle extends PokemonCharacter {
     public final String evolve() {
         return null;
     }
-
-    @Override
-    public final String defend(final int attack) {
-        int damage;
-
-        damage = (int) (attack * getDefenseMultiplier());
-        int newHP = getHitPoints() - damage;
-
-        String defendMessage = new String("Defending attack, damage caused is "
-                + damage + " new HP is " + newHP);
-
-        setHitPoints(newHP);
-        return defendMessage;
-
-    }
-
-    @Override
-    public final void setNewAttack(AttackBehavior oldAtk,
-                                   AttackBehavior newAtk) {
-        oldAtk = newAtk;
-    }
-
-
 }

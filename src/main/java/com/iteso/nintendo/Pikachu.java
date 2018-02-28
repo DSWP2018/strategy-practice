@@ -17,11 +17,11 @@ public class Pikachu extends PokemonCharacter {
      * Pikachu constructor.
      */
     public Pikachu() {
-        setType("electric");
+        setType(new Electric());
         setName("Pikachu");
         setHasEvolution(true);
-        setNewAttack(mainAttack, new Thunderbolt());
-        setNewAttack(secondAttack, new Tackle());
+        setNewMainAttack(new Thunderbolt());
+        setNewSecondAttack(new Tackle());
         setHitPoints(HIT_POINTS);
         setDefenseMultiplier(DEFENSE_MULTIPLIER);
     }
@@ -30,27 +30,4 @@ public class Pikachu extends PokemonCharacter {
     public final String evolve() {
         return null;
     }
-
-    @Override
-    public final String defend(final int attack) {
-        int damage;
-
-        damage = (int) (attack * getDefenseMultiplier());
-        int newHP = getHitPoints() - damage;
-
-        String defendMessage = new String("Defending attack, damage caused is "
-                + damage + " new HP is " + newHP);
-
-        setHitPoints(newHP);
-        return defendMessage;
-
-    }
-
-    @Override
-    public final void setNewAttack(AttackBehavior oldAtk,
-                                   AttackBehavior newAtk) {
-        oldAtk = newAtk;
-    }
-
-
 }

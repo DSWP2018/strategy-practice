@@ -20,4 +20,9 @@ public interface AttackBehavior {
      * @return Name of the attack.
      */
     String getName();
+    /**
+     * Method to get attack type.
+     * @return Name of the attack type.
+     */
+    String getType();
 }

@@ -3,7 +3,7 @@ package com.iteso.nintendo;
 public class WaterGun implements AttackBehavior{
 
     private final int damage = 40;
-    private final String type = "water";
+    private final iType type = new Water();
     private final String name = "Water Gun";
 
     public String attackOpponent(PokemonCharacter opponent) {
@@ -12,11 +12,9 @@ public class WaterGun implements AttackBehavior{
         return attackMessage;
     }
 
-    public int getDamage(){
-        return damage;
-    }
+    public int getDamage(){ return damage; }
 
-    public String getName(){
-        return name;
-    }
+    public String getName(){ return name; }
+
+    public String getType(){return type.getName();}
 }

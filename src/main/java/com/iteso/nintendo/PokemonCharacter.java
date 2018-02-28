@@ -12,7 +12,7 @@ public abstract class PokemonCharacter {
     /**
      * Pokemon type.
      */
-    private String type = null;
+    private iType type = null;
     /**
      * Indicator of evolution.
      */
@@ -58,22 +58,41 @@ public abstract class PokemonCharacter {
 
     /**
      * Method to defend an attack.
-     * @param attackDamage Amount of damage to defend.
+     * @param attack Amount of damage to defend.
      * @return Result of defense.
      */
-    public abstract String defend(int attackDamage);
+    public final String defend(final AttackBehavior attack) {
+        int damage;
+
+        damage = (int) (getType().getFinalDamage(attack.getType(),attack.getDamage()));
+        int newHP = getHitPoints() - damage;
+
+        String defendMessage = new String("Defending attack, damage caused is "
+                + damage + " new HP is " + newHP);
+
+        setHitPoints(newHP);
+        return defendMessage;
+    }
 
     /**
      * Method to perform second attack.
      * @return Result of attack.
      */
-    public abstract void setNewAttack(AttackBehavior oldAtk,
-                                      AttackBehavior newAtk);
+    public final void setNewMainAttack(final AttackBehavior newAtk){
+        this.mainAttack = newAtk;
+    }
+    /**
+     * Method to perform second attack.
+     * @return Result of attack.
+     */
+    public final void setNewSecondAttack(final AttackBehavior newAtk){
+        this.secondAttack = newAtk;
+    }
     /**
      * Pokemon type.
      * @return water, fire, normal, electric, plant, bug, etc.
      */
-    public final String getType() {
+    public final iType getType() {
         return type;
     }
 
@@ -81,7 +100,7 @@ public abstract class PokemonCharacter {
      * Set new pokemon type.
      * @param newType new pokemon type.
      */
-    public final void setType(final String newType) {
+    public final void setType(final iType newType) {
         this.type = newType;
     }
 

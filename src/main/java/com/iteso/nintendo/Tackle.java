@@ -3,7 +3,7 @@ package com.iteso.nintendo;
 public class Tackle implements AttackBehavior{
 
     private final int damage = 35;
-    private final String type = "normal";
+    private final iType type = new Normal();
     private final String name = "Tackle";
 
     public String attackOpponent(PokemonCharacter opponent) {
@@ -19,4 +19,6 @@ public class Tackle implements AttackBehavior{
     public String getName(){
         return name;
     }
+
+    public String getType(){return type.getName();}
 }

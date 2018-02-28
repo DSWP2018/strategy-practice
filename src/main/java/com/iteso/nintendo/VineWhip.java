@@ -3,7 +3,7 @@ package com.iteso.nintendo;
 public class VineWhip implements AttackBehavior{
 
     private final int damage = 35;
-    private final String type = "grass";
+    private final iType type = new Grass();
     private final String name = "Vine Whip";
 
     public String attackOpponent(PokemonCharacter opponent) {
@@ -19,4 +19,6 @@ public class VineWhip implements AttackBehavior{
     public String getName(){
         return name;
     }
+
+    public String getType(){return type.getName();}
 }

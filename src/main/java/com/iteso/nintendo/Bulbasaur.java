@@ -17,11 +17,11 @@ public class Bulbasaur extends PokemonCharacter {
      * Pikachu constructor.
      */
     public Bulbasaur() {
-        setType("grass");
+        setType(new Grass());
         setName("Bulbasaur");
         setHasEvolution(true);
-        setNewAttack(mainAttack, new VineWhip());
-        setNewAttack(secondAttack, new Tackle());
+        setNewMainAttack(new VineWhip());
+        setNewSecondAttack(new Tackle());
         setHitPoints(HIT_POINTS);
         setDefenseMultiplier(DEFENSE_MULTIPLIER);
     }
@@ -29,20 +29,5 @@ public class Bulbasaur extends PokemonCharacter {
     @Override
     public final String evolve() {
         return null;
-    }
-
-    @Override
-    public final String defend(final int attack) {
-        int damage;
-
-        damage = (int) (attack * getDefenseMultiplier());
-        int newHP = getHitPoints() - damage;
-
-        String defendMessage = new String("Defending attack, damage caused is "
-                + damage + " new HP is " + newHP);
-
-        setHitPoints(newHP);
-        return defendMessage;
-
     }
 }
