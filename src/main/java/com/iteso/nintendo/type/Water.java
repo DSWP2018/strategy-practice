@@ -1,11 +1,15 @@
 package com.iteso.nintendo.type;
 
-import com.iteso.nintendo.type.PokemonType;
-
+/**
+ * Water Type.
+ */
 public class Water implements PokemonType {
-    String type;
+    /**
+     * Type Name.
+     */
+    private final String type = "Water";
     @Override
-    public String getType() {
+    public final String getType() {
         return type;
     }
 }

@@ -1,9 +1,15 @@
 package com.iteso.nintendo.type;
 
+/**
+ * Type Electric.
+ */
 public class Electric implements PokemonType {
-    private String type;
+    /**
+     * Type Name.
+     */
+    private final String type = "Electric";
     @Override
-    public String getType() {
+    public final String getType() {
         return type;
     }
 }

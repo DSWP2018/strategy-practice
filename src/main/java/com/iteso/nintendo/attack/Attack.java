@@ -1,3 +1,6 @@
+/**
+ * Package
+ */
 package com.iteso.nintendo.attack;
 
 /**

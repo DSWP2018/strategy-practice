@@ -1,9 +1,15 @@
 package com.iteso.nintendo.type;
 
+/**
+ * Type Grass.
+ */
 public class Grass implements PokemonType {
-    String type;
+    /**
+     * Type Name.
+     */
+    private final String type = "Grass";
     @Override
-    public String getType() {
+    public final String getType() {
         return type;
     }
 }

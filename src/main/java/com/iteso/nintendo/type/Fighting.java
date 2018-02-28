@@ -1,9 +1,15 @@
 package com.iteso.nintendo.type;
 
+/**
+ * Type Fighting.
+ */
 public class Fighting implements PokemonType {
-    String type;
+    /**
+     * Type Name.
+     */
+    private final String type = "Fighting";
     @Override
-    public String getType() {
+    public final String getType() {
         return type;
     }
 }
