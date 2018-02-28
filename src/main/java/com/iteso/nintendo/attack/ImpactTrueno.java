@@ -1,31 +1,41 @@
 package com.iteso.nintendo.attack;
 
-import com.iteso.nintendo.attack.Attack;
 
+/**
+ * Attack ImpactTrueno.
+ */
 public class ImpactTrueno implements Attack {
-
-    private static int attackDamage = 15;
+    /**
+     * Attack Damege of ImpactTrueno.
+     */
+    private static final int DAMAGE = 15;
+    /**
+     * Name of this Attack (Imapact Trueno).
+     */
     private static String name = "ImpactTrueno";
 
-    public ImpactTrueno(){
+    /**
+     * Constructor.
+     */
+    public ImpactTrueno() {
 
     }
 
     @Override
-    public String attackOpponent() {
+    public final String attackOpponent() {
         String attackMessage = new String("Attacking opponent with "
                 + name
-                + " causing a damage of " + attackDamage);
+                + " causing a DAMAGE of " + DAMAGE);
         return attackMessage;
     }
 
     @Override
-    public int getAttackDamage() {
-        return attackDamage;
+    public final int getAttackDamage() {
+        return DAMAGE;
     }
 
     @Override
-    public String getAttackName() {
+    public final String getAttackName() {
         return name;
     }
 

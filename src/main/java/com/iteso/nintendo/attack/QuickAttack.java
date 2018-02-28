@@ -1,31 +1,41 @@
 package com.iteso.nintendo.attack;
 
-import com.iteso.nintendo.attack.Attack;
 
+/**
+ * Attack QuickAttack.
+ */
 public class QuickAttack implements Attack {
-
-    private static int attackDamage = 5;
+    /**
+     * Damage of Quick Attack.
+     */
+    private static final int DAMAGE = 5;
+    /**
+     * Name of Attack.
+     */
     private static String name = "QuickAttack";
 
-    public QuickAttack(){
+    /**
+     * Constructor.
+     */
+    public QuickAttack() {
 
     }
 
     @Override
-    public String attackOpponent() {
+    public final String attackOpponent() {
         String attackMessage = new String("Attacking opponent with "
                 + name
-                + " causing a damage of " + attackDamage);
+                + " causing a DAMAGE of " + DAMAGE);
         return attackMessage;
     }
 
     @Override
-    public int getAttackDamage() {
-        return attackDamage;
+    public final int getAttackDamage() {
+        return DAMAGE;
     }
 
     @Override
-    public String getAttackName() {
+    public final String getAttackName() {
         return name;
     }
 }

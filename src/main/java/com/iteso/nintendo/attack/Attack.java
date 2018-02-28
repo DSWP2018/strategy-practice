@@ -8,7 +8,7 @@ public interface Attack {
 
     /**
      * Get the attack.
-     * @return
+     * @return attack to Opponent
      */
      String attackOpponent();
 

@@ -1,30 +1,40 @@
 package com.iteso.nintendo.attack;
 
-import com.iteso.nintendo.attack.Attack;
-
+/**
+ * Attack Fire Blast, type Fire.
+ */
 public class FireBlast implements Attack {
-    private static int attackDamage = 10;
+    /**
+     * Damage of Attack FireBlast.
+     */
+    private static final int DAMAGE = 10;
+    /**
+     * Name of the attack.
+     */
     private static String name = "FireBlast";
 
-    public FireBlast(){
+    /**
+     * Constructor.
+     */
+    public FireBlast() {
 
     }
 
     @Override
-    public String attackOpponent() {
+    public final String attackOpponent() {
         String attackMessage = new String("Attacking opponent with "
                 + name
-                + " causing a damage of " + attackDamage);
+                + " causing a damage of " + DAMAGE);
         return attackMessage;
     }
 
     @Override
-    public int getAttackDamage() {
-        return attackDamage;
+    public final int getAttackDamage() {
+        return DAMAGE;
     }
 
     @Override
-    public String getAttackName() {
+    public final String getAttackName() {
         return name;
     }
 }

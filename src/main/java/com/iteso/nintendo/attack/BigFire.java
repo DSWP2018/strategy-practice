@@ -7,7 +7,7 @@ public class BigFire implements Attack {
     /**
      * Damage.
      */
-    private static final int attackDamage = 17;
+    private static final int DAMAGE = 17;
 
     /**
      * Name attack.
@@ -17,25 +17,25 @@ public class BigFire implements Attack {
     /**
      * Constructor.
      */
-    public BigFire(){
+    public BigFire() {
 
     }
 
     @Override
-    public String attackOpponent() {
+    public final String attackOpponent() {
         String attackMessage = new String("Attacking opponent with "
                 + name
-                + " causing a damage of " + attackDamage);
+                + " causing a damage of " + DAMAGE);
         return attackMessage;
     }
 
     @Override
-    public int getAttackDamage() {
-        return attackDamage;
+    public final int getAttackDamage() {
+        return DAMAGE;
     }
 
     @Override
-    public String getAttackName() {
+    public final String getAttackName() {
         return name;
     }
 }

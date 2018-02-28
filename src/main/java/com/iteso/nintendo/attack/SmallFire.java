@@ -1,30 +1,40 @@
 package com.iteso.nintendo.attack;
 
-import com.iteso.nintendo.attack.Attack;
-
+/**
+ * Attack Small Fire.
+ */
 public class SmallFire implements Attack {
-    private static int attackDamage = 3;
+    /**
+     * Attack Damage of SmallFire.
+     */
+    private static final int DAMAGE = 3;
+    /**
+     * Name of Attack.
+     */
     private static String name = "SmallFire";
 
-    public SmallFire(){
+    /**
+     * Constructor.
+     */
+    public SmallFire() {
 
     }
 
     @Override
-    public String attackOpponent() {
+    public final String attackOpponent() {
         String attackMessage = new String("Attacking opponent with "
                 + name
-                + " causing a damage of " + attackDamage);
+                + " causing a damage of " + DAMAGE);
         return attackMessage;
     }
 
     @Override
-    public int getAttackDamage() {
-        return attackDamage;
+    public final int getAttackDamage() {
+        return DAMAGE;
     }
 
     @Override
-    public String getAttackName() {
+    public final String getAttackName() {
         return name;
     }
 }
