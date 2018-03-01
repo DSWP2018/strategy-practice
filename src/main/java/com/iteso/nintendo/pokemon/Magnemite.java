@@ -19,7 +19,18 @@ public class Magnemite extends PokemonCharacter {
      * Defense multiplier value between 0-1.
      */
     public static final double DEFENSE_MULTIPLIER = 0.4;
-
+    /**
+     * Water Less.
+     */
+    private final int waterLess = 2;
+    /**
+     * Electic multiplier.
+     */
+    private final double electicMultiplier = 0.2;
+    /**
+     * Fire Pluss.
+     */
+    private final int firePluss = 2;
     /**
      * Pikachu constructor.
      */
@@ -42,81 +53,45 @@ public class Magnemite extends PokemonCharacter {
     public final String defend(final Attack attack) {
         int damage;
         String defendMessage;
+        int newHP;
         if (getType() instanceof Electric) {
-            damage = (int) ((attack.getAttackDamage()
-                    - 3)
-                    * getDefenseMultiplier()
-                    + 1);
-
-            int newHP = getHitPoints() - damage;
-
-            defendMessage = new String("Defending attack,"
-                    + " damage caused is "
-                    + damage
-                    + " new HP is "
-                    + newHP);
-
-            setHitPoints(newHP);
-        } else if (getType() instanceof Fire) {
             damage = (int) (attack.getAttackDamage()
-                    * (getDefenseMultiplier()
-                    + 2));
-
-            int newHP = getHitPoints()
-                    - damage;
-
-            defendMessage = new String("Defending attack,"
-                    + " damage caused is "
-                    + damage
-                    + " new HP is "
-                    + newHP);
-
-            setHitPoints(newHP);
+                    * (getDefenseMultiplier() + electicMultiplier));
+        } else if (getType() instanceof Fire) {
+            damage = (int) ((attack.getAttackDamage() + firePluss)
+                    * getDefenseMultiplier());
         } else if (getType() instanceof Water) {
             damage = (int) ((attack.getAttackDamage()
-                    + 3)
+                    + waterLess)
                     * getDefenseMultiplier());
-
-            int newHP = getHitPoints() - damage;
-
-            defendMessage = new String("Defending attack,"
-                    + " damage caused is "
-                    + damage
-                    + " new HP is "
-                    + newHP);
-
-            setHitPoints(newHP);
         } else {
             damage = (int) (attack.getAttackDamage()
                     * getDefenseMultiplier());
 
-            int newHP = getHitPoints() - damage;
-
-            defendMessage = new String("Defending attack, "
-                    + "damage caused is "
-                    + damage
-                    + " new HP is "
-                    + newHP);
-
-            setHitPoints(newHP);
         }
+        newHP = getHitPoints() - damage;
+        defendMessage = new String("Defending attack, "
+                + "damage caused is "
+                + damage
+                + " new HP is "
+                + newHP);
+        setHitPoints(newHP);
         return defendMessage;
-
     }
 
     @Override
-    final public String secondAttack() {
+    public final String secondAttack() {
         return getSecondAttack().attackOpponent();
     }
 
     @Override
-    final public String mainAttack() {
+    public final String mainAttack() {
         return getMainAttack().attackOpponent();
     }
 
     @Override
-    final public void setNewAttack(final int attack, final Attack newAttack) {
-        if(attack == 1) {
+    public final void setNewAttack(final int attack, final Attack newAttack) {
+        if (attack == 1) {
             setMainAttack(newAttack);
         } else {
             setSecondAttack(newAttack);
