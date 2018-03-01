@@ -2,7 +2,6 @@ package com.iteso.nintendo.pokemons;
 
 import com.iteso.nintendo.attacks.Attack;
 import com.iteso.nintendo.attacks.Bite;
-import com.iteso.nintendo.attacks.EnergyBall;
 import com.iteso.nintendo.attacks.FireBall;
 
 public class Charizard {
