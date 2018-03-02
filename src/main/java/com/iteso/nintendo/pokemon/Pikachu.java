@@ -1,30 +1,32 @@
-package com.iteso.nintendo;
+package com.iteso.nintendo.pokemon;
 
-import com.iteso.nintendo.impl.ElectroBall;
-import com.iteso.nintendo.impl.Thunder;
+import com.iteso.nintendo.Attack;
+import com.iteso.nintendo.PokemonCharacter;
+import com.iteso.nintendo.PokemonType;
+import com.iteso.nintendo.impl.attacks.ElectroBall;
+import com.iteso.nintendo.impl.attacks.Thunder;
+import com.iteso.nintendo.impl.attacks.types.Plants;
+import com.iteso.nintendo.impl.attacks.types.Psychic;
 
 /**
  * Created by rvillalobos on 2/24/18.
  */
-public class Snorlax extends PokemonCharacter {
+public class Pikachu extends PokemonCharacter {
     /**
      * Hit Points are the maximum life of pokemon.
      */
-    public static final int HIT_POINTS = 190;
-    /**
-     * Defense multiplier value between 0-1.
-     */
-    public static final double DEFENSE_MULTIPLIER = 1.9;
+    public static final int HIT_POINTS = 100;
 
     /**
      * Pikachu constructor.
      */
-    public Snorlax() {
-        setType("normal");
-        setName("Snorlax");
+    public Pikachu() {
+
+        setName("Pikachu");
         setHasEvolution(true);
         setHitPoints(HIT_POINTS);
-        setDefenseMultiplier(DEFENSE_MULTIPLIER);
+        PokemonType type = new Psychic();
+        setType(type);
         Attack main_Attack = new ElectroBall();
         setMainAttack(main_Attack);
         Attack second_Attack = new Thunder();

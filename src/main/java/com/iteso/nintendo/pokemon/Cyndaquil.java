@@ -1,34 +1,38 @@
-package com.iteso.nintendo;
+package com.iteso.nintendo.pokemon;
 
-import com.iteso.nintendo.impl.FireBlast;
-import com.iteso.nintendo.impl.Scratch;
+import com.iteso.nintendo.Attack;
+import com.iteso.nintendo.PokemonCharacter;
+import com.iteso.nintendo.PokemonType;
+import com.iteso.nintendo.impl.attacks.ElectroBall;
+import com.iteso.nintendo.impl.attacks.Thunder;
+import com.iteso.nintendo.impl.attacks.types.Fire;
+import com.iteso.nintendo.impl.attacks.types.Plants;
 
 /**
  * Created by rvillalobos on 2/24/18.
  */
-public class Charmander extends PokemonCharacter {
+public class Cyndaquil extends PokemonCharacter {
     /**
      * Hit Points are the maximum life of pokemon.
      */
-    public static final int HIT_POINTS = 77;
+    public static final int HIT_POINTS = 116;
     /**
      * Defense multiplier value between 0-1.
      */
-    public static final double DEFENSE_MULTIPLIER = 0.3;
-
+    public static final double DEFENSE_MULTIPLIER = 0.96;
 
     /**
-     * Charmander constructor.
+     * Pikachu constructor.
      */
-    public Charmander() {
-        setType("fire");
-        setName("Charmander");
+    public Cyndaquil() {
+        setName("Cyndaquil");
         setHasEvolution(true);
         setHitPoints(HIT_POINTS);
-        setDefenseMultiplier(DEFENSE_MULTIPLIER);
-        Attack main_Attack = new FireBlast();
+        PokemonType type = new Fire();
+        setType(type);
+        Attack main_Attack = new ElectroBall();
         setMainAttack(main_Attack);
-        Attack second_Attack = new Scratch();
+        Attack second_Attack = new Thunder();
         setSecondAttack(second_Attack);
     }
 
@@ -49,6 +53,5 @@ public class Charmander extends PokemonCharacter {
 
         setHitPoints(newHP);
         return defendMessage;
-
     }
 }

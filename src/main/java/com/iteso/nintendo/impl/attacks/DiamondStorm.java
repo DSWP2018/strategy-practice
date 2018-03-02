@@ -1,14 +1,14 @@
-package com.iteso.nintendo.impl;
+package com.iteso.nintendo.impl.attacks;
 
 import com.iteso.nintendo.Attack;
 
-/** Class Scratch that implements Attacks. /*
+/** Class DiamondStorm that implements Attacks. /*
  *
  */
-public class Scratch implements Attack {
+public class DiamondStorm implements Attack {
     /**Declare variables.*/
-    private static final String ATTACK_NAME = "Scratch"; /**Name of the attack. */
-    private static final int ATTACK_DAMAGE = 40;
+    private static final String ATTACK_NAME = "Diamond Storm"; /**Name of the attack. */
+    private static final int ATTACK_DAMAGE = 90;
 
 
     @Override

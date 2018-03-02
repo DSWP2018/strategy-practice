@@ -12,7 +12,7 @@ public abstract class PokemonCharacter {
     /**
      * Pokemon type.
      */
-    private String type = null;
+    private PokemonType type = null;
     /**
      * Indicator of evolution.
      */
@@ -25,10 +25,6 @@ public abstract class PokemonCharacter {
      * Second attack name.
      */
     private Attack secondAttack = null;
-    /**
-     * Multiplier to calculate damage received.
-     */
-    private double defenseMultiplier = 0;
     /**
      * Pokemon life.
      */
@@ -68,14 +64,14 @@ public abstract class PokemonCharacter {
      * @return water, fire, normal, electric, plant, bug, etc.
      */
     public final String getType() {
-        return type;
+        return type.getType();
     }
 
     /**
      * Set new pokemon type.
      * @param newType new pokemon type.
      */
-    public final void setType(final String newType) {
+    public final void setType(final PokemonType newType) {
         this.type = newType;
     }
 
@@ -143,15 +139,15 @@ public abstract class PokemonCharacter {
      * @return defense multiplier.
      */
     public final double getDefenseMultiplier() {
-        return defenseMultiplier;
+        return type.getDefenseMultiplier();
     }
 
     /**
-     * Set new defense mul;tiplier.
-     * @param newDefenseMultiplier new defense multiplier.
+     * Get damage multiplier.
+     * @return damage multiplier.
      */
-    public final void setDefenseMultiplier(final double newDefenseMultiplier) {
-        this.defenseMultiplier = newDefenseMultiplier;
+    public final double getDamageMultiplier() {
+        return type.getDamageMultiplier();
     }
 
     /**

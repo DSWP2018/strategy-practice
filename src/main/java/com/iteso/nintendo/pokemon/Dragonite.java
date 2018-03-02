@@ -1,30 +1,31 @@
-package com.iteso.nintendo;
+package com.iteso.nintendo.pokemon;
 
-import com.iteso.nintendo.impl.ElectroBall;
-import com.iteso.nintendo.impl.Thunder;
+import com.iteso.nintendo.Attack;
+import com.iteso.nintendo.PokemonCharacter;
+import com.iteso.nintendo.PokemonType;
+import com.iteso.nintendo.impl.attacks.ElectroBall;
+import com.iteso.nintendo.impl.attacks.Thunder;
+import com.iteso.nintendo.impl.attacks.types.*;
 
 /**
  * Created by rvillalobos on 2/24/18.
  */
-public class Cyndaquil extends PokemonCharacter {
+public class Dragonite extends PokemonCharacter {
     /**
      * Hit Points are the maximum life of pokemon.
      */
-    public static final int HIT_POINTS = 116;
-    /**
-     * Defense multiplier value between 0-1.
-     */
-    public static final double DEFENSE_MULTIPLIER = 0.96;
+    public static final int HIT_POINTS = 263;
+
 
     /**
      * Pikachu constructor.
      */
-    public Cyndaquil() {
-        setType("fuego");
-        setName("Cyndaquil");
+    public Dragonite() {
+        setName("Dragonite");
         setHasEvolution(true);
         setHitPoints(HIT_POINTS);
-        setDefenseMultiplier(DEFENSE_MULTIPLIER);
+        PokemonType type = new Fire();
+        setType(type);
         Attack main_Attack = new ElectroBall();
         setMainAttack(main_Attack);
         Attack second_Attack = new Thunder();

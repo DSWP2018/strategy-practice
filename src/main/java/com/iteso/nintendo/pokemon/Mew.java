@@ -1,33 +1,35 @@
-package com.iteso.nintendo;
+package com.iteso.nintendo.pokemon;
 
-import com.iteso.nintendo.impl.Cut;
-import com.iteso.nintendo.impl.SeedBomb;
+import com.iteso.nintendo.Attack;
+import com.iteso.nintendo.PokemonCharacter;
+import com.iteso.nintendo.PokemonType;
+import com.iteso.nintendo.impl.attacks.Acid;
+import com.iteso.nintendo.impl.attacks.DiamondStorm;
+import com.iteso.nintendo.impl.attacks.types.Plants;
+import com.iteso.nintendo.impl.attacks.types.Psychic;
 
-/** Class Bulbasaur. /*
+/** Class Mew. /*
  *
  */
-public class Bulbasaur extends PokemonCharacter {
+public class Mew extends PokemonCharacter {
     /**
      * Hit Points are the maximum life of pokemon.
      */
-    public static final int HIT_POINTS = 118;
-    /**
-     * Defense multiplier value between 0-1.
-     */
-    public static final double DEFENSE_MULTIPLIER = 0.9;
+    public static final int HIT_POINTS = 100;
+
 
     /**
      * Bulbasaur constructor.
      */
-    public Bulbasaur() {
-        setType("planta");
-        setName("Bulbasaur");
+    public Mew() {
+        setName("Mew");
         setHasEvolution(true);
         setHitPoints(HIT_POINTS);
-        setDefenseMultiplier(DEFENSE_MULTIPLIER);
-        Attack main_Attack = new Cut();
+        PokemonType type = new Psychic();
+        setType(type);
+        Attack main_Attack = new Acid();
         setMainAttack(main_Attack);
-        Attack second_Attack = new SeedBomb();
+        Attack second_Attack = new DiamondStorm();
         setSecondAttack(second_Attack);
     }
 

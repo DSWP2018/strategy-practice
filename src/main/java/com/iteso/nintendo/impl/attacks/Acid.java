@@ -1,14 +1,14 @@
-package com.iteso.nintendo.impl;
+package com.iteso.nintendo.impl.attacks;
 
 import com.iteso.nintendo.Attack;
 
-/** Class Cut that implements Attacks. /*
+/** Class Acid that implements Attacks. /*
  *
  */
-public class Cut implements Attack {
+public class Acid implements Attack {
     /**Declare variables.*/
-    private static final String ATTACK_NAME = "Cut"; /**Name of the attack. */
-    private static final int ATTACK_DAMAGE = 50;
+    private static final String ATTACK_NAME = "Acid"; /**Name of the attack. */
+    private static final int ATTACK_DAMAGE = 90;
 
 
     @Override

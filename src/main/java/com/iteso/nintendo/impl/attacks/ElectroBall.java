@@ -1,4 +1,4 @@
-package com.iteso.nintendo.impl;
+package com.iteso.nintendo.impl.attacks;
 
 import com.iteso.nintendo.Attack;
 

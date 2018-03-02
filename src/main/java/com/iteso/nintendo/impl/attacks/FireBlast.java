@@ -1,13 +1,13 @@
-package com.iteso.nintendo.impl;
+package com.iteso.nintendo.impl.attacks;
 
 import com.iteso.nintendo.Attack;
 
-/** Class Acid that implements Attacks. /*
+/** Class FireBlast that implements Attacks. /*
  *
  */
-public class Acid implements Attack {
+public class FireBlast implements Attack {
     /**Declare variables.*/
-    private static final String ATTACK_NAME = "Acid"; /**Name of the attack. */
+    private static final String ATTACK_NAME = "Fire Blast"; /**Name of the attack. */
     private static final int ATTACK_DAMAGE = 90;
 
 

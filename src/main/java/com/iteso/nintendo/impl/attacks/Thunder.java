@@ -1,14 +1,14 @@
-package com.iteso.nintendo.impl;
+package com.iteso.nintendo.impl.attacks;
 
 import com.iteso.nintendo.Attack;
 
-/** Class FireBlast that implements Attacks. /*
+/** Class Thunder that implements Attacks. /*
  *
  */
-public class FireBlast implements Attack {
+public class Thunder implements Attack {
     /**Declare variables.*/
-    private static final String ATTACK_NAME = "Fire Blast"; /**Name of the attack. */
-    private static final int ATTACK_DAMAGE = 90;
+    private static final String ATTACK_NAME = "Thunder"; /**Name of the attack. */
+    private static final int ATTACK_DAMAGE = 110;
 
 
     @Override
