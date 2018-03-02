@@ -1,9 +1,9 @@
-package com.iteso.nintendo.test.PockemonUnitTest;
+package com.iteso.nintendo.PockemonUnitTest;
 
 import com.iteso.nintendo.Definitions.Attack;
 import com.iteso.nintendo.Definitions.PokemonCharacter;
 import com.iteso.nintendo.Definitions.PokemonType;
-import com.iteso.nintendo.Pokemons.Mudkip;
+import com.iteso.nintendo.Pokemons.Squirtle;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -11,8 +11,8 @@ import org.junit.Test;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
-public class MudkipTest {
-    PokemonCharacter mudkip;
+public class SquirtleTest {
+    PokemonCharacter squirtle;
     PokemonCharacter pokeDummy;
     Attack mainAttack, secondAttack;
     PokemonType pokemonType;
@@ -22,68 +22,68 @@ public class MudkipTest {
         mainAttack = mock(Attack.class);
         secondAttack = mock(Attack.class);
         pokemonType = mock(PokemonType.class);
-        mudkip = new Mudkip(pokemonType, mainAttack, secondAttack);
+        squirtle = new Squirtle(pokemonType, mainAttack, secondAttack);
     }
 
     @Test
     public void evolve(){
-        Assert.assertEquals(null, mudkip.evolve());
+        Assert.assertEquals(null, squirtle.evolve());
     }
 
     @Test
     public void getMainAttack(){
         when(mainAttack.getAttackName()).thenReturn("Hydro Pump");
-        Assert.assertEquals("Hydro Pump", mudkip.getMainAttack().getAttackName());
+        Assert.assertEquals("Hydro Pump", squirtle.getMainAttack().getAttackName());
     }
 
     @Test
     public void performMainAttack(){
-        when(mainAttack.attackOpponent(pokemonType, pokeDummy)).thenReturn("Mudkip Attacked!");
-        Assert.assertEquals("Mudkip Attacked!", mudkip.mainAttack(pokeDummy));
+        when(mainAttack.attackOpponent(pokemonType, pokeDummy)).thenReturn("Squirtle Attacked!");
+        Assert.assertEquals("Squirtle Attacked!", squirtle.mainAttack(pokeDummy));
     }
 
     @Test
     public void getSecondAttack(){
         when(secondAttack.getAttackName()).thenReturn("Tackle");
-        Assert.assertEquals("Tackle", mudkip.getSecondAttack().getAttackName());
+        Assert.assertEquals("Tackle", squirtle.getSecondAttack().getAttackName());
     }
 
     @Test
     public void performSecondAttack(){
-        when(secondAttack.attackOpponent(pokemonType, pokeDummy)).thenReturn("Mudkip Attacked!");
-        Assert.assertEquals("Mudkip Attacked!", mudkip.secondAttack(pokeDummy));
+        when(secondAttack.attackOpponent(pokemonType, pokeDummy)).thenReturn("Squirtle Attacked!");
+        Assert.assertEquals("Squirtle Attacked!", squirtle.secondAttack(pokeDummy));
     }
 
     @Test
     public void defend(){
         when(mainAttack.getAttackDamage()).thenReturn(20);
-        Assert.assertEquals("Defending attack, damage caused is 8 new HP is 82",
-                mudkip.defend(mainAttack));
+        Assert.assertEquals("Defending attack, damage caused is 8 new HP is 92",
+                squirtle.defend(mainAttack));
     }
 
     @Test
     public void hasEvolution(){
-        Assert.assertEquals(true, mudkip.isHasEvolution());
+        Assert.assertEquals(true, squirtle.isHasEvolution());
     }
 
     @Test
     public void getType(){
         when(pokemonType.getType()).thenReturn("Water");
-        Assert.assertEquals("Water", mudkip.getType().getType());
+        Assert.assertEquals("Water", squirtle.getType().getType());
     }
 
     @Test
     public void getName(){
-        Assert.assertEquals("Mudkip", mudkip.getName());
+        Assert.assertEquals("Squirtle", squirtle.getName());
     }
 
     @Test
     public void getDefense(){
-        Assert.assertEquals(0.4, mudkip.getDefenseMultiplier(), 0.001);
+        Assert.assertEquals(0.4, squirtle.getDefenseMultiplier(), 0.001);
     }
 
     @Test
     public void getHitPoints(){
-        Assert.assertEquals(90, mudkip.getHitPoints());
+        Assert.assertEquals(100, squirtle.getHitPoints());
     }
 }

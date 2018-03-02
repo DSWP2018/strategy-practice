@@ -1,4 +1,4 @@
-package com.iteso.nintendo.test.PockemonUnitTest;
+package com.iteso.nintendo.PockemonUnitTest;
 
 import com.iteso.nintendo.Definitions.Attack;
 import com.iteso.nintendo.Definitions.PokemonCharacter;
