@@ -6,7 +6,7 @@ import com.iteso.nintendo.Definitions.PokemonType;
  * Tipo de Pokemon que implementa la interfaz PokemonType para
  * describir su comportamiento.
  */
-public class Water implements PokemonType {
+public class Steel implements PokemonType {
     /**
      * Valor positivo numero 1.
      */
@@ -30,17 +30,17 @@ public class Water implements PokemonType {
     /**
      * Nombre del tipo.
      */
-    private String type = "Water";
+    private String type = "Steel";
 
     @Override
     public final int damageAdjustment(final PokemonType enemyType) {
         switch (enemyType.getType()) {
             case "Fire":
-                return PLUS_A;
-            case "Steel":
                 return PLUS_B;
-            case "Grass":
+            case "Water":
                 return MINUS_A;
+            case "Grass":
+                return PLUS_A;
             case "Earth":
                 return MINUS_B;
             default:
@@ -52,11 +52,11 @@ public class Water implements PokemonType {
     public final double defenseAdjustment(final PokemonType enemyType) {
         switch (enemyType.getType()) {
             case "Fire":
-                return TO_CENTS * PLUS_A;
-            case "Steel":
                 return TO_CENTS * PLUS_B;
-            case "Grass":
+            case "Steel":
                 return TO_CENTS * MINUS_A;
+            case "Grass":
+                return TO_CENTS * PLUS_A;
             case "Earth":
                 return TO_CENTS * MINUS_B;
             default:

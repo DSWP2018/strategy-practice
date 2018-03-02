@@ -12,7 +12,7 @@ public abstract class PokemonCharacter {
     /**
      * Pokemon type.
      */
-    private String type = null;
+    private PokemonType type = null;
     /**
      * Indicator of evolution.
      */
@@ -66,20 +66,22 @@ public abstract class PokemonCharacter {
     /**
      * Method to perform second attack.
      * @return Result of attack.
+     * @param pokemonCharacter pokemon que se va a atacar.
      */
-    public abstract String secondAttack();
+    public abstract String secondAttack(PokemonCharacter pokemonCharacter);
 
     /**
      * Method to perform main attack.
      * @return Result of main attack.
+     * @param pokemonCharacter pokemon que se va a atacar.
      */
-    public abstract String mainAttack();
+    public abstract String mainAttack(PokemonCharacter pokemonCharacter);
 
     /**
      * Pokemon type.
      * @return water, fire, normal, electric, plant, bug, etc.
      */
-    public final String getType() {
+    public final PokemonType getType() {
         return type;
     }
 
@@ -87,7 +89,7 @@ public abstract class PokemonCharacter {
      * Set new pokemon type.
      * @param newType new pokemon type.
      */
-    public final void setType(final String newType) {
+    public final void setType(final PokemonType newType) {
         this.type = newType;
     }
 

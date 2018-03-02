@@ -1,4 +1,4 @@
 /**
  * Pokemon package.
  */
-package com.iteso.nintendo.Pokemons;
+package com.iteso.nintendo.PokemonTypes;

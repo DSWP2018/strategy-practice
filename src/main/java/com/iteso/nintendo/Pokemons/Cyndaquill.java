@@ -2,6 +2,7 @@ package com.iteso.nintendo.Pokemons;
 
 import com.iteso.nintendo.Definitions.Attack;
 import com.iteso.nintendo.Definitions.PokemonCharacter;
+import com.iteso.nintendo.Definitions.PokemonType;
 
 /**
  * Clase que extiende PokemonCharacter.
@@ -20,9 +21,11 @@ public class Cyndaquill extends PokemonCharacter {
      * Cyndaquill constructor.
      * @param mainAttack ataque principal.
      * @param secondAttack ataque secundario.
+     * @param type tipo de pokemon.
      */
-    public Cyndaquill(final Attack mainAttack, final Attack secondAttack) {
-        setType("Fire");
+    public Cyndaquill(final PokemonType type, final Attack mainAttack,
+                      final Attack secondAttack) {
+        setType(type);
         setName("Cyndaquill");
         setHasEvolution(true);
         setSecondAttack(secondAttack);
@@ -52,13 +55,14 @@ public class Cyndaquill extends PokemonCharacter {
     }
 
     @Override
-    public final String secondAttack() {
-        return getSecondAttack().attackOpponent();
+    public final String secondAttack(final PokemonCharacter pokemonCharacter) {
+        return getSecondAttack().attackOpponent(this.getType(),
+                pokemonCharacter);
     }
 
     @Override
-    public final String mainAttack() {
-        return getMainAttack().attackOpponent();
-
+    public final String mainAttack(final PokemonCharacter pokemonCharacter) {
+        return getMainAttack().attackOpponent(this.getType(),
+                pokemonCharacter);
     }
 }

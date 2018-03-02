@@ -1,6 +1,8 @@
 package com.iteso.nintendo.Attacks;
 
 import com.iteso.nintendo.Definitions.Attack;
+import com.iteso.nintendo.Definitions.PokemonCharacter;
+import com.iteso.nintendo.Definitions.PokemonType;
 
 /**
  * Ataque que los objetos PockemonCharacter pueden utilizar.
@@ -21,10 +23,13 @@ public class FireBreath implements Attack {
     private int attackDamage = DAMAGE;
 
     @Override
-    public final String attackOpponent() {
+    public final String attackOpponent(final PokemonType myType,
+            final PokemonCharacter pokemonCharacter) {
         String attackMessage = new String("Attacking opponent with "
                 + getAttackName()
-                + " causing a damage of " + getAttackDamage());
+                + " causing a damage of "
+                + (getAttackDamage()
+                + myType.damageAdjustment(pokemonCharacter.getType())));
         return attackMessage;
     }
 

@@ -9,8 +9,11 @@ public interface Attack {
      * Método que recibe un pokemon y calcula el daño hecho por el ataque.
      * Toma en cuenta el defense multiplier del pokemon objetivo.
      * @return mensaje de ataque.
+     * @param myType tipo del pokemon que hará el ataque.
+     * @param pokemonCharacter pokemon que recibe el ataque.
      */
-    String attackOpponent();
+    String attackOpponent(PokemonType myType,
+                          PokemonCharacter pokemonCharacter);
 
     /**
      * Método que regresa el nombre del ataque utilizado.
