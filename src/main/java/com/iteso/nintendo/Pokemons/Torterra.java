@@ -15,7 +15,7 @@ public class Torterra extends PokemonCharacter {
     /**
      * Defense multiplier value between 0-1.
      */
-    public static final double DEFENSE_MULTIPLIER = 1;
+    public static final double DEFENSE_MULTIPLIER = 0.1;
 
     /**
      * Torterra constructor.
@@ -27,7 +27,7 @@ public class Torterra extends PokemonCharacter {
                     final Attack secondAttack) {
         setType(type);
         setName("Torterra");
-        setHasEvolution(true);
+        setHasEvolution(false);
         setSecondAttack(secondAttack);
         setMainAttack(mainAttack);
         setHitPoints(HIT_POINTS);
