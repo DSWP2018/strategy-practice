@@ -103,12 +103,16 @@ public abstract class PokemonCharacter {
      *
      * @return the name of the main attack.
      */
-    public final String getMainAttack(){ return this.mainAttack.getAttack(); }
+    public final String getMainAttack() {
+        return this.mainAttack.getAttack();
+    }
 
     /** Method getSecondAttack. /*
-     *
+     * @return String with the name of the second attack.
      */
-    public final String getSecondAttack(){ return this.secondAttack.getAttack(); }
+    public final String getSecondAttack() {
+        return this.secondAttack.getAttack();
+    }
 
     /**
      * Set name of second attack.
@@ -118,19 +122,19 @@ public abstract class PokemonCharacter {
         this.secondAttack = newSecondAttack;
     }
 
-    /** Method getMainAttackDamage./*
+    /** Method getMainAttackDamage. /*
      *
       * @return The number of attack damage of the main attack.
      */
-    public final int getMainAttackDamage(){
+    public final int getMainAttackDamage() {
         return this.mainAttack.getAttackDamage();
     }
 
-    /** Method getSecondAttackDamage./*
+    /** Method getSecondAttackDamage. /*
      *
      * @return The number of attack damage of the second attack.
      */
-    public final int getSecondAttackDamage(){
+    public final int getSecondAttackDamage() {
         return this.secondAttack.getAttackDamage();
     }
 

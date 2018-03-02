@@ -5,8 +5,7 @@ import com.iteso.nintendo.PokemonCharacter;
 import com.iteso.nintendo.PokemonType;
 import com.iteso.nintendo.impl.attacks.Acid;
 import com.iteso.nintendo.impl.attacks.DiamondStorm;
-import com.iteso.nintendo.impl.attacks.types.Plants;
-import com.iteso.nintendo.impl.attacks.types.Psychic;
+import com.iteso.nintendo.types.Psychic;
 
 /** Class Eevee. /*
  *
@@ -30,10 +29,10 @@ public class Eevee extends PokemonCharacter {
         setHitPoints(HIT_POINTS);
         PokemonType type = new Psychic();
         setType(type);
-        Attack main_Attack = new Acid();
-        setMainAttack(main_Attack);
-        Attack second_Attack = new DiamondStorm();
-        setSecondAttack(second_Attack);
+        Attack mainAttack = new Acid();
+        setMainAttack(mainAttack);
+        Attack secondAttack = new DiamondStorm();
+        setSecondAttack(secondAttack);
     }
 
     @Override

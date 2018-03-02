@@ -7,23 +7,25 @@ import com.iteso.nintendo.Attack;
  */
 public class ElectroBall implements Attack {
     /**Declare variables.*/
-    private static final String ATTACK_NAME = "Electro Ball"; /**Name of the attack. */
+    /**Name of the attack. */
+    private static final String ATTACK_NAME = "Electro Ball";
+    /**Attack damage. */
     private static final int ATTACK_DAMAGE = 110;
 
 
     @Override
-    public String getAttack() {
+    public final String getAttack() {
         return ATTACK_NAME;
     }
 
     @Override
-    public int getAttackDamage() {
+    public final int getAttackDamage() {
         return ATTACK_DAMAGE;
     }
 
     @Override
-    public String Attacking() {
-        return "Attacking opponent with " + getAttack()
+    public final String attacking() {
+        return "attacking opponent with " + getAttack()
                 + " causing a damage of " + getAttackDamage();
     }
 }

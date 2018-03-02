@@ -8,17 +8,17 @@ public interface PokemonType {
      *
      * @return get a String with the type of Pokemon.
      */
-    public String getType();
+    String getType();
 
     /** Method getDefenseMultiplier. /*
      *
      * @return how the type affects the defense.
      */
-    public double getDefenseMultiplier();
+    double getDefenseMultiplier();
 
     /**Method getDamageMultiplier. /*
      *
      * @return how the type affects the damage.
      */
-    public double getDamageMultiplier();
+    double getDamageMultiplier();
 }

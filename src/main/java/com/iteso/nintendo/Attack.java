@@ -9,17 +9,17 @@ public interface Attack {
      *
      * @return String with the name of the attack.
      */
-    public String getAttack();
+    String getAttack();
 
     /**Method getAttackDamage. /*
      *
      * @return The number of the attack damage.
      */
-    public int getAttackDamage();
+    int getAttackDamage();
 
-    /** Method Attacking. /*
+    /** Method attacking. /*
      *
      * @return The name of the attack.
      */
-    public String Attacking();
+    String attacking();
 }

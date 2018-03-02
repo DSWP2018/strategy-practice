@@ -3,8 +3,9 @@ package com.iteso.nintendo.pokemon;
 import com.iteso.nintendo.Attack;
 import com.iteso.nintendo.PokemonCharacter;
 import com.iteso.nintendo.PokemonType;
-import com.iteso.nintendo.impl.attacks.*;
-import com.iteso.nintendo.impl.attacks.types.*;
+import com.iteso.nintendo.impl.attacks.Cut;
+import com.iteso.nintendo.impl.attacks.SeedBomb;
+import com.iteso.nintendo.types.Plants;
 
 /** Class Bulbasaur. /*
  *
@@ -24,10 +25,10 @@ public class Bulbasaur extends PokemonCharacter {
         setHitPoints(HIT_POINTS);
         PokemonType type = new Plants();
         setType(type);
-        Attack main_Attack = new Cut();
-        setMainAttack(main_Attack);
-        Attack second_Attack = new SeedBomb();
-        setSecondAttack(second_Attack);
+        Attack mainAttack = new Cut();
+        setMainAttack(mainAttack);
+        Attack secondAttack = new SeedBomb();
+        setSecondAttack(secondAttack);
     }
 
     @Override

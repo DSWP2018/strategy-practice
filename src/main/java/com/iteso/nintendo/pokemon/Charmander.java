@@ -5,8 +5,7 @@ import com.iteso.nintendo.PokemonCharacter;
 import com.iteso.nintendo.PokemonType;
 import com.iteso.nintendo.impl.attacks.FireBlast;
 import com.iteso.nintendo.impl.attacks.Scratch;
-import com.iteso.nintendo.impl.attacks.types.Fire;
-import com.iteso.nintendo.impl.attacks.types.Plants;
+import com.iteso.nintendo.types.Fire;
 
 /**
  * Created by rvillalobos on 2/24/18.
@@ -27,10 +26,10 @@ public class Charmander extends PokemonCharacter {
         setHitPoints(HIT_POINTS);
         PokemonType type = new Fire();
         setType(type);
-        Attack main_Attack = new FireBlast();
-        setMainAttack(main_Attack);
-        Attack second_Attack = new Scratch();
-        setSecondAttack(second_Attack);
+        Attack mainAttack = new FireBlast();
+        setMainAttack(mainAttack);
+        Attack secondAttack = new Scratch();
+        setSecondAttack(secondAttack);
     }
 
     @Override
