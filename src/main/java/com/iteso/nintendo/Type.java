@@ -23,4 +23,10 @@ public interface Type {
      * @return Name type
      */
     String getTypeName();
+
+    /**
+     * Opponent type.
+     * @param type opponent type
+     */
+    void setOpponentType(Type type);
 }
