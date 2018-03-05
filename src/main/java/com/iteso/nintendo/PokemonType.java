@@ -12,8 +12,10 @@ public interface PokemonType {
     String getType();
 
     /**
-     * @return el factor de defensa segun el tipo de pokemon que ataco.
+     * @param attackedType el tipo del pokemon que ataco al tipo Water.
+     * @return numero entre 1-10entre mas alto mas resistente es atque externo
      */
+
     int defenseFactor(PokemonType attackedType);
 
 }
