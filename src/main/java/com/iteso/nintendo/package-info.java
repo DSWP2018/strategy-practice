@@ -1,4 +1,4 @@
 /**
- * Pokemon package.
+ * pokemon package.
  */
 package com.iteso.nintendo;

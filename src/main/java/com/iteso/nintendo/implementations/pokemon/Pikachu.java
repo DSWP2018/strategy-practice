@@ -1,17 +1,24 @@
-package com.iteso.nintendo;
+package com.iteso.nintendo.implementations.pokemon;
+
+import com.iteso.nintendo.Attack;
+import com.iteso.nintendo.PokemonCharacter;
+import com.iteso.nintendo.Type;
+import com.iteso.nintendo.implementations.attack.QuickAttack;
+import com.iteso.nintendo.implementations.attack.ImpactTrueno;
+import com.iteso.nintendo.implementations.type.Electric;
 
 /**
  * Created by rvillalobos on 2/24/18.
  */
-public class JoseElectrico extends PokemonCharacter {
+public class Pikachu extends PokemonCharacter {
     /**
      * Hit Points are the maximum life of pokemon.
      */
-    public static final int HIT_POINTS = 120;
+    public static final int HIT_POINTS = 100;
     /**
      * Defense multiplier value between 0-1.
      */
-    public static final double DEFENSE_MULTIPLIER = 0.1;
+    public static final double DEFENSE_MULTIPLIER = 0.4;
     /**
      * Main Attack.
      */
@@ -20,16 +27,21 @@ public class JoseElectrico extends PokemonCharacter {
      * Second Attack.
      */
     private final Attack secondAttack;
+    /**
+     * Type.
+     */
+    private final Type type;
 
     /**
      * Pikachu constructor.
      */
-    public JoseElectrico() {
+    public Pikachu() {
         mainAttack = new QuickAttack();
         secondAttack = new ImpactTrueno();
+        type = new Electric();
 
-        setType("electric");
-        setName("Jose Electrico");
+        setType(type);
+        setName("Pikachu");
         setHasEvolution(true);
         setSecondAttack(secondAttack);
         setMainAttack(mainAttack);
@@ -92,3 +104,4 @@ public class JoseElectrico extends PokemonCharacter {
 
 
 }
+

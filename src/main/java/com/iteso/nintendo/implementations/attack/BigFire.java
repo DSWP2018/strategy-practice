@@ -1,34 +1,36 @@
-package com.iteso.nintendo;
+package com.iteso.nintendo.implementations.attack;
+
+import com.iteso.nintendo.Attack;
 
 /**
- * Small fire.
+ * Bigfire.
  */
-public class SmallFire implements Attack {
+public class BigFire implements Attack {
     /**
      * Attack damage.
      */
-    public static final int ATTACK_DAMAGE = 3;
+    public static final int ATTACK_DAMAGE = 17;
     /**
      * Attack name.
      */
-    public static final String ATTACK_NAME = "Small Fire";
+    public static final String ATTACK_NAME = "BigFire";
 
     /**
      *
-     * @return Attack
+     * @return How pokemon attacks
      */
     @Override
     public final String attackOpponent() {
-        return "Aventar bolita de fuego";
+        return "Aventar bolota de fuego";
     }
 
     /**
      *
-     * @return Animation
+     * @return pokemon animation
      */
     @Override
     public final String animation() {
-        return "Mover manitas lento";
+        return "Mover manitas rapido";
     }
 
     /**
@@ -41,8 +43,9 @@ public class SmallFire implements Attack {
 
     /**
      *
-     * @return Name attack
+     * @return Attack name
      */
+    @Override
     public final String getNameAttack() {
         return this.ATTACK_NAME;
     }

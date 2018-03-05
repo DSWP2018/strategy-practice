@@ -9,9 +9,8 @@
   <url>http://maven.apache.org</url>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>1.9</maven.compiler.source>
-    <maven.compiler.target>1.9</maven.compiler.target>
   </properties>
+
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -29,6 +28,7 @@
       <groupId>org.apache.maven.plugins</groupId>
       <artifactId>maven-pmd-plugin</artifactId>
       <version>3.9.0</version>
+      <type>maven-plugin</type>
     </dependency>
     <dependency>
       <groupId>com.puppycrawl.tools</groupId>

@@ -1,17 +1,19 @@
-package com.iteso.nintendo;
+package com.iteso.nintendo.implementations.attack;
+
+import com.iteso.nintendo.Attack;
 
 /**
- * Impact trueno.
+ * Small fire.
  */
-public class ImpactTrueno implements Attack {
+public class SmallFire implements Attack {
     /**
      * Attack damage.
      */
-    public static final int ATTACK_DAMAGE = 15;
+    public static final int ATTACK_DAMAGE = 3;
     /**
      * Attack name.
      */
-    public static final String ATTACK_NAME = "ImpactTrueno";
+    public static final String ATTACK_NAME = "Small Fire";
 
     /**
      *
@@ -19,7 +21,7 @@ public class ImpactTrueno implements Attack {
      */
     @Override
     public final String attackOpponent() {
-        return "Aventar rayote";
+        return "Aventar bolita de fuego";
     }
 
     /**
@@ -28,7 +30,7 @@ public class ImpactTrueno implements Attack {
      */
     @Override
     public final String animation() {
-        return "Externder dos manita";
+        return "Mover manitas lento";
     }
 
     /**
@@ -41,9 +43,8 @@ public class ImpactTrueno implements Attack {
 
     /**
      *
-     * @return Attack name
+     * @return Name attack
      */
-    @Override
     public final String getNameAttack() {
         return this.ATTACK_NAME;
     }

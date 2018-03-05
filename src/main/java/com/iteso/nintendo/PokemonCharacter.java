@@ -6,13 +6,13 @@ package com.iteso.nintendo;
 public abstract class PokemonCharacter {
 
     /**
-     * Pokemon name.
+     * pokemon name.
      */
       private String name = null;
     /**
-     * Pokemon type.
+     * pokemon type.
      */
-    private String type = null;
+    private Type type = null;
     /**
      * Indicator of evolution.
      */
@@ -38,7 +38,7 @@ public abstract class PokemonCharacter {
      */
     private double defenseMultiplier = 0;
     /**
-     * Pokemon life.
+     * pokemon life.
      */
       private int hitPoints = 0;
 
@@ -90,10 +90,10 @@ public abstract class PokemonCharacter {
     public abstract void setNewAttack(Attack newAttack);
 
     /**
-     * Pokemon type.
+     * pokemon type.
      * @return water, fire, normal, electric, plant, bug, etc.
      */
-    public final String getType() {
+    public final Type getType() {
         return type;
     }
 
@@ -101,7 +101,7 @@ public abstract class PokemonCharacter {
      * Set new pokemon type.
      * @param newType new pokemon type.
      */
-    public final void setType(final String newType) {
+    public final void setType(final Type newType) {
         this.type = newType;
     }
 
@@ -158,7 +158,7 @@ public abstract class PokemonCharacter {
      * @return main attack damage.
      */
     public final int getMainAttackDamage() {
-        return mainAttackDamage;
+        return mainAttackDamage + type.attackDamageAffectedByType();
     }
 
     /**
@@ -174,7 +174,7 @@ public abstract class PokemonCharacter {
      * @return second attack damage.
      */
     public final int getSecondAttackDamage() {
-        return secondAttackDamage;
+        return secondAttackDamage + type.attackDamageAffectedByType();
     }
 
     /**
@@ -190,7 +190,7 @@ public abstract class PokemonCharacter {
      * @return defense multiplier.
      */
     public final double getDefenseMultiplier() {
-        return defenseMultiplier;
+        return defenseMultiplier + type.defenseAffectedByType();
     }
 
     /**

@@ -12,7 +12,7 @@ public interface Attack {
 
     /**
      *
-     * @return Pokemon animation
+     * @return pokemon animation
      */
     String animation();
 

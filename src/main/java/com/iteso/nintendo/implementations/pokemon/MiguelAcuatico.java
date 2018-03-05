@@ -1,17 +1,24 @@
-package com.iteso.nintendo;
+package com.iteso.nintendo.implementations.pokemon;
+
+import com.iteso.nintendo.Attack;
+import com.iteso.nintendo.PokemonCharacter;
+import com.iteso.nintendo.Type;
+import com.iteso.nintendo.implementations.type.Water;
+import com.iteso.nintendo.implementations.attack.Bubble;
+import com.iteso.nintendo.implementations.attack.ImpactTrueno;
 
 /**
  * Created by rvillalobos on 2/24/18.
  */
-public class PabloHibrido extends PokemonCharacter {
+public class MiguelAcuatico extends PokemonCharacter {
     /**
      * Hit Points are the maximum life of pokemon.
      */
-    public static final int HIT_POINTS = 60;
+    public static final int HIT_POINTS = 100;
     /**
      * Defense multiplier value between 0-1.
      */
-    public static final double DEFENSE_MULTIPLIER = 0.6;
+    public static final double DEFENSE_MULTIPLIER = 0.4;
     /**
      * Main Attack.
      */
@@ -20,16 +27,20 @@ public class PabloHibrido extends PokemonCharacter {
      * Second Attack.
      */
     private final Attack secondAttack;
-
+    /**
+     * Type.
+     */
+    private final Type type;
     /**
      * Pikachu constructor.
      */
-    public PabloHibrido() {
-        mainAttack = new ImpactTrueno();
-        secondAttack = new BigFire();
+    public MiguelAcuatico() {
+        mainAttack = new Bubble();
+        secondAttack = new ImpactTrueno();
+        type = new Water();
 
-        setType("hybrid");
-        setName("Pablo el hibrido");
+        setType(type);
+        setName("Miguel Acuatico");
         setHasEvolution(true);
         setSecondAttack(secondAttack);
         setMainAttack(mainAttack);

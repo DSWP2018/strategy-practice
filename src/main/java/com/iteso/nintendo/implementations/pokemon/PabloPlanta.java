@@ -1,17 +1,24 @@
-package com.iteso.nintendo;
+package com.iteso.nintendo.implementations.pokemon;
+
+import com.iteso.nintendo.Attack;
+import com.iteso.nintendo.PokemonCharacter;
+import com.iteso.nintendo.Type;
+import com.iteso.nintendo.implementations.attack.BigFire;
+import com.iteso.nintendo.implementations.attack.ImpactTrueno;
+import com.iteso.nintendo.implementations.type.Plant;
 
 /**
  * Created by rvillalobos on 2/24/18.
  */
-public class Pikachu extends PokemonCharacter {
+public class PabloPlanta extends PokemonCharacter {
     /**
      * Hit Points are the maximum life of pokemon.
      */
-    public static final int HIT_POINTS = 100;
+    public static final int HIT_POINTS = 60;
     /**
      * Defense multiplier value between 0-1.
      */
-    public static final double DEFENSE_MULTIPLIER = 0.4;
+    public static final double DEFENSE_MULTIPLIER = 0.6;
     /**
      * Main Attack.
      */
@@ -20,16 +27,21 @@ public class Pikachu extends PokemonCharacter {
      * Second Attack.
      */
     private final Attack secondAttack;
+    /**
+     * Type.
+     */
+    private final Type type;
 
     /**
-     * Pikachu constructor.
+     * Pablo constructor.
      */
-    public Pikachu() {
-        mainAttack = new QuickAttack();
-        secondAttack = new ImpactTrueno();
+    public PabloPlanta() {
+        mainAttack = new ImpactTrueno();
+        secondAttack = new BigFire();
+        type = new Plant();
 
-        setType("fire");
-        setName("Charmander");
+        setType(type);
+        setName("Pablo el chico planta");
         setHasEvolution(true);
         setSecondAttack(secondAttack);
         setMainAttack(mainAttack);
@@ -92,4 +104,3 @@ public class Pikachu extends PokemonCharacter {
 
 
 }
-

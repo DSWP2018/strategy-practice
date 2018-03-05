@@ -1,13 +1,20 @@
-package com.iteso.nintendo;
+package com.iteso.nintendo.implementations.pokemon;
+
+import com.iteso.nintendo.Attack;
+import com.iteso.nintendo.PokemonCharacter;
+import com.iteso.nintendo.Type;
+import com.iteso.nintendo.implementations.attack.SmallFire;
+import com.iteso.nintendo.implementations.attack.BigFire;
+import com.iteso.nintendo.implementations.type.Fire;
 
 /**
  * Created by rvillalobos on 2/24/18.
  */
-public class SeniorBurbujas extends PokemonCharacter {
+public class Charmander extends PokemonCharacter {
     /**
      * Hit Points are the maximum life of pokemon.
      */
-    public static final int HIT_POINTS = 70;
+    public static final int HIT_POINTS = 77;
     /**
      * Defense multiplier value between 0-1.
      */
@@ -22,14 +29,20 @@ public class SeniorBurbujas extends PokemonCharacter {
     private final Attack secondAttack;
 
     /**
-     * Pikachu constructor.
+     * Type.
      */
-    public SeniorBurbujas() {
-        mainAttack = new Bubble();
-        secondAttack = new BigFire();
+    private final Type type;
 
-        setType("water");
-        setName("Senior burbujas");
+    /**
+     * Charmander constructor.
+     */
+    public Charmander() {
+        mainAttack = new SmallFire();
+        secondAttack = new BigFire();
+        type = new Fire();
+
+        setType(type);
+        setName("Charmander");
         setHasEvolution(true);
         setSecondAttack(secondAttack);
         setMainAttack(mainAttack);

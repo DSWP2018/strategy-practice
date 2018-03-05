@@ -1,39 +1,41 @@
-package com.iteso.nintendo;
+package com.iteso.nintendo.implementations.attack;
+
+import com.iteso.nintendo.Attack;
 
 /**
- * Quick attack.
+ * Bubble.
  */
-public class QuickAttack implements Attack {
+public class Bubble implements Attack {
     /**
      * Attack damage.
      */
-    public static final int ATTACK_DAMAGE = 5;
+    public static final int ATTACK_DAMAGE = 7;
     /**
      * Attack name.
      */
-    public static final String ATTACK_NAME = "QuickAttack";
+    public static final String ATTACK_NAME = "Bubble";
 
     /**
      *
-     * @return Attack
+     * @return How pokemon attacks
      */
     @Override
     public final String attackOpponent() {
-        return "Aventar rayito";
+        return "Aventar burbujas";
     }
 
     /**
      *
-     * @return animation
+     * @return pokemon animation
      */
     @Override
     public final String animation() {
-        return "Extender manita";
+        return "Agitar manitas";
     }
 
     /**
      *
-     * @return Attack damage
+     * @return attack damage
      */
     public final int getAttackDamage() {
         return this.ATTACK_DAMAGE;
