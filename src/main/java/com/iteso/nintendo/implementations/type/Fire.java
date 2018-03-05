@@ -65,7 +65,6 @@ public class Fire implements Type {
      * which type is your opponent.
      * @return Increase or decrease in damage
      */
-    @Override
     public final int attackDamageAffectedByType() {
         int attack;
         if (opponentType.getTypeName().equals("Fire")) {
@@ -90,7 +89,6 @@ public class Fire implements Type {
      * which type is your opponent.
      * @return Increase or decrease in defence
      */
-    @Override
     public final double defenseAffectedByType() {
         final double defence;
         if (opponentType.getTypeName().equals("Fire")) {
@@ -114,7 +112,6 @@ public class Fire implements Type {
      * type name.
      * @return type name
      */
-    @Override
     public final String getTypeName() {
         return "Fire";
     }
