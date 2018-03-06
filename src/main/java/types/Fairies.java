@@ -1,10 +1,12 @@
 package types;
 
 import other.PokemonType;
-
+/** Type Fairies. */
 public class Fairies  implements PokemonType {
-	@Override
-	public String getType(){
-		return "Fairy";
-	}
+/** Type. */
+private static final String TYPE = "Fairy";
+@Override
+public final String getType() {
+return TYPE;
+}
 }
