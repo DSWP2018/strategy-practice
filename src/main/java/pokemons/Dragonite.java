@@ -1,6 +1,10 @@
-package com.iteso.nintendo;
+package pokemons;
 
-public class Charizard extends PokemonCharacter {
+import attack.FireBallAttack;
+import attack.ThunderpunchAttack;
+import other.PokemonCharacter;
+
+public class Dragonite extends PokemonCharacter {
     /**
      * Hit Points are the maximum life of pokemon.
      */
@@ -19,16 +23,16 @@ public class Charizard extends PokemonCharacter {
     public static final int SECOND_ATTACK_DAMAGE = 17;
 
     public FireBallAttack fire;
-    public PoisonAttack poison;
+    public ThunderpunchAttack punch;
 
     /**
      * Pikachu constructor.
      */
-    public Charizard() {
+    public Dragonite() {
         setType("fire");
-        setName("Charizard");
+        setName("Dragonite");
         setHasEvolution(true);
-        setSecondAttack(poison);
+        setSecondAttack(punch);
         setMainAttack(fire);
         setHitPoints(HIT_POINTS);
         setDefenseMultiplier(DEFENSE_MULTIPLIER);

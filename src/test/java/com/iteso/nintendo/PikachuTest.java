@@ -2,7 +2,8 @@ package com.iteso.nintendo;
 
 import org.junit.Before;
 import org.junit.Test;
-import static org.junit.Assert.assertEquals;
+
+import pokemons.Pikachu;
 
 /**
  * Created by rvillalobos on 2/24/18.
@@ -10,5 +11,13 @@ import static org.junit.Assert.assertEquals;
 public class PikachuTest {
     Pikachu pikachu;
 
+    @Before
+    public void setUp(){
 
+    }
+
+    @Test
+    public void setNewAttack(){
+
+    }
 }

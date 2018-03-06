@@ -1,4 +1,8 @@
-package com.iteso.nintendo;
+package pokemons;
+
+import attack.DigAttack;
+import attack.ThunderpunchAttack;
+import other.PokemonCharacter;
 
 /**
  * Created by rvillalobos on 2/24/18.

@@ -1,6 +1,10 @@
-package com.iteso.nintendo;
+package pokemons;
 
-public class Dragonite extends PokemonCharacter {
+import attack.PoisonAttack;
+import attack.SingAttack;
+import other.PokemonCharacter;
+
+public class Jigglipuff extends PokemonCharacter {
     /**
      * Hit Points are the maximum life of pokemon.
      */
@@ -18,18 +22,18 @@ public class Dragonite extends PokemonCharacter {
      */
     public static final int SECOND_ATTACK_DAMAGE = 17;
 
-    public FireBallAttack fire;
-    public ThunderpunchAttack punch;
+    public SingAttack sing;
+    public PoisonAttack poison;
 
     /**
      * Pikachu constructor.
      */
-    public Dragonite() {
+    public Jigglipuff() {
         setType("fire");
-        setName("Dragonite");
+        setName("Jigglipuff");
         setHasEvolution(true);
-        setSecondAttack(punch);
-        setMainAttack(fire);
+        setSecondAttack(poison);
+        setMainAttack(sing);
         setHitPoints(HIT_POINTS);
         setDefenseMultiplier(DEFENSE_MULTIPLIER);
         setMainAttackDamage(MAIN_ATTACK_DAMAGE);

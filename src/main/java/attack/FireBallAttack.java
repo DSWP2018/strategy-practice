@@ -1,10 +1,12 @@
-package com.iteso.nintendo;
+package attack;
 
-public class PoisonAttack implements PokemonAttack{
+import other.PokemonAttack;
+
+public class FireBallAttack implements PokemonAttack {
 
 	@Override
 	public String attackOpponent() {
-		return "El oponente ha sido atacado con veneno";
+		return "El oponente ha sido atacado con FIREBALL";
 	}
 	@Override
 	public String cancelAttack() {
@@ -12,11 +14,11 @@ public class PoisonAttack implements PokemonAttack{
 	}
 	@Override
 	public String getAttackName() {
-		return "Veneno";
+		return "Fireball";
 	}
 	@Override
 	public int getAttackDamage() {
-		return 3;
+		return 5;
 	}
 
 }

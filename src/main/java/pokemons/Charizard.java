@@ -1,6 +1,10 @@
-package com.iteso.nintendo;
+package pokemons;
 
-public class Jigglipuff extends PokemonCharacter {
+import attack.FireBallAttack;
+import attack.PoisonAttack;
+import other.PokemonCharacter;
+
+public class Charizard extends PokemonCharacter {
     /**
      * Hit Points are the maximum life of pokemon.
      */
@@ -18,18 +22,18 @@ public class Jigglipuff extends PokemonCharacter {
      */
     public static final int SECOND_ATTACK_DAMAGE = 17;
 
-    public SingAttack sing;
+    public FireBallAttack fire;
     public PoisonAttack poison;
 
     /**
      * Pikachu constructor.
      */
-    public Jigglipuff() {
+    public Charizard() {
         setType("fire");
-        setName("Jigglipuff");
+        setName("Charizard");
         setHasEvolution(true);
         setSecondAttack(poison);
-        setMainAttack(sing);
+        setMainAttack(fire);
         setHitPoints(HIT_POINTS);
         setDefenseMultiplier(DEFENSE_MULTIPLIER);
         setMainAttackDamage(MAIN_ATTACK_DAMAGE);

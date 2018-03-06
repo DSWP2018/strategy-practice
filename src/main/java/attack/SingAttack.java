@@ -1,10 +1,12 @@
-package com.iteso.nintendo;
+package attack;
 
-public class FireBallAttack implements PokemonAttack {
+import other.PokemonAttack;
+
+public class SingAttack implements PokemonAttack {
 
 	@Override
 	public String attackOpponent() {
-		return "El oponente ha sido atacado con fuego";
+		return "El oponente ha sido atacado con SING";
 	}
 	@Override
 	public String cancelAttack() {
@@ -12,11 +14,11 @@ public class FireBallAttack implements PokemonAttack {
 	}
 	@Override
 	public String getAttackName() {
-		return "Fire";
+		return "Sing";
 	}
 	@Override
 	public int getAttackDamage() {
-		return 5;
+		return 4;
 	}
 
 }

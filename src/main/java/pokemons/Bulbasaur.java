@@ -1,6 +1,10 @@
-package com.iteso.nintendo;
+package pokemons;
 
-public class Ditto extends PokemonCharacter {
+import attack.DigAttack;
+import attack.PoisonAttack;
+import other.PokemonCharacter;
+
+public class Bulbasaur extends PokemonCharacter {
     /**
      * Hit Points are the maximum life of pokemon.
      */
@@ -18,18 +22,18 @@ public class Ditto extends PokemonCharacter {
      */
     public static final int SECOND_ATTACK_DAMAGE = 17;
 
-    public FireBallAttack fire;
+    public DigAttack dig;
     public PoisonAttack poison;
 
     /**
      * Pikachu constructor.
      */
-    public Ditto() {
+    public Bulbasaur() {
         setType("fire");
-        setName("Ditto");
+        setName("Bulbasaur");
         setHasEvolution(true);
         setSecondAttack(poison);
-        setMainAttack(fire);
+        setMainAttack(dig);
         setHitPoints(HIT_POINTS);
         setDefenseMultiplier(DEFENSE_MULTIPLIER);
         setMainAttackDamage(MAIN_ATTACK_DAMAGE);

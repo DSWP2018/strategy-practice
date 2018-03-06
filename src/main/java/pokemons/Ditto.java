@@ -1,9 +1,10 @@
-package com.iteso.nintendo;
+package pokemons;
 
-/**
- * Created by rvillalobos on 2/24/18.
- */
-public class Charmander extends PokemonCharacter {
+import attack.FireBallAttack;
+import attack.PoisonAttack;
+import other.PokemonCharacter;
+
+public class Ditto extends PokemonCharacter {
     /**
      * Hit Points are the maximum life of pokemon.
      */
@@ -27,9 +28,9 @@ public class Charmander extends PokemonCharacter {
     /**
      * Pikachu constructor.
      */
-    public Charmander() {
+    public Ditto() {
         setType("fire");
-        setName("Charmander");
+        setName("Ditto");
         setHasEvolution(true);
         setSecondAttack(poison);
         setMainAttack(fire);

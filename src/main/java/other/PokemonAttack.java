@@ -1,4 +1,4 @@
-package com.iteso.nintendo;
+package other;
 
 public interface PokemonAttack {
 

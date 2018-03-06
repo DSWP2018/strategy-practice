@@ -1,10 +1,12 @@
-package com.iteso.nintendo;
+package attack;
 
-public class DigAttack implements PokemonAttack{
+import other.PokemonAttack;
+
+public class ThunderpunchAttack implements PokemonAttack {
 
 	@Override
 	public String attackOpponent() {
-		return "El oponente ha sido atacado con rocas";
+		return "El oponente ha sido atacado con THUNDERPUNCH";
 	}
 	@Override
 	public String cancelAttack() {
@@ -12,7 +14,7 @@ public class DigAttack implements PokemonAttack{
 	}
 	@Override
 	public String getAttackName() {
-		return "Roca";
+		return "ThunderPunch";
 	}
 	@Override
 	public int getAttackDamage() {

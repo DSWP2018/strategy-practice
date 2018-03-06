@@ -1,6 +1,13 @@
-package com.iteso.nintendo;
+package pokemons;
 
-public class Bulbasaur extends PokemonCharacter {
+import attack.FireBallAttack;
+import attack.PoisonAttack;
+import other.PokemonCharacter;
+
+/**
+ * Created by rvillalobos on 2/24/18.
+ */
+public class Charmander extends PokemonCharacter {
     /**
      * Hit Points are the maximum life of pokemon.
      */
@@ -18,18 +25,18 @@ public class Bulbasaur extends PokemonCharacter {
      */
     public static final int SECOND_ATTACK_DAMAGE = 17;
 
-    public DigAttack dig;
+    public FireBallAttack fire;
     public PoisonAttack poison;
 
     /**
      * Pikachu constructor.
      */
-    public Bulbasaur() {
+    public Charmander() {
         setType("fire");
-        setName("Bulbasaur");
+        setName("Charmander");
         setHasEvolution(true);
         setSecondAttack(poison);
-        setMainAttack(dig);
+        setMainAttack(fire);
         setHitPoints(HIT_POINTS);
         setDefenseMultiplier(DEFENSE_MULTIPLIER);
         setMainAttackDamage(MAIN_ATTACK_DAMAGE);

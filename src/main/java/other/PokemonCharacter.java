@@ -1,4 +1,4 @@
-package com.iteso.nintendo;
+package other;
 
 /**
  * Created by rvillalobos on 2/24/18.
