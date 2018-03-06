@@ -42,7 +42,7 @@ public class Totodile extends PokemonCharacter {
     }
 
     @Override
-    public String defend(int attackDamage) {
+    public String defend(int attackDamage) { // String defend(Attack attack)
         int damage;
 
         damage = (int) (attackDamage * getDefenseMultiplier());

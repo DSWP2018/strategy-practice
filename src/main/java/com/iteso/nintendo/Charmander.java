@@ -22,6 +22,8 @@ public class Charmander extends PokemonCharacter{
     public static final int SECOND_ATTACK_DAMAGE = 17;
     private Attacks quickAttack;
     private Attacks flamethrower;
+    private PokemonType fuego;
+    private PokemonCharacter enemyAttack;
 
     /**
      * Pikachu constructor.
@@ -29,7 +31,7 @@ public class Charmander extends PokemonCharacter{
     public Charmander() {
         quickAttack = new AtaqueRapido();
         flamethrower = new Lanzallamas();
-        setType("fire");
+        setType("Fire");
         setName("Charmander");
         setHasEvolution(true);
         setSecondAttack(quickAttack);
@@ -49,10 +51,10 @@ public class Charmander extends PokemonCharacter{
     public final String defend(final int attack) {
         int damage;
 
-        damage = (int) (attack * getDefenseMultiplier());
+        damage = (int) (attack * fuego.recievedDamage(enemyAttack.getType(),getDefenseMultiplier()));
         int newHP = getHitPoints() - damage;
 
-        String defendMessage = new String("Defending attack, damage caused is "
+        String defendMessage = new String(fuego.defendMessage()
                 + damage + " new HP is " + newHP);
 
         setHitPoints(newHP);
