@@ -1,8 +1,8 @@
 package pokemons;
 
-import attack.PoisonAttack;
-import attack.SingAttack;
+import other.PokemonAttack;
 import other.PokemonCharacter;
+import other.PokemonType;
 
 public class Jigglipuff extends PokemonCharacter {
     /**
@@ -22,14 +22,15 @@ public class Jigglipuff extends PokemonCharacter {
      */
     public static final int SECOND_ATTACK_DAMAGE = 17;
 
-    public SingAttack sing;
-    public PoisonAttack poison;
+    public PokemonAttack sing;
+    public PokemonAttack poison;
+    public PokemonType fairy;
 
     /**
      * Pikachu constructor.
      */
     public Jigglipuff() {
-        setType("fire");
+        setType(fairy);
         setName("Jigglipuff");
         setHasEvolution(true);
         setSecondAttack(poison);

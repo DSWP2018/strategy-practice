@@ -1,8 +1,8 @@
 package pokemons;
 
-import attack.FireBallAttack;
-import attack.PoisonAttack;
+import other.PokemonAttack;
 import other.PokemonCharacter;
+import other.PokemonType;
 
 /**
  * Created by rvillalobos on 2/24/18.
@@ -25,14 +25,14 @@ public class Charmander extends PokemonCharacter {
      */
     public static final int SECOND_ATTACK_DAMAGE = 17;
 
-    public FireBallAttack fire;
-    public PoisonAttack poison;
-
+    public PokemonAttack fire;
+    public PokemonAttack poison;
+    public PokemonType fire1;
     /**
      * Pikachu constructor.
      */
     public Charmander() {
-        setType("fire");
+        setType(fire1);
         setName("Charmander");
         setHasEvolution(true);
         setSecondAttack(poison);

@@ -1,10 +1,18 @@
 package other;
 
+/** Interface Attack.  */
 public interface PokemonAttack {
-
-	public String attackOpponent();
-	public String cancelAttack();
-	public String getAttackName();
-	public int getAttackDamage();
+/** attackOpponent.
+ * @return String. */
+String attackOpponent();
+/** cancelAttack.
+ * @return String. */
+String cancelAttack();
+/** getAttackName.
+ * @return String. */
+String getAttackName();
+/** getAttackDamage.
+ * @return int. */
+int getAttackDamage();
 
 }

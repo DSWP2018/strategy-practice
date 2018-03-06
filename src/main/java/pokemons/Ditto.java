@@ -1,8 +1,8 @@
 package pokemons;
 
-import attack.FireBallAttack;
-import attack.PoisonAttack;
+import other.PokemonAttack;
 import other.PokemonCharacter;
+import other.PokemonType;
 
 public class Ditto extends PokemonCharacter {
     /**
@@ -22,14 +22,14 @@ public class Ditto extends PokemonCharacter {
      */
     public static final int SECOND_ATTACK_DAMAGE = 17;
 
-    public FireBallAttack fire;
-    public PoisonAttack poison;
-
+    public PokemonAttack fire;
+    public PokemonAttack poison;
+    public PokemonType fairy;
     /**
      * Pikachu constructor.
      */
     public Ditto() {
-        setType("fire");
+        setType(fairy);
         setName("Ditto");
         setHasEvolution(true);
         setSecondAttack(poison);

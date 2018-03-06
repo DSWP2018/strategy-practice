@@ -1,8 +1,8 @@
 package pokemons;
 
-import attack.DigAttack;
-import attack.PoisonAttack;
+import other.PokemonAttack;
 import other.PokemonCharacter;
+import other.PokemonType;
 
 public class Bulbasaur extends PokemonCharacter {
     /**
@@ -22,14 +22,15 @@ public class Bulbasaur extends PokemonCharacter {
      */
     public static final int SECOND_ATTACK_DAMAGE = 17;
 
-    public DigAttack dig;
-    public PoisonAttack poison;
+    public PokemonAttack dig;
+    public PokemonAttack poison;
+    public PokemonType grass;
 
     /**
      * Pikachu constructor.
      */
     public Bulbasaur() {
-        setType("fire");
+        setType(grass);
         setName("Bulbasaur");
         setHasEvolution(true);
         setSecondAttack(poison);

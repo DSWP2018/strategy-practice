@@ -1,4 +1,4 @@
-package com.iteso.nintendo;
+package pokemonTest;
 
 import org.junit.Before;
 import org.junit.Test;

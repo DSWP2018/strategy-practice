@@ -1,8 +1,8 @@
 package pokemons;
 
-import attack.DigAttack;
-import attack.ThunderpunchAttack;
+import other.PokemonAttack;
 import other.PokemonCharacter;
+import other.PokemonType;
 
 /**
  * Created by rvillalobos on 2/24/18.
@@ -26,14 +26,15 @@ public class Pikachu extends PokemonCharacter {
      */
     public static final int SECOND_ATTACK_DAMAGE = 4;
 
-    public ThunderpunchAttack thunder;
-    public DigAttack rock;
+    public PokemonAttack thunder;
+    public PokemonAttack rock;
+    public PokemonType electric;
 
     /**
      * Pikachu constructor.
      */
     public Pikachu() {
-        setType("electric");
+        setType(electric);
         setName("Pikachu");
         setHasEvolution(true);
         setMainAttack(thunder);

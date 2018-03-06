@@ -1,7 +1,8 @@
 package other;
 
+/** Interface Type. */
 public interface PokemonType {
-
-	public String getType();
-
+/** Get Pokemon Type.
+ * @return String. */
+String getType();
 }

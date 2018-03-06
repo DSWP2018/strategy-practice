@@ -1,8 +1,8 @@
 package pokemons;
 
-import attack.FireBallAttack;
-import attack.PoisonAttack;
+import other.PokemonAttack;
 import other.PokemonCharacter;
+import other.PokemonType;
 
 public class Charizard extends PokemonCharacter {
     /**
@@ -22,14 +22,15 @@ public class Charizard extends PokemonCharacter {
      */
     public static final int SECOND_ATTACK_DAMAGE = 17;
 
-    public FireBallAttack fire;
-    public PoisonAttack poison;
+    public PokemonAttack fire;
+    public PokemonAttack poison;
+    public PokemonType fire1;
 
     /**
      * Pikachu constructor.
      */
     public Charizard() {
-        setType("fire");
+        setType(fire1);
         setName("Charizard");
         setHasEvolution(true);
         setSecondAttack(poison);

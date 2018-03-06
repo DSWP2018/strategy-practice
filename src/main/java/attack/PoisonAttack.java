@@ -1,24 +1,25 @@
 package attack;
 
 import other.PokemonAttack;
-
-public class PoisonAttack implements PokemonAttack{
-
-	@Override
-	public String attackOpponent() {
-		return "El oponente ha sido atacado con POISON";
-	}
-	@Override
-	public String cancelAttack() {
-		return "Ataque cancelado";
-	}
-	@Override
-	public String getAttackName() {
-		return "Poison";
-	}
-	@Override
-	public int getAttackDamage() {
-		return 3;
-	}
+/** Ataque Poison. */
+public class PoisonAttack implements PokemonAttack {
+/** Attack damage. */
+private static final int ATTACKDAMAGE = 3;
+@Override
+public final String attackOpponent() {
+return "El oponente ha sido atacado con POISON";
+}
+@Override
+public final String cancelAttack() {
+return "Ataque cancelado";
+}
+@Override
+public final String getAttackName() {
+return "Poison";
+}
+@Override
+public final int getAttackDamage() {
+return ATTACKDAMAGE;
+}
 
 }

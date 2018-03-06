@@ -1,24 +1,25 @@
 package attack;
 
 import other.PokemonAttack;
-
+/** Ataque THUNDERPUNCH. */
 public class ThunderpunchAttack implements PokemonAttack {
-
-	@Override
-	public String attackOpponent() {
-		return "El oponente ha sido atacado con THUNDERPUNCH";
-	}
-	@Override
-	public String cancelAttack() {
-		return "Ataque cancelado";
-	}
-	@Override
-	public String getAttackName() {
-		return "ThunderPunch";
-	}
-	@Override
-	public int getAttackDamage() {
-		return 6;
-	}
+/** Attack damage. */
+private static final int ATTACKDAMAGE = 3;
+@Override
+public final String attackOpponent() {
+return "El oponente ha sido atacado con THUNDERPUNCH";
+}
+@Override
+public final String cancelAttack() {
+return "Ataque cancelado";
+}
+@Override
+public final String getAttackName() {
+return "ThunderPunch";
+}
+@Override
+public final int getAttackDamage() {
+return ATTACKDAMAGE;
+}
 
 }

@@ -1,8 +1,8 @@
 package pokemons;
 
-import attack.FireBallAttack;
-import attack.ThunderpunchAttack;
+import other.PokemonAttack;
 import other.PokemonCharacter;
+import other.PokemonType;
 
 public class Dragonite extends PokemonCharacter {
     /**
@@ -22,14 +22,14 @@ public class Dragonite extends PokemonCharacter {
      */
     public static final int SECOND_ATTACK_DAMAGE = 17;
 
-    public FireBallAttack fire;
-    public ThunderpunchAttack punch;
-
+    public PokemonAttack fire;
+    public PokemonAttack punch;
+    public PokemonType flying;
     /**
      * Pikachu constructor.
      */
     public Dragonite() {
-        setType("fire");
+        setType(flying);
         setName("Dragonite");
         setHasEvolution(true);
         setSecondAttack(punch);
