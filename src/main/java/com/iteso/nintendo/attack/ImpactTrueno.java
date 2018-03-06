@@ -25,7 +25,7 @@ public class ImpactTrueno implements Attack {
     public final String attackOpponent() {
         String attackMessage = new String("Attacking opponent with "
                 + name
-                + " causing a DAMAGE of " + DAMAGE);
+                + " causing a damage of " + DAMAGE);
         return attackMessage;
     }
 
