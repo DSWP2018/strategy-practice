@@ -1,6 +1,6 @@
 package com.iteso.nintendo;
 
-/**
+import com.iteso.nintendo.types.PokemonType; /**
  * Created by rvillalobos on 2/24/18.
  */
 public abstract class PokemonCharacter {
