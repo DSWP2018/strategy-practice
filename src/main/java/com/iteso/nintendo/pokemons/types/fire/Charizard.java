@@ -1,4 +1,9 @@
-package com.iteso.nintendo;
+package com.iteso.nintendo.pokemons.types.fire;
+
+import com.iteso.nintendo.attacks.Attack;
+import com.iteso.nintendo.attacks.Big_Fire_Attack;
+import com.iteso.nintendo.attacks.Small_Fire_Attack;
+import com.iteso.nintendo.pokemons.PokemonCharacter;
 
 /**
  * Created by rvillalobos on 2/24/18.
@@ -14,10 +19,10 @@ public class Charizard extends PokemonCharacter {
     public static final double DEFENSE_MULTIPLIER = 0.3;
 
     /**
-     * Pikachu constructor.
+     * Charizard constructor.
      */
     public Charizard() {
-        setType("fire");
+        setType(new Fire_Type());
         setName("Charizard");
         setHasEvolution(true);
         setSecondAttack(new Big_Fire_Attack());
@@ -30,31 +35,6 @@ public class Charizard extends PokemonCharacter {
     @Override
     public final String evolve() {
         return null;
-    }
-
-    @Override
-    public final String defend(final int attack) {
-        int damage;
-
-        damage = (int) (attack * getDefenseMultiplier());
-        int newHP = getHitPoints() - damage;
-
-        String defendMessage = new String("Defending attack, damage caused is "
-                + damage + " new HP is " + newHP);
-
-        setHitPoints(newHP);
-        return defendMessage;
-
-    }
-
-    @Override
-    public final String secondAttack() {
-    	return getSecondAttack().attackOpponent();
-    }
-
-    @Override
-    public final String mainAttack() {
-        return getMainAttack().attackOpponent();
     }
 
     @Override

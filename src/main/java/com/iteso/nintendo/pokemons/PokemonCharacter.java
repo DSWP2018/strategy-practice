@@ -1,4 +1,7 @@
-package com.iteso.nintendo;
+package com.iteso.nintendo.pokemons;
+
+import com.iteso.nintendo.pokemons.types.Type;
+import com.iteso.nintendo.attacks.Attack;
 
 /**
  * Created by rvillalobos on 2/24/18.
@@ -12,7 +15,7 @@ public abstract class PokemonCharacter {
     /**
      * Pokemon type.
      */
-    private String type = null;
+    private Type type = null;
     /**
      * Indicator of evolution.
      */
@@ -67,21 +70,40 @@ public abstract class PokemonCharacter {
     /**
      * Method to defend an attack.
      * @param attackDamage Amount of damage to defend.
+     * @param attacker The attacker
      * @return Result of defense.
      */
-    public abstract String defend(int attackDamage);
+    public final String defend(final PokemonCharacter attacker,
+                               final int attackDamage) {
+        int damage;
+        damage = (int) (attackDamage * attacker.getType()
+                .getAttackMultiplier(this));
+        setHitPoints(getHitPoints() - damage);
+
+        return String.format("%s defended!, attack damage was %d", getName(),
+                (int)(attackDamage * attacker.getType()
+        .getAttackMultiplier(this)));
+    }
 
     /**
      * Method to perform second attack.
+     * @param beingAttacked is the pokemon being attacked.
      * @return Result of attack.
      */
-    public abstract String secondAttack();
+    public final String secondAttack(final PokemonCharacter beingAttacked) {
+        return String.format("%s\n\t%s", getSecondAttack().attackOpponent(),
+                beingAttacked.defend(this,getSecondAttack().getAttackDamage()));
+    }
 
     /**
      * Method to perform main attack.
+     * @param beingAttacked is the pokemon being attacked
      * @return Result of main attack.
      */
-    public abstract String mainAttack();
+    public final String mainAttack(final PokemonCharacter beingAttacked) {
+        return String.format("%s\n\t%s", getMainAttack().attackOpponent(),
+                beingAttacked.defend(this,getMainAttack().getAttackDamage()));
+    }
 
     /**
      * Method to change pokemon attack.
@@ -96,7 +118,7 @@ public abstract class PokemonCharacter {
      * Pokemon type.
      * @return water, fire, normal, electric, plant, bug, etc.
      */
-    public final String getType() {
+    public final Type getType() {
         return type;
     }
 
@@ -104,7 +126,7 @@ public abstract class PokemonCharacter {
      * Set new pokemon type.
      * @param newType new pokemon type.
      */
-    public final void setType(final String newType) {
+    public final void setType(final Type newType) {
         this.type = newType;
     }
 
@@ -161,7 +183,7 @@ public abstract class PokemonCharacter {
      * @return main attack damage.
      */
     public final int getMainAttackDamage() {
-        return mainAttackDamage;
+        return getMainAttack().getAttackDamage();
     }
 
     /**
@@ -177,7 +199,7 @@ public abstract class PokemonCharacter {
      * @return second attack damage.
      */
     public final int getSecondAttackDamage() {
-        return secondAttackDamage;
+        return getSecondAttack().getAttackDamage();
     }
 
     /**
@@ -217,7 +239,7 @@ public abstract class PokemonCharacter {
      * @param newHitPoints new hit points.
      */
     public final void setHitPoints(final int newHitPoints) {
-        this.hitPoints = newHitPoints;
+        this.hitPoints = hitPoints >= newHitPoints ? hitPoints-newHitPoints : 0;
     }
 
 }

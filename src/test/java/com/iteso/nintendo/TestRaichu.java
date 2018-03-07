@@ -11,17 +11,15 @@ import com.iteso.nintendo.pokemons.types.fire.Charmander;
 import com.iteso.nintendo.pokemons.types.fire.Charmeleon;
 import org.junit.Before;
 import org.junit.Test;
-import static org.junit.Assert.*;
-import static org.mockito.Mockito.*;
 
-/**
- * Created by rvillalobos on 2/24/18.
- */
-public class PikachuTest {
-    Pikachu pikachu;
+import static org.junit.Assert.assertTrue;
+import static org.mockito.Mockito.mock;
+
+public class TestRaichu {
     Raichu raichu;
     Magneton magneton;
     Magnemite magnemite;
+    Pikachu pikachu;
     Charizard charizard;
     Charmander charmander;
     Charmeleon charmeleon;
@@ -29,62 +27,62 @@ public class PikachuTest {
 
     @Before
     public void setUp() {
-    	pikachu = new Pikachu();
-    	raichu = new Raichu();
-    	magneton = new Magneton();
-    	magnemite = new Magnemite();
-    	charizard = new Charizard();
-    	charmander = new Charmander();
-    	charmeleon = new Charmeleon();
-    	mockedAttacker = mock(PokemonCharacter.class);
-    	mockedAttacker.setType(mock(Type.class));
+        raichu = new Raichu();
+        magneton = new Magneton();
+        magnemite = new Magnemite();
+        pikachu = new Pikachu();
+        charizard = new Charizard();
+        charmander = new Charmander();
+        charmeleon = new Charmeleon();
+        mockedAttacker = mock(PokemonCharacter.class);
+        mockedAttacker.setType(mock(Type.class));
     }
 
     @Test
-    public void testAttackRaichu() {
-        System.out.println(pikachu.mainAttack(raichu));
-        System.out.println(pikachu.secondAttack(raichu));
-        assertTrue(raichu.getHitPoints()>=0);
+    public void testAttackPikachu() {
+        System.out.println(raichu.mainAttack(pikachu));
+        System.out.println(raichu.secondAttack(pikachu));
+        assertTrue(pikachu.getHitPoints()>=0);
     }
 
     @Test
     public void testAttackMagneton() {
-        System.out.println(pikachu.mainAttack(magneton));
-        System.out.println(pikachu.secondAttack(magneton));
+        System.out.println(raichu.mainAttack(magneton));
+        System.out.println(raichu.secondAttack(magneton));
         assertTrue(magneton.getHitPoints()>=0);
     }
 
     @Test
     public void testAttackMagnemite() {
-        System.out.println(pikachu.mainAttack(magnemite));
-        System.out.println(pikachu.secondAttack(magnemite));
+        System.out.println(raichu.mainAttack(magnemite));
+        System.out.println(raichu.secondAttack(magnemite));
         assertTrue(magnemite.getHitPoints()>=0);
     }
 
     @Test
     public void testAttackCharizard() {
-        System.out.println(pikachu.mainAttack(charizard));
-        System.out.println(pikachu.secondAttack(charizard));
+        System.out.println(raichu.mainAttack(charizard));
+        System.out.println(raichu.secondAttack(charizard));
         assertTrue(charizard.getHitPoints()>=0);
     }
 
     @Test
     public void testAttackCharmander() {
-        System.out.println(pikachu.mainAttack(charmander));
-        System.out.println(pikachu.secondAttack(charmander));
+        System.out.println(raichu.mainAttack(charmander));
+        System.out.println(raichu.secondAttack(charmander));
         assertTrue(charmander.getHitPoints()>=0);
     }
 
     @Test
     public void testAttackCharmeleon() {
-        System.out.println(pikachu.mainAttack(charmeleon));
-        System.out.println(pikachu.secondAttack(charmeleon));
+        System.out.println(raichu.mainAttack(charmeleon));
+        System.out.println(raichu.secondAttack(charmeleon));
         assertTrue(charmeleon.getHitPoints()>=0);
     }
 
     @Test
     public void testDefense() {
-        System.out.println(pikachu.defend(mockedAttacker,10));
-        assertTrue(pikachu.getHitPoints()>=0);
+        System.out.println(raichu.defend(mockedAttacker,10));
+        assertTrue(raichu.getHitPoints()>=0);
     }
 }

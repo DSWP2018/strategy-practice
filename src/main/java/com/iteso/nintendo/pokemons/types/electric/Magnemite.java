@@ -1,9 +1,14 @@
-package com.iteso.nintendo;
+package com.iteso.nintendo.pokemons.types.electric;
+
+import com.iteso.nintendo.attacks.Attack;
+import com.iteso.nintendo.attacks.Impact_Trueno_Attack;
+import com.iteso.nintendo.attacks.Quick_Attack;
+import com.iteso.nintendo.pokemons.PokemonCharacter;
 
 /**
  * Created by rvillalobos on 2/24/18.
  */
-public class Raichu extends PokemonCharacter {
+public class Magnemite extends PokemonCharacter {
     /**
      * Hit Points are the maximum life of pokemon.
      */
@@ -15,9 +20,9 @@ public class Raichu extends PokemonCharacter {
     /**
      * Raichu constructor.
      */
-    public Raichu() {
-        setType("electric");
-        setName("Raichu");
+    public Magnemite() {
+        setType(new Electric_Type());
+        setName("Magnemite");
         setHasEvolution(true);
         setSecondAttack(new Impact_Trueno_Attack());
         setMainAttack(new Quick_Attack());
@@ -30,31 +35,6 @@ public class Raichu extends PokemonCharacter {
     @Override
     public final String evolve() {
         return null;
-    }
-
-    @Override
-    public final String defend(final int attack) {
-        int damage;
-
-        damage = (int) (attack * getDefenseMultiplier());
-        int newHP = getHitPoints() - damage;
-
-        String defendMessage = new String("Defending attack, damage caused is "
-                + damage + " new HP is " + newHP);
-
-        setHitPoints(newHP);
-        return defendMessage;
-
-    }
-
-    @Override
-    public final String secondAttack() {
-    	return getSecondAttack().attackOpponent();
-    }
-
-    @Override
-    public final String mainAttack() {
-        return getMainAttack().attackOpponent();
     }
 
     @Override
