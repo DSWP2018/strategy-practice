@@ -1,8 +1,17 @@
 package com.iteso.nintendo;
 
+/**
+ * Created by hsm-y on 2/24/18.
+ */
 public class Bulbasaur extends PokemonCharacter {
-    public Terremoto terremoto;
-    public GiroBola girobola;
+    /**
+     * First kind of attack.
+     */
+    private Attack terremoto;
+    /**
+     * Second kind of attack.
+     */
+    private Attack girobola;
     /**
      * Hit Points are the maximum life of pokemon.
      */
@@ -66,7 +75,7 @@ public class Bulbasaur extends PokemonCharacter {
     }
 
     @Override
-    public void setNewAttack(Attack attack) {
+    public void setNewAttack(final Attack attack) {
 
     }
 }

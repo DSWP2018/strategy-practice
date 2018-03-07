@@ -1,24 +1,31 @@
 package com.iteso.nintendo;
 
+/**
+ * Tipo de ataque que implementa a la clase de Attack.
+ */
 public class TormentaFloral implements Attack {
+    /**
+     * Daño que causa el ataque.
+     */
+    private final int attackDamage = 23;
 
     @Override
-    public String getAttackName() {
+    public final String getAttackName() {
         return "Tormenta Floral";
     }
 
     @Override
-    public int getAttackDamage() {
-        return 23;
+    public final int getAttackDamage() {
+        return attackDamage;
     }
 
     @Override
-    public String attackOpponent() {
+    public final String attackOpponent() {
         return "Ataque tormenta floral!";
     }
 
     @Override
-    public String cancelAttack() {
+    public final String cancelAttack() {
         return "Ataque cancelado";
     }
 }
