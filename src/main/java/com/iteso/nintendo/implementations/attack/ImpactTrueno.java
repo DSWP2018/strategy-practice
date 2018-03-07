@@ -28,7 +28,7 @@ public class ImpactTrueno implements Attack {
      * @return Animation
      */
     public final String animation() {
-        return "Externder dos manita";
+        return "Extender dos manitas";
     }
 
     /**
