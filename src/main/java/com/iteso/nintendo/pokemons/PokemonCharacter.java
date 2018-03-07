@@ -29,14 +29,6 @@ public abstract class PokemonCharacter {
      */
       private Attack secondAttack = null;
     /**
-     * Damage caused by main attack.
-     */
-    private int mainAttackDamage = 0;
-    /**
-     * Damage caused by second attack.
-     */
-      private int secondAttackDamage = 0;
-    /**
      * Multiplier to calculate damage received.
      */
     private double defenseMultiplier = 0;
@@ -81,7 +73,7 @@ public abstract class PokemonCharacter {
         setHitPoints(getHitPoints() - damage);
 
         return String.format("%s defended!, attack damage was %d", getName(),
-                (int)(attackDamage * attacker.getType()
+                (int) (attackDamage * attacker.getType()
         .getAttackMultiplier(this)));
     }
 
@@ -92,7 +84,8 @@ public abstract class PokemonCharacter {
      */
     public final String secondAttack(final PokemonCharacter beingAttacked) {
         return String.format("%s\n\t%s", getSecondAttack().attackOpponent(),
-                beingAttacked.defend(this,getSecondAttack().getAttackDamage()));
+                beingAttacked.defend(this, getSecondAttack()
+                        .getAttackDamage()));
     }
 
     /**
@@ -102,7 +95,7 @@ public abstract class PokemonCharacter {
      */
     public final String mainAttack(final PokemonCharacter beingAttacked) {
         return String.format("%s\n\t%s", getMainAttack().attackOpponent(),
-                beingAttacked.defend(this,getMainAttack().getAttackDamage()));
+                beingAttacked.defend(this, getMainAttack().getAttackDamage()));
     }
 
     /**
@@ -190,9 +183,9 @@ public abstract class PokemonCharacter {
      * Set main attack new damage.
      * @param newMainAttackDamage new main attack damage.
      */
-    public final void setMainAttackDamage(final int newMainAttackDamage) {
+    /*public final void setMainAttackDamage(final int newMainAttackDamage) {
         this.mainAttackDamage = newMainAttackDamage;
-    }
+    }*/
 
     /**
      * Get second attack damage.
@@ -206,9 +199,9 @@ public abstract class PokemonCharacter {
      * Set new second attack damage.
      * @param newSecondAttackDamage new second attack damage.
      */
-    public final void setSecondAttackDamage(final int newSecondAttackDamage) {
+    /*public final void setSecondAttackDamage(final int newSecondAttackDamage) {
         this.secondAttackDamage = newSecondAttackDamage;
-    }
+    }*/
 
     /**
      * Get defense multiplier.
@@ -239,7 +232,8 @@ public abstract class PokemonCharacter {
      * @param newHitPoints new hit points.
      */
     public final void setHitPoints(final int newHitPoints) {
-        this.hitPoints = hitPoints >= newHitPoints ? hitPoints-newHitPoints : 0;
+        this.hitPoints = hitPoints >= newHitPoints
+                ? hitPoints - newHitPoints : 0;
     }
 
 }
