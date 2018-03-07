@@ -184,7 +184,8 @@ public abstract class PokemonCharacter {
      * Set new second attack damage.
      * @param newSecondAttackDamage new second attack damage.
      */
-    public final void setSecondAttackDamage(final Attacks newSecondAttackDamage) {
+    public final void setSecondAttackDamage(
+            final Attacks newSecondAttackDamage) {
         this.secondAttackDamage = newSecondAttackDamage.attackDamage();
     }
 

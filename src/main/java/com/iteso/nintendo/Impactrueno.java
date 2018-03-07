@@ -1,26 +1,41 @@
 package com.iteso.nintendo;
-
+/**
+ * */
 public class Impactrueno implements Attacks {
-    public static final int ATTACK_DAMAGE = 60;
-    public static final String ATTACK = "Thunder volt";
-    public static final String ATTACK_OPPONENT = "Attacking opponent with ";
-
-    String attack = ATTACK;
-    String attackOponnent = ATTACK_OPPONENT;
-    int attackDamage = ATTACK_DAMAGE;
-
+    /**
+     * */
+    private static final int ATTACK_DAMAGE = 60;
+    /**
+     * */
+    private static final String ATTACK = "Thunder volt";
+    /**
+     * */
+    private static final String ATTACK_OPPONENT = "Attacking opponent with ";
+    /**
+     * */
+    private static final String ATTACK_TYPE = "Electric";
+    /**
+     * */
     @Override
-    public String attackName() {
-        return attack;
+    public final String attackName() {
+        return ATTACK;
     }
-
+    /**
+     * */
     @Override
-    public int attackDamage() {
-        return attackDamage;
+    public final int attackDamage() {
+        return ATTACK_DAMAGE;
     }
-
+    /**
+     * */
     @Override
-    public String attackOpponent() {
-        return attackOponnent+attack;
+    public final String attackOpponent() {
+        return ATTACK_OPPONENT + ATTACK;
+    }
+    /**
+     * */
+    @Override
+    public final String attackType() {
+        return ATTACK_TYPE;
     }
 }

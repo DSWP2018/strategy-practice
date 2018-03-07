@@ -1,5 +1,6 @@
 package com.iteso.nintendo;
-
+/**
+ * */
 public class Lugia extends PokemonCharacter {
     /**
      * Hit Points are the maximum life of pokemon.
@@ -17,15 +18,26 @@ public class Lugia extends PokemonCharacter {
      * Damage from 1 -25.
      */
     public static final int SECOND_ATTACK_DAMAGE = 15;
+    /**
+     * */
     private Attacks quickAttack;
+    /**
+     * */
     private Attacks terremoto;
+    /**
+     * */
+    private PokemonType lugia;
+    /**
+     * */
+    private Attacks enemyAttack;
     /**
      * Pikachu constructor.
      */
     public Lugia() {
+        lugia = new Agua();
         quickAttack = new AtaqueRapido();
         terremoto = new Terremoto();
-        setType("Water");
+        setType(lugia.type());
         setName("Lugia");
         setHasEvolution(true);
         setSecondAttack(quickAttack); //
@@ -35,40 +47,57 @@ public class Lugia extends PokemonCharacter {
         setMainAttackDamage(terremoto); //
         setSecondAttackDamage(quickAttack); //
     }
-
+    /**
+     * */
     @Override
-    public String evolve() {
+    public final String evolve() {
         return null;
     }
-
+    /**
+     * */
     @Override
-    public String defend(int attackDamage) {
+    public final String defend(final int attack) {
         int damage;
 
-        damage = (int) (attackDamage * getDefenseMultiplier());
+        damage = (int) (attack * lugia.recievedDamage(
+                enemyAttack.attackType(), getDefenseMultiplier()));
         int newHP = getHitPoints() - damage;
 
-        String defendMessage = new String("Defending attack, damage caused is "
-                + damage + " new HP is " + newHP);
+        String defendMessage = new String(lugia.defendMessage()
+                + damage
+                + " new HP is "
+                + newHP);
 
         setHitPoints(newHP);
         return defendMessage;
-    }
 
+    }
+    /**
+     * */
     @Override
-    public String secondAttack() {
-        String attackMessage = new String(quickAttack.attackOpponent()+" damage: "+quickAttack.attackDamage());
+    public final String secondAttack() {
+
+        String attackMessage = new String(quickAttack.attackOpponent()
+                + " damage: "
+                + quickAttack.attackDamage());
+        return attackMessage;
+
+    }
+    /**
+     * */
+    @Override
+    public final String mainAttack() {
+        String attackMessage = new String(terremoto.attackOpponent()
+                + " damage: "
+                + terremoto.attackDamage());
         return attackMessage;
     }
-
+    /**
+     * */
     @Override
-    public String mainAttack() {
-        String attackMessage = new String(terremoto.attackOpponent()+" damage: "+terremoto.attackDamage());
-        return attackMessage;
-    }
-
-    @Override
-    public void setNewAttack(int attack, Attacks attackDamage, Attacks newAttack) {
+    public final void setNewAttack(final int attack,
+                                   final Attacks attackDamage,
+                                   final Attacks newAttack) {
         if (attack == 1) {
             setMainAttack(newAttack);
             setMainAttackDamage(attackDamage);
@@ -77,4 +106,5 @@ public class Lugia extends PokemonCharacter {
             setSecondAttackDamage(attackDamage);
         }
     }
+
 }

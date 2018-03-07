@@ -1,32 +1,49 @@
 package com.iteso.nintendo;
-
+/**
+ * */
 public class Agua implements PokemonType {
-    private final String ATAQUE_TIPO = "Water";
-    private final String NOT_EFFECTIVE_IN = "Electric";
-    private final String SUPER_EFFECTIVE_IN = "Fire";
-    private final String DEFENDING_MESSAGE = "Defending attack, damage caused is: ";
-    private final double DEFENSE_UP = 1.5;
-    private final double DEFENSE_DOWN = 0.5;
-
+    /**
+     * */
+    private final String pokeTipo = "Water";
+    /**
+     * */
+    private final String notEffectiveIn = "Electric";
+    /**
+     * */
+    private final String superEffectiveIn = "Fire";
+    /**
+     * */
+    private final String defendingMessage = "Defending... damage caused is:";
+    /**
+     * */
+    private final double defenseUp = 1.5;
+    /**
+     * */
+    private final double defenseDown = 0.5;
+    /**
+     * */
     @Override
-    public String attackType() {
-        return this.ATAQUE_TIPO;
+    public final String type() {
+        return this.pokeTipo;
     }
-
+    /**
+     * */
     @Override
-    public double recievedDamage(String ataqueTipo, double defenseMultiplier) {
+    public final double recievedDamage(final String ataqueTipo,
+                                       final double defenseMultiplier) {
 
-        if (ataqueTipo.equals(SUPER_EFFECTIVE_IN)) {
-            return DEFENSE_UP * defenseMultiplier;
-        } else if(ataqueTipo.equals(NOT_EFFECTIVE_IN)) {
-            return DEFENSE_DOWN * defenseMultiplier;
+        if (ataqueTipo.equals(superEffectiveIn)) {
+            return defenseUp * defenseMultiplier;
+        } else if (ataqueTipo.equals(notEffectiveIn)) {
+            return defenseDown * defenseMultiplier;
         } else {
             return defenseMultiplier;
         }
     }
-
+    /**
+     * */
     @Override
-    public String defendMessage() {
-        return this.DEFENDING_MESSAGE;
+    public final String defendMessage() {
+        return this.defendingMessage;
     }
 }

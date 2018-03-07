@@ -3,7 +3,7 @@ package com.iteso.nintendo;
 /**
  * Created by rvillalobos on 2/24/18.
  */
-public class Charmander extends PokemonCharacter{
+public class Charmander extends PokemonCharacter {
     /**
      * Hit Points are the maximum life of pokemon.
      */
@@ -20,18 +20,27 @@ public class Charmander extends PokemonCharacter{
      * Damage from 1 -25.
      */
     public static final int SECOND_ATTACK_DAMAGE = 17;
+    /**
+     * */
     private Attacks quickAttack;
+    /**
+     * */
     private Attacks flamethrower;
-    private PokemonType fuego;
-    private PokemonCharacter enemyAttack;
+    /**
+     * */
+    private PokemonType charmander;
+    /**
+     * */
+    private Attacks enemyAttack;
 
     /**
      * Pikachu constructor.
      */
     public Charmander() {
+        charmander = new Fuego();
         quickAttack = new AtaqueRapido();
         flamethrower = new Lanzallamas();
-        setType("Fire");
+        setType(charmander.type());
         setName("Charmander");
         setHasEvolution(true);
         setSecondAttack(quickAttack);
@@ -41,44 +50,57 @@ public class Charmander extends PokemonCharacter{
         setMainAttackDamage(flamethrower);
         setSecondAttackDamage(quickAttack);
     }
-
+    /**
+     * */
     @Override
     public final String evolve() {
         return null;
     }
-
+    /**
+     * */
     @Override
     public final String defend(final int attack) {
         int damage;
 
-        damage = (int) (attack * fuego.recievedDamage(enemyAttack.getType(),getDefenseMultiplier()));
+        damage = (int) (attack * charmander.recievedDamage(
+                enemyAttack.attackType(), getDefenseMultiplier()));
         int newHP = getHitPoints() - damage;
 
-        String defendMessage = new String(fuego.defendMessage()
-                + damage + " new HP is " + newHP);
+        String defendMessage = new String(charmander.defendMessage()
+                + damage
+                + " new HP is "
+                + newHP);
 
         setHitPoints(newHP);
         return defendMessage;
 
     }
-
+    /**
+     * */
     @Override
     public final String secondAttack() {
 
-        String attackMessage = new String(quickAttack.attackOpponent()+" damage: "+quickAttack.attackDamage());
+        String attackMessage = new String(quickAttack.attackOpponent()
+                + " damage: "
+                + quickAttack.attackDamage());
         return attackMessage;
 
-
     }
-
+    /**
+     * */
     @Override
     public final String mainAttack() {
-        String attackMessage = new String(flamethrower.attackOpponent()+" damage: "+flamethrower.attackDamage());
+        String attackMessage = new String(flamethrower.attackOpponent()
+                + " damage: "
+                + flamethrower.attackDamage());
         return attackMessage;
     }
-
+    /**
+     * */
     @Override
-    public void setNewAttack(int attack, Attacks attackDamage, Attacks newAttack) {
+    public final void setNewAttack(final int attack,
+                                   final Attacks attackDamage,
+                                   final Attacks newAttack) {
         if (attack == 1) {
             setMainAttack(newAttack);
             setMainAttackDamage(attackDamage);

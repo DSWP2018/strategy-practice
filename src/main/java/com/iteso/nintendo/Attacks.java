@@ -20,5 +20,11 @@ public interface Attacks {
      *@return void
      * */
     String attackOpponent();
+    /**
+     *metodo del ataque.
+     *@return void
+     * */
+    String attackType();
+
 
 }

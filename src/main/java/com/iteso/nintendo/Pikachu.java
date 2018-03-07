@@ -20,16 +20,27 @@ public class Pikachu extends PokemonCharacter {
      * Damage from 1 -25.
      */
     public static final int SECOND_ATTACK_DAMAGE = 15;
+    /**
+     * */
     private Attacks quickAttack;
+    /**
+     * */
     private Attacks thunderVolt;
+    /**
+     * */
+    private PokemonType pikachu;
+    /**
+     * */
+    private Attacks enemyAttack;
 
     /**
      * Pikachu constructor.
      */
     public Pikachu() {
+        pikachu = new Electricidad();
         quickAttack = new AtaqueRapido();
         thunderVolt = new Impactrueno();
-        setType("electric");
+        setType(pikachu.type());
         setName("Pikachu");
         setHasEvolution(true);
         setSecondAttack(thunderVolt);
@@ -39,42 +50,57 @@ public class Pikachu extends PokemonCharacter {
         setMainAttackDamage(quickAttack);
         setSecondAttackDamage(thunderVolt);
     }
-
+    /**
+     * */
     @Override
     public final String evolve() {
         return null;
     }
-
+    /**
+     * */
     @Override
     public final String defend(final int attack) {
         int damage;
 
-        damage = (int) (attack * getDefenseMultiplier());
+        damage = (int) (attack * pikachu.recievedDamage(
+                enemyAttack.attackType(), getDefenseMultiplier()));
         int newHP = getHitPoints() - damage;
 
-        String defendMessage = new String("Defending attack, damage caused is "
-                + damage + " new HP is " + newHP);
+        String defendMessage = new String(pikachu.defendMessage()
+                + damage
+                + " new HP is "
+                + newHP);
 
         setHitPoints(newHP);
         return defendMessage;
 
     }
-
+    /**
+     * */
     @Override
     public final String secondAttack() {
-        String attackMessage = new String(thunderVolt.attackOpponent()+" damage: "+thunderVolt.attackDamage());
-        return attackMessage;
-    }
 
+        String attackMessage = new String(quickAttack.attackOpponent()
+                + " damage: "
+                + quickAttack.attackDamage());
+        return attackMessage;
+
+    }
+    /**
+     * */
     @Override
     public final String mainAttack() {
-        String attackMessage = new String(quickAttack.attackOpponent()+" damage: "+quickAttack.attackDamage());
+        String attackMessage = new String(thunderVolt.attackOpponent()
+                + " damage: "
+                + thunderVolt.attackDamage());
         return attackMessage;
-
     }
-
+    /**
+     * */
     @Override
-    public void setNewAttack(int attack, Attacks attackDamage, Attacks newAttack) {
+    public final void setNewAttack(final int attack,
+                                   final Attacks attackDamage,
+                                   final Attacks newAttack) {
         if (attack == 1) {
             setMainAttack(newAttack);
             setMainAttackDamage(attackDamage);
@@ -83,6 +109,5 @@ public class Pikachu extends PokemonCharacter {
             setSecondAttackDamage(attackDamage);
         }
     }
-
 
 }
