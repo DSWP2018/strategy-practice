@@ -76,7 +76,7 @@ public class AgustinFogoso extends PokemonCharacter {
     public final String secondAttack() {
 
         String attackMessage = new String("Attacking opponent with "
-                + getSecondAttack()
+                + getSecondAttack().getNameAttack()
                 + " causing a damage of " + getSecondAttackDamage());
         return attackMessage;
 
@@ -86,7 +86,7 @@ public class AgustinFogoso extends PokemonCharacter {
     @Override
     public final String mainAttack() {
         String attackMessage = new String("Attacking opponent with "
-                + getMainAttack()
+                + getMainAttack().getNameAttack()
                 + " causing a damage of " + getMainAttackDamage());
         return attackMessage;
 

@@ -1,5 +1,6 @@
-package com.iteso.nintendo;
+package com.iteso.nintendo.pokemon_tests;
 
+import com.iteso.nintendo.Type;
 import com.iteso.nintendo.implementations.attack.Bubble;
 import com.iteso.nintendo.implementations.pokemon.Pikachu;
 import com.iteso.nintendo.implementations.type.*;
@@ -33,7 +34,7 @@ public class PikachuTest {
                             && pikachu.getDefenseMultiplier() == 0.4);
     }
 
-    // Pikachu should make aditional damage against a fire opponent
+    // Pikachu should make additional damage against a fire opponent
     // and have more defence
     @Test
     public void pikachuVsFire(){
@@ -44,7 +45,7 @@ public class PikachuTest {
                             && pikachu.getDefenseMultiplier() > 0.4);
     }
 
-    // Pikachu should make aditional damage against a normal opponent
+    // Pikachu should make additional damage against a normal opponent
     // and have less defence
     @Test
     public void pikachuVsNormal(){
@@ -55,7 +56,7 @@ public class PikachuTest {
                             && pikachu.getDefenseMultiplier() < 0.4);
     }
 
-    // Pikachu should make aditional damage against a plant opponent
+    // Pikachu should make additional damage against a plant opponent
     // and have more defence
     @Test
     public void pikachuVsPlant(){
@@ -66,7 +67,7 @@ public class PikachuTest {
                             && pikachu.getDefenseMultiplier() > 0.4);
     }
 
-    // Pikachu should damage less against a water opponent
+    // Pikachu should make less damage against a water opponent
     // and have less defence
     @Test
     public void pikachuVsWater(){
