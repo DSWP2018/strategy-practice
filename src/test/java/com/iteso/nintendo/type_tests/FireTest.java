@@ -1,5 +1,6 @@
-package com.iteso.nintendo;
+package com.iteso.nintendo.type_tests;
 
+import com.iteso.nintendo.Type;
 import com.iteso.nintendo.implementations.type.*;
 import org.junit.Before;
 import org.junit.Test;

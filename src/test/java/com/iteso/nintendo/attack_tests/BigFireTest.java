@@ -1,5 +1,6 @@
-package com.iteso.nintendo;
+package com.iteso.nintendo.attack_tests;
 
+import com.iteso.nintendo.Attack;
 import com.iteso.nintendo.implementations.attack.BigFire;
 import org.junit.Before;
 import org.junit.Test;
