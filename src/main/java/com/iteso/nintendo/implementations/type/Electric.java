@@ -46,7 +46,7 @@ public class Electric implements Type {
     /**
      * VS Water.
      */
-    private final double defenceVsWater = 0.2;
+    private final double defenceVsWater = -0.2;
     /**
      * Opponent type.
      */

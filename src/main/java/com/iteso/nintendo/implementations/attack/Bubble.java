@@ -19,7 +19,6 @@ public class Bubble implements Attack {
      *
      * @return How pokemon attacks
      */
-    @Override
     public final String attackOpponent() {
         return "Aventar burbujas";
     }
@@ -28,7 +27,6 @@ public class Bubble implements Attack {
      *
      * @return pokemon animation
      */
-    @Override
     public final String animation() {
         return "Agitar manitas";
     }
@@ -45,7 +43,6 @@ public class Bubble implements Attack {
      *
      * @return Name attack
      */
-    @Override
     public final String getNameAttack() {
         return this.ATTACK_NAME;
     }

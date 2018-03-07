@@ -19,7 +19,6 @@ public class ImpactTrueno implements Attack {
      *
      * @return Attack
      */
-    @Override
     public final String attackOpponent() {
         return "Aventar rayote";
     }
@@ -28,7 +27,6 @@ public class ImpactTrueno implements Attack {
      *
      * @return Animation
      */
-    @Override
     public final String animation() {
         return "Externder dos manita";
     }
@@ -45,7 +43,6 @@ public class ImpactTrueno implements Attack {
      *
      * @return Attack name
      */
-    @Override
     public final String getNameAttack() {
         return this.ATTACK_NAME;
     }

@@ -19,7 +19,6 @@ public class QuickAttack implements Attack {
      *
      * @return Attack
      */
-    @Override
     public final String attackOpponent() {
         return "Aventar rayito";
     }
@@ -28,7 +27,6 @@ public class QuickAttack implements Attack {
      *
      * @return animation
      */
-    @Override
     public final String animation() {
         return "Extender manita";
     }
@@ -45,7 +43,6 @@ public class QuickAttack implements Attack {
      *
      * @return Name attack
      */
-    @Override
     public final String getNameAttack() {
         return this.ATTACK_NAME;
     }

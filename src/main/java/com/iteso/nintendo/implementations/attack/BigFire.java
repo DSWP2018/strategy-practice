@@ -19,7 +19,6 @@ public class BigFire implements Attack {
      *
      * @return How pokemon attacks
      */
-    @Override
     public final String attackOpponent() {
         return "Aventar bolota de fuego";
     }
@@ -28,7 +27,6 @@ public class BigFire implements Attack {
      *
      * @return pokemon animation
      */
-    @Override
     public final String animation() {
         return "Mover manitas rapido";
     }
@@ -45,7 +43,6 @@ public class BigFire implements Attack {
      *
      * @return Attack name
      */
-    @Override
     public final String getNameAttack() {
         return this.ATTACK_NAME;
     }

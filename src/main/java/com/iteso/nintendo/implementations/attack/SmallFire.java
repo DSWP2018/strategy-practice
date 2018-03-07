@@ -19,7 +19,6 @@ public class SmallFire implements Attack {
      *
      * @return Attack
      */
-    @Override
     public final String attackOpponent() {
         return "Aventar bolita de fuego";
     }
@@ -28,7 +27,6 @@ public class SmallFire implements Attack {
      *
      * @return Animation
      */
-    @Override
     public final String animation() {
         return "Mover manitas lento";
     }
