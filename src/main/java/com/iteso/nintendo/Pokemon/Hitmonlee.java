@@ -1,9 +1,17 @@
-package com.iteso.nintendo;
+package com.iteso.nintendo.Pokemon;
+
+import com.iteso.nintendo.Moves.AncientPowerAttack;
+import com.iteso.nintendo.Attack;
+import com.iteso.nintendo.Moves.LowKickAttack;
+import com.iteso.nintendo.PokemonCharacter;
+import com.iteso.nintendo.PokemonType;
+import com.iteso.nintendo.Types.Fighting;
+import com.iteso.nintendo.Types.Fire;
 
 /**
  * Created by rvillalobos on 2/24/18.
  */
-public class Cranidos extends PokemonCharacter {
+public class Hitmonlee extends PokemonCharacter {
     /**
      * Hit Points are the maximum life of pokemon.
      */
@@ -24,16 +32,18 @@ public class Cranidos extends PokemonCharacter {
     /**
      * Pikachu constructor.
      */
-    public Cranidos() {
-        setType("fire");
-        setName("Cranidos");
+    public Hitmonlee() {
+        //setType("fight");
+        setName("Hitmonlee");
         setHasEvolution(true);
-        Attack attackfb = new DragonClawAttack();
+        Attack attackfb = new AncientPowerAttack();
         setSecondAttack(attackfb);
-        Attack attackAP = new AncientPowerAttack();
+        Attack attackAP = new LowKickAttack();
         setMainAttack(attackAP);
         setHitPoints(HIT_POINTS);
         setDefenseMultiplier(DEFENSE_MULTIPLIER);
+        PokemonType fight = new Fighting();
+        setType(fight);
     }
 
     @Override
@@ -42,10 +52,10 @@ public class Cranidos extends PokemonCharacter {
     }
 
     @Override
-    public final String defend(final int attack) {
+    public final String defend(final int attack, final String typePok) {
         int damage;
 
-        damage = (int) (attack * getDefenseMultiplier());
+        damage = (int) (attack * getDefenseMultiplier(typePok));
         int newHP = getHitPoints() - damage;
 
         String defendMessage = new String("Defending attack, damage caused is "

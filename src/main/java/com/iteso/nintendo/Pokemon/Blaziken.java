@@ -1,9 +1,14 @@
-package com.iteso.nintendo;
+package com.iteso.nintendo.Pokemon;
+
+import com.iteso.nintendo.Attack;
+import com.iteso.nintendo.Moves.FireBlazeAttack;
+import com.iteso.nintendo.Moves.LowKickAttack;
+import com.iteso.nintendo.PokemonCharacter;
 
 /**
  * Created by rvillalobos on 2/24/18.
  */
-public class Hitmonlee extends PokemonCharacter {
+public class Blaziken extends PokemonCharacter {
     /**
      * Hit Points are the maximum life of pokemon.
      */
@@ -24,13 +29,13 @@ public class Hitmonlee extends PokemonCharacter {
     /**
      * Pikachu constructor.
      */
-    public Hitmonlee() {
-        setType("fight");
-        setName("Hitmonlee");
+    public Blaziken() {
+        setType("fire");
+        setName("Blaziken");
         setHasEvolution(true);
-        Attack attackfb = new AncientPowerAttack();
+        Attack attackfb = new LowKickAttack();
         setSecondAttack(attackfb);
-        Attack attackAP = new LowKickAttack();
+        Attack attackAP = new FireBlazeAttack();
         setMainAttack(attackAP);
         setHitPoints(HIT_POINTS);
         setDefenseMultiplier(DEFENSE_MULTIPLIER);

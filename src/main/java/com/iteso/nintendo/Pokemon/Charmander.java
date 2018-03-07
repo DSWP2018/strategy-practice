@@ -1,9 +1,16 @@
-package com.iteso.nintendo;
+package com.iteso.nintendo.Pokemon;
+
+import com.iteso.nintendo.Moves.AncientPowerAttack;
+import com.iteso.nintendo.Attack;
+import com.iteso.nintendo.Moves.FireBlazeAttack;
+import com.iteso.nintendo.PokemonCharacter;
+import com.iteso.nintendo.PokemonType;
+import com.iteso.nintendo.Types.Fire;
 
 /**
  * Created by rvillalobos on 2/24/18.
  */
-public class Cyndaquil extends PokemonCharacter {
+public class Charmander extends PokemonCharacter {
     /**
      * Hit Points are the maximum life of pokemon.
      */
@@ -24,9 +31,9 @@ public class Cyndaquil extends PokemonCharacter {
     /**
      * Pikachu constructor.
      */
-    public Cyndaquil() {
-        setType("fire");
-        setName("Cyndaquil");
+    public Charmander() {
+        //setType("fire");
+        setName("Charmander");
         setHasEvolution(true);
         Attack attackfb = new FireBlazeAttack();
         setSecondAttack(attackfb);
@@ -34,6 +41,8 @@ public class Cyndaquil extends PokemonCharacter {
         setMainAttack(attackAP);
         setHitPoints(HIT_POINTS);
         setDefenseMultiplier(DEFENSE_MULTIPLIER);
+        PokemonType fire = new Fire();
+        setType(fire);
     }
 
     @Override
@@ -41,11 +50,12 @@ public class Cyndaquil extends PokemonCharacter {
         return null;
     }
 
+
     @Override
-    public final String defend(final int attack) {
+    public final String defend(final int attack, final String typePok) {
         int damage;
 
-        damage = (int) (attack * getDefenseMultiplier());
+        damage = (int) (attack * getDefenseMultiplier(typePok));
         int newHP = getHitPoints() - damage;
 
         String defendMessage = new String("Defending attack, damage caused is "

@@ -1,10 +1,11 @@
-package com.iteso.nintendo;
-/**Clase ancientpower. */
-public class AncientPowerAttack implements Attack {
-    /**Declarar variables */
-    private static final String ATTACK_NAME = "Ancient Power"; /**attack name. */
-    private  static final int ATTACK_DAMAGE= 17; /**attack damage. */
+package com.iteso.nintendo.Moves;
 
+import com.iteso.nintendo.Attack;
+
+public class IceBeamAttack implements Attack {
+    private static final String ATTACK_NAME = "Ice Beam";
+    private  static final int ATTACK_DAMAGE= 23;
+    private static final String TYPE = "Ice"; /**Tipo de ataque. */
     @Override
     public String attackOpponent() {
         return "Attacking opponent with " + ATTACK_NAME + " causing a damage of " + ATTACK_DAMAGE;

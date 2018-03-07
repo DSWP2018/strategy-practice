@@ -1,4 +1,11 @@
-package com.iteso.nintendo;
+package com.iteso.nintendo.Pokemon;
+
+import com.iteso.nintendo.Moves.AncientPowerAttack;
+import com.iteso.nintendo.Attack;
+import com.iteso.nintendo.Moves.IceBeamAttack;
+import com.iteso.nintendo.PokemonCharacter;
+import com.iteso.nintendo.PokemonType;
+import com.iteso.nintendo.Types.Electric;
 
 /**
  * Created by rvillalobos on 2/24/18.
@@ -25,7 +32,7 @@ public class Pikachu extends PokemonCharacter {
      * Pikachu constructor.
      */
     public Pikachu() {
-        setType("electric");
+        //setType("electric");
         setName("Pikachu");
         setHasEvolution(true);
         Attack attackAP = new AncientPowerAttack();
@@ -34,6 +41,8 @@ public class Pikachu extends PokemonCharacter {
         setMainAttack(attackIB);
         setHitPoints(HIT_POINTS);
         setDefenseMultiplier(DEFENSE_MULTIPLIER);
+        PokemonType electric = new Electric();
+        setType(electric);
     }
 
     @Override
@@ -42,10 +51,10 @@ public class Pikachu extends PokemonCharacter {
     }
 
     @Override
-    public final String defend(final int attack) {
+    public final String defend(final int attack, final String typePok) {
         int damage;
 
-        damage = (int) (attack * getDefenseMultiplier());
+        damage = (int) (attack * getDefenseMultiplier(typePok));
         int newHP = getHitPoints() - damage;
 
         String defendMessage = new String("Defending attack, damage caused is "
@@ -55,5 +64,6 @@ public class Pikachu extends PokemonCharacter {
         return defendMessage;
 
     }
+
 
 }

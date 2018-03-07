@@ -1,9 +1,16 @@
-package com.iteso.nintendo;
+package com.iteso.nintendo.Pokemon;
+
+import com.iteso.nintendo.Moves.AncientPowerAttack;
+import com.iteso.nintendo.Attack;
+import com.iteso.nintendo.Moves.FireBlazeAttack;
+import com.iteso.nintendo.PokemonCharacter;
+import com.iteso.nintendo.PokemonType;
+import com.iteso.nintendo.Types.Fire;
 
 /**
  * Created by rvillalobos on 2/24/18.
  */
-public class Blaziken extends PokemonCharacter {
+public class Cyndaquil extends PokemonCharacter {
     /**
      * Hit Points are the maximum life of pokemon.
      */
@@ -24,16 +31,18 @@ public class Blaziken extends PokemonCharacter {
     /**
      * Pikachu constructor.
      */
-    public Blaziken() {
-        setType("fire");
-        setName("Blaziken");
+    public Cyndaquil() {
+        //setType("fire");
+        setName("Cyndaquil");
         setHasEvolution(true);
-        Attack attackfb = new LowKickAttack();
+        Attack attackfb = new FireBlazeAttack();
         setSecondAttack(attackfb);
-        Attack attackAP = new FireBlazeAttack();
+        Attack attackAP = new AncientPowerAttack();
         setMainAttack(attackAP);
         setHitPoints(HIT_POINTS);
         setDefenseMultiplier(DEFENSE_MULTIPLIER);
+        PokemonType fire = new Fire();
+        setType(fire);
     }
 
     @Override
@@ -42,10 +51,10 @@ public class Blaziken extends PokemonCharacter {
     }
 
     @Override
-    public final String defend(final int attack) {
+    public final String defend(final int attack, final String typePok) {
         int damage;
 
-        damage = (int) (attack * getDefenseMultiplier());
+        damage = (int) (attack * getDefenseMultiplier(typePok));
         int newHP = getHitPoints() - damage;
 
         String defendMessage = new String("Defending attack, damage caused is "
@@ -55,5 +64,6 @@ public class Blaziken extends PokemonCharacter {
         return defendMessage;
 
     }
+
 
 }

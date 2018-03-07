@@ -6,4 +6,5 @@ public interface Attack {
     String defenseTurn();
     String getAttackName();
     int getAttackDamage();
+    String getTtype();
 }

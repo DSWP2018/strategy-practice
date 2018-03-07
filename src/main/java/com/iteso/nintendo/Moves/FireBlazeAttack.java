@@ -1,10 +1,11 @@
-package com.iteso.nintendo;
+package com.iteso.nintendo.Moves;
 
-public class LowKickAttack implements Attack {
-    private static final String ATTACK_NAME = "Low Kick";
-    private  static final int ATTACK_DAMAGE= 15;
-    private static final String DEFENSE_NAME = "protect";
-    private static final int DEFENSE_POINTS = 100;
+import com.iteso.nintendo.Attack;
+
+public class FireBlazeAttack implements Attack {
+    private static final String ATTACK_NAME = "fire blaze";
+    private  static final int ATTACK_DAMAGE= 20;
+    private static final String TYPE = "fire"; /**Tipo de ataque. */
     @Override
     public String attackOpponent() {
         return "Attacking opponent with " + ATTACK_NAME + " causing a damage of " + ATTACK_DAMAGE;

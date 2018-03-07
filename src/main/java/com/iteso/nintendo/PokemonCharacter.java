@@ -12,7 +12,7 @@ public abstract class PokemonCharacter {
     /**
      * Pokemon type.
      */
-    private String type = null;
+    private PokemonType type = null;
     /**
      * Indicator of evolution.
      */
@@ -62,7 +62,7 @@ public abstract class PokemonCharacter {
      * @param attackDamage Amount of damage to defend.
      * @return Result of defense.
      */
-    public abstract String defend(int attackDamage);
+    public abstract String defend(int attackDamage, String typeAttack);
 
     /**
      * Method to change pokemon attack.
@@ -70,20 +70,20 @@ public abstract class PokemonCharacter {
      * @param attackDamage New damage.
      * @param newAttack New attack name.
      */
- 
+
     /**
      * Pokemon type.
      * @return water, fire, normal, electric, plant, bug, etc.
      */
     public final String getType() {
-        return type;
+        return type.getTypeName();
     }
 
     /**
      * Set new pokemon type.
      * @param newType new pokemon type.
      */
-    public final void setType(final String newType) {
+    public final void setType(final PokemonType newType) {
         this.type = newType;
     }
 
@@ -156,8 +156,8 @@ public abstract class PokemonCharacter {
      * Get defense multiplier.
      * @return defense multiplier.
      */
-    public final double getDefenseMultiplier() {
-        return defenseMultiplier;
+    public final double getDefenseMultiplier(String typePok) {
+        return defenseMultiplier * type.getDefenseTypes(typePok);
     }
 
     /**

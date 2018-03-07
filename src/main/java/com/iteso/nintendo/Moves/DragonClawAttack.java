@@ -1,10 +1,12 @@
-package com.iteso.nintendo;
+package com.iteso.nintendo.Moves;
 
-public class IceBeamAttack implements Attack {
-    private static final String ATTACK_NAME = "Ice Beam";
-    private  static final int ATTACK_DAMAGE= 23;
-    private static final String DEFENSE_NAME = "protect";
-    private static final int DEFENSE_POINTS = 100;
+import com.iteso.nintendo.Attack;
+
+public class DragonClawAttack implements Attack {
+    private static final String ATTACK_NAME = "Dragon Claw";
+    private  static final int ATTACK_DAMAGE = 22;
+    private static final String TYPE = "Dragon"; /**Tipo de ataque. */
+
     @Override
     public String attackOpponent() {
         return "Attacking opponent with " + ATTACK_NAME + " causing a damage of " + ATTACK_DAMAGE;
@@ -24,4 +26,5 @@ public class IceBeamAttack implements Attack {
     public int getAttackDamage() {
         return this.ATTACK_DAMAGE;
     }
+
 }

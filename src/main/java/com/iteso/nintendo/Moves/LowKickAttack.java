@@ -1,11 +1,10 @@
-package com.iteso.nintendo;
+package com.iteso.nintendo.Moves;
 
-public class DragonClawAttack implements Attack {
-    private static final String ATTACK_NAME = "Dragon Claw";
-    private  static final int ATTACK_DAMAGE = 22;
-    private static final String DFENSE_NAME = "protect";
-    private static final int DEFENSE_POINTS = 100;
+import com.iteso.nintendo.Attack;
 
+public class LowKickAttack implements Attack {
+    private static final String ATTACK_NAME = "Low Kick";
+    private  static final int ATTACK_DAMAGE= 15;
     @Override
     public String attackOpponent() {
         return "Attacking opponent with " + ATTACK_NAME + " causing a damage of " + ATTACK_DAMAGE;
@@ -25,5 +24,4 @@ public class DragonClawAttack implements Attack {
     public int getAttackDamage() {
         return this.ATTACK_DAMAGE;
     }
-
 }
