@@ -7,11 +7,15 @@ public class Wartortle extends PokemonCharacter {
     /**
      * First kind of attack.
      */
-    private Attack terremoto;
+    private Attack terremoto = new Terremoto();
     /**
      * Second kind of attack.
      */
-    private Attack girobola;
+    private Attack girobola = new GiroBola();
+    /**
+     * Type of Pokemon.
+     */
+    private PokemonType type = new Hielo();
     /**
      * Hit Points are the maximum life of pokemon.
      */
@@ -22,14 +26,14 @@ public class Wartortle extends PokemonCharacter {
     public static final double DEFENSE_MULTIPLIER = 0.3;
 
     /**
-     * Pikachu constructor.
+     * Wartortle constructor.
      */
     public Wartortle() {
-        setType("fire");
-        setName("Charmander");
+        setType(type);
+        setName("Wartortle");
         setHasEvolution(true);
-        setSecondAttack(terremoto);
-        setMainAttack(girobola);
+        setSecondAttack(girobola);
+        setMainAttack(terremoto);
         setHitPoints(HIT_POINTS);
         setDefenseMultiplier(DEFENSE_MULTIPLIER);
     }
@@ -40,42 +44,35 @@ public class Wartortle extends PokemonCharacter {
     }
 
     @Override
-    public final String defend(final int attack) {
+    public final String defend(final Attack attack,
+                               final PokemonType attackedby) {
         int damage;
-
-        damage = (int) (attack * getDefenseMultiplier());
-        int newHP = getHitPoints() - damage;
-
-        String defendMessage = new String("Defending attack, damage caused is "
-                + damage + " new HP is " + newHP);
-
-        setHitPoints(newHP);
-        return defendMessage;
-
+        damage = (int) (attack.getAttackDamage() * (getDefenseMultiplier()
+                + this.type.setDefense(attackedby)));
+        setHitPoints(getHitPoints() - damage);
+        return "Defending attack, damage is " + damage
+                + " new HP is " + getHitPoints();
     }
 
     @Override
     public final String secondAttack() {
-
-        String attackMessage = new String("Attacking opponent with "
-                + terremoto.getAttackName()
-                + " causing a damage of " + terremoto.getAttackDamage());
-        return attackMessage;
-
-
+        return "Attacking opponent with " + girobola.getAttackName()
+                + " causing a damage of " + girobola.getAttackDamage();
     }
 
     @Override
     public final String mainAttack() {
-        String attackMessage = new String("Attacking opponent with "
-                + girobola.getAttackName()
-                + " causing a damage of " + girobola.getAttackDamage());
-        return attackMessage;
+        return "Attacking opponent with " + terremoto.getAttackName()
+                + " causing a damage of " + terremoto.getAttackDamage();
 
     }
 
     @Override
-    public void setNewAttack(final Attack attack) {
-
+    public final void setNewAttack(final Attack attack, final int tochange) {
+        if (tochange == 1) {
+            setMainAttack(attack);
+        } else {
+            setSecondAttack(attack);
+        }
     }
 }

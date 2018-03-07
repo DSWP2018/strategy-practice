@@ -16,9 +16,11 @@ public interface Attack {
     int getAttackDamage();
     /**
      * Método para atacar al oponente.
-     * @return String con frase de ataque.
+     * @param type para saber el tipo de mi pokemon.
+     * @param character para saber a quién ataco.
+     * @return String con mensaje de ataque.
      */
-    String attackOpponent();
+    String attackOpponent(PokemonType type, PokemonCharacter character);
     /**
      * Método para cancelar el ataque dirigido.
      * @return String con mensaje de cancelación.

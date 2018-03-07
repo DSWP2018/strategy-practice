@@ -20,8 +20,11 @@ public class Terremoto implements Attack {
     }
 
     @Override
-    public final String attackOpponent() {
-        return "Ataque terremoto!";
+    public final String attackOpponent(final PokemonType type,
+                                       final PokemonCharacter character) {
+        return "Attack " + character.getName()
+                + "with " + getAttackName()
+                + "to cause a damage of " + type.setDamage(character.getType());
     }
 
     @Override

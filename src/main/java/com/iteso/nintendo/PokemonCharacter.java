@@ -12,7 +12,7 @@ public abstract class PokemonCharacter {
     /**
      * Pokemon type.
      */
-    private String type = null;
+    private PokemonType type = null;
     /**
      * Indicator of evolution.
      */
@@ -58,10 +58,11 @@ public abstract class PokemonCharacter {
 
     /**
      * Method to defend an attack.
-     * @param attackDamage Amount of damage to defend.
+     * @param attack to know wich was the attack used.
+     * @param attackedby of Pokemon attacking me.
      * @return Result of defense.
      */
-    public abstract String defend(int attackDamage);
+    public abstract String defend(Attack attack, PokemonType attackedby);
 
     /**
      * Method to perform second attack.
@@ -77,15 +78,16 @@ public abstract class PokemonCharacter {
 
     /**
      * Method to change pokemon attack.
-     * @param attack Which attack to change.
+     * @param attack to know wich is gonna be the new attack.
+     * @param tochange Which attack to change.
      */
-    public abstract void setNewAttack(Attack attack);
+    public abstract void setNewAttack(Attack attack, int tochange);
 
     /**
      * Pokemon type.
      * @return water, fire, normal, electric, plant, bug, etc.
      */
-    public final String getType() {
+    public final PokemonType getType() {
         return type;
     }
 
@@ -93,7 +95,7 @@ public abstract class PokemonCharacter {
      * Set new pokemon type.
      * @param newType new pokemon type.
      */
-    public final void setType(final String newType) {
+    public final void setType(final PokemonType newType) {
         this.type = newType;
     }
 
