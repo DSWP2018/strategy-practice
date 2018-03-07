@@ -12,7 +12,7 @@ public class Water implements Attack {
 
     @Override
     public String attack() {
-        return "Se ataco al pokemon con " + attackName + ", dañandolo con " + damage + " puntos.";
+        return "Pokemon used " + attackName + ", making a damage of " + damage + ".";
     }
 
     @Override
