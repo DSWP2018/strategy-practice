@@ -1,9 +1,14 @@
-package com.iteso.nintendo;
+package com.iteso.nintendo.Pokemon;
+
+import com.iteso.nintendo.Attack;
+import com.iteso.nintendo.Moves.SeedBomb;
+import com.iteso.nintendo.Moves.TakeDown;
+import com.iteso.nintendo.PokemonCharacter;
 
 /**
  * Created by rvillalobos on 2/24/18.
  */
-public class Gyarados extends PokemonCharacter {
+public class Bulbasaur extends PokemonCharacter {
     /**
      * Hit Points are the maximum life of pokemon.
      */
@@ -14,14 +19,14 @@ public class Gyarados extends PokemonCharacter {
     public static final double DEFENSE_MULTIPLIER = 0.3;
 
     /**
-     * Psyduck constructor.
+     * Bulbasaur constructor.
      */
-    public Gyarados() {
-        setType("Water");
-        setName("Gyarados");
+    public Bulbasaur() {
+        setType("grass");
+        setName("Bulbasaur");
         setHasEvolution(true);
-        setSecondAttack(new SurfAttack());
-        setMainAttack(new SolarBeamAttack());
+        setMainAttack(new TakeDown());
+        setSecondAttack(new SeedBomb());
         setHitPoints(HIT_POINTS);
         setDefenseMultiplier(DEFENSE_MULTIPLIER);
     }
@@ -48,16 +53,13 @@ public class Gyarados extends PokemonCharacter {
 
     @Override
     public final String secondAttack() {
-
         return getSecondAttack().attackOpponent();
-
 
     }
 
     @Override
     public final String mainAttack() {
         return getMainAttack().attackOpponent();
-
     }
 
     @Override

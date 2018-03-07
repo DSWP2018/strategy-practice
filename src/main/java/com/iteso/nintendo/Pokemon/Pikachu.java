@@ -1,4 +1,9 @@
-package com.iteso.nintendo;
+package com.iteso.nintendo.Pokemon;
+
+import com.iteso.nintendo.Attack;
+import com.iteso.nintendo.Moves.Spark;
+import com.iteso.nintendo.Moves.Thunder;
+import com.iteso.nintendo.PokemonCharacter;
 
 /**
  * Created by rvillalobos on 2/24/18.
@@ -22,8 +27,8 @@ public class Pikachu extends PokemonCharacter {
         setType("electric");
         setName("Pikachu");
         setHasEvolution(true);
-        setSecondAttack(new ThunderAttack());
-        setMainAttack(new SwallowAttack());
+        setMainAttack(new Spark());
+        setSecondAttack(new Thunder());
         setHitPoints(HIT_POINTS);
         setDefenseMultiplier(DEFENSE_MULTIPLIER);
 

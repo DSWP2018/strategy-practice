@@ -1,19 +1,21 @@
-package com.iteso.nintendo;
+package com.iteso.nintendo.Moves;
+
+import com.iteso.nintendo.Attack;
 
 /**
  *
  */
-public class SurfAttack implements Attack {
+public class FlameBurst implements Attack {
 
     /**
      *
      */
-    public static final String ATTACK_NAME = "Surf";
+    public static final String ATTACK_NAME = "Flame Burst";
 
     /**
      *
      */
-    public static final int ATTACK_DAMAGE = 90;
+    public static final int ATTACK_DAMAGE = 70;
     /**
      *
      * @return string of the attack

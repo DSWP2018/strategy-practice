@@ -1,18 +1,21 @@
-package com.iteso.nintendo;
+package com.iteso.nintendo.Moves;
+
+import com.iteso.nintendo.Attack;
 
 /**
  *
  */
-public class ThunderAttack implements Attack {
-    /**
-     *
-     */
-    public static final String ATTACK_NAME = "Thunder";
+public class Confusion implements Attack {
 
     /**
      *
      */
-    public static final int ATTACK_DAMAGE = 70;
+    public static final String ATTACK_NAME = "Confusion";
+
+    /**
+     *
+     */
+    public static final int ATTACK_DAMAGE = 50;
     /**
      *
      * @return string of the attack

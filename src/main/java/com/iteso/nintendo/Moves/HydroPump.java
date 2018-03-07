@@ -1,19 +1,21 @@
-package com.iteso.nintendo;
+package com.iteso.nintendo.Moves;
+
+import com.iteso.nintendo.Attack;
 
 /**
  *
  */
-public class SwallowAttack implements Attack {
+public class HydroPump implements Attack {
 
     /**
      *
      */
-    public static final String ATTACK_NAME = "Swallow";
+    public static final String ATTACK_NAME = "Hydro Pump";
 
     /**
      *
      */
-    public static final int ATTACK_DAMAGE = 10;
+    public static final int ATTACK_DAMAGE = 110;
     /**
      *
      * @return string of the attack

@@ -1,18 +1,21 @@
-package com.iteso.nintendo;
+package com.iteso.nintendo.Moves;
+
+import com.iteso.nintendo.Attack;
 
 /**
- *solar beam.
+ *
  */
-public class SolarBeamAttack implements Attack {
-    /**
-     *
-     */
-    public static final String ATTACK_NAME = "Solar Beam";
+public class StompingTantrum implements Attack {
 
     /**
      *
      */
-    public static final int ATTACK_DAMAGE = 100;
+    public static final String ATTACK_NAME = "Stomping Tantrum";
+
+    /**
+     *
+     */
+    public static final int ATTACK_DAMAGE = 75;
     /**
      *
      * @return string of the attack

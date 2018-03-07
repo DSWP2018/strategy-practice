@@ -1,9 +1,14 @@
-package com.iteso.nintendo;
+package com.iteso.nintendo.Pokemon;
+
+import com.iteso.nintendo.Attack;
+import com.iteso.nintendo.Moves.Confusion;
+import com.iteso.nintendo.Moves.HydroPump;
+import com.iteso.nintendo.PokemonCharacter;
 
 /**
  * Created by rvillalobos on 2/24/18.
  */
-public class Vulpix extends PokemonCharacter {
+public class Psyduck extends PokemonCharacter {
     /**
      * Hit Points are the maximum life of pokemon.
      */
@@ -16,12 +21,12 @@ public class Vulpix extends PokemonCharacter {
     /**
      * Psyduck constructor.
      */
-    public Vulpix() {
-        setType("Fire");
-        setName("Vulpix");
+    public Psyduck() {
+        setType("Water");
+        setName("Psyduck");
         setHasEvolution(true);
-        setSecondAttack(new SwallowAttack());
-        setMainAttack(new SolarBeamAttack());
+        setMainAttack(new HydroPump());
+        setSecondAttack(new Confusion());
         setHitPoints(HIT_POINTS);
         setDefenseMultiplier(DEFENSE_MULTIPLIER);
     }

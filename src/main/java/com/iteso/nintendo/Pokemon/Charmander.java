@@ -1,4 +1,9 @@
-package com.iteso.nintendo;
+package com.iteso.nintendo.Pokemon;
+
+import com.iteso.nintendo.Attack;
+import com.iteso.nintendo.Moves.FlameBurst;
+import com.iteso.nintendo.Moves.Flamethrower;
+import com.iteso.nintendo.PokemonCharacter;
 
 /**
  * Created by rvillalobos on 2/24/18.
@@ -20,8 +25,8 @@ public class Charmander extends PokemonCharacter {
         setType("fire");
         setName("Charmander");
         setHasEvolution(true);
-        setSecondAttack(new SwallowAttack());
-        setMainAttack(new SolarBeamAttack()); //Sorry Charmander unu
+        setMainAttack(new Flamethrower());
+        setSecondAttack(new FlameBurst());
         setHitPoints(HIT_POINTS);
         setDefenseMultiplier(DEFENSE_MULTIPLIER);
     }

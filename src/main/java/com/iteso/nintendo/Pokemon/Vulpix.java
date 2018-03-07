@@ -1,9 +1,14 @@
-package com.iteso.nintendo;
+package com.iteso.nintendo.Pokemon;
+
+import com.iteso.nintendo.Attack;
+import com.iteso.nintendo.Moves.FireBlast;
+import com.iteso.nintendo.Moves.Flamethrower;
+import com.iteso.nintendo.PokemonCharacter;
 
 /**
  * Created by rvillalobos on 2/24/18.
  */
-public class Squirtle extends PokemonCharacter {
+public class Vulpix extends PokemonCharacter {
     /**
      * Hit Points are the maximum life of pokemon.
      */
@@ -14,21 +19,21 @@ public class Squirtle extends PokemonCharacter {
     public static final double DEFENSE_MULTIPLIER = 0.3;
 
     /**
-     * Squirtle constructor.
+     * Psyduck constructor.
      */
-    public Squirtle() {
-        setType("water");
-        setName("Squirtle");
+    public Vulpix() {
+        setType("Fire");
+        setName("Vulpix");
         setHasEvolution(true);
-        setSecondAttack(new SwallowAttack());
-        setMainAttack(new SolarBeamAttack()); //Sorry Charmander unu
+        setMainAttack(new FireBlast());
+        setSecondAttack(new Flamethrower());
         setHitPoints(HIT_POINTS);
         setDefenseMultiplier(DEFENSE_MULTIPLIER);
     }
 
     @Override
     public final String evolve() {
-        return null;
+        return "";
     }
 
     @Override

@@ -1,9 +1,16 @@
-package com.iteso.nintendo;
+package com.iteso.nintendo.Pokemon;
+
+import com.iteso.nintendo.Attack;
+import com.iteso.nintendo.Moves.Confusion;
+import com.iteso.nintendo.Moves.HydroPump;
+import com.iteso.nintendo.Moves.StompingTantrum;
+import com.iteso.nintendo.Moves.Thrash;
+import com.iteso.nintendo.PokemonCharacter;
 
 /**
  * Created by rvillalobos on 2/24/18.
  */
-public class Bulbasaur extends PokemonCharacter {
+public class Cubone extends PokemonCharacter {
     /**
      * Hit Points are the maximum life of pokemon.
      */
@@ -14,14 +21,14 @@ public class Bulbasaur extends PokemonCharacter {
     public static final double DEFENSE_MULTIPLIER = 0.3;
 
     /**
-     * Bulbasaur constructor.
+     * Psyduck constructor.
      */
-    public Bulbasaur() {
-        setType("grass");
-        setName("Bulbasaur");
+    public Cubone() {
+        setType("Ground");
+        setName("Cubone");
         setHasEvolution(true);
-        setSecondAttack(new FrezeeShockAttack());
-        setMainAttack(new SolarBeamAttack());
+        setMainAttack(new StompingTantrum());
+        setSecondAttack(new Thrash());
         setHitPoints(HIT_POINTS);
         setDefenseMultiplier(DEFENSE_MULTIPLIER);
     }
