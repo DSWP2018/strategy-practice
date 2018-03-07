@@ -56,9 +56,10 @@ public class ChikoritaTest {
 
     @Test
     public void defend(){
+        when(pokemonType.defenseAdjustment(pokemonType)).thenReturn(0.2);
         when(mainAttack.getAttackDamage()).thenReturn(20);
-        Assert.assertEquals("Defending attack, damage caused is 4 new HP is 46",
-                chikorita.defend(mainAttack));
+        Assert.assertEquals("Defending attack, damage caused is 8 new HP is 42",
+                chikorita.defend(mainAttack, pokemonType, pokemonType));
     }
 
     @Test

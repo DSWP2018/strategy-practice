@@ -56,9 +56,10 @@ public class MudkipTest {
 
     @Test
     public void defend(){
+        when(pokemonType.defenseAdjustment(pokemonType)).thenReturn(0.2);
         when(mainAttack.getAttackDamage()).thenReturn(20);
-        Assert.assertEquals("Defending attack, damage caused is 8 new HP is 82",
-                mudkip.defend(mainAttack));
+        Assert.assertEquals("Defending attack, damage caused is 12 new HP is 78",
+                mudkip.defend(mainAttack, pokemonType, pokemonType));
     }
 
     @Test

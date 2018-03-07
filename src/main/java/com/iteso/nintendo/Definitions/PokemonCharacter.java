@@ -59,9 +59,12 @@ public abstract class PokemonCharacter {
     /**
      * Method to defend an attack.
      * @param attack Amount of damage to defend.
+     * @param  myType tipo del pokemon que defiende
+     * @param  enemyType tipo del pokemon que ataca.
      * @return Result of defense.
      */
-    public abstract String defend(Attack attack);
+    public abstract String defend(Attack attack,
+            PokemonType myType, PokemonType enemyType);
 
     /**
      * Method to perform second attack.

@@ -40,10 +40,12 @@ public class Mudkip extends PokemonCharacter {
     }
 
     @Override
-    public final String defend(final Attack attack) {
+    public final String defend(final Attack attack,
+            final PokemonType myType, final PokemonType enemyType) {
         int damage;
 
-        damage = (int) (attack.getAttackDamage() * getDefenseMultiplier());
+        damage = (int) (attack.getAttackDamage() * (getDefenseMultiplier()
+                + myType.defenseAdjustment(enemyType)));
         int newHP = getHitPoints() - damage;
 
         String defendMessage = new String("Defending attack, damage caused is "
@@ -51,7 +53,6 @@ public class Mudkip extends PokemonCharacter {
 
         setHitPoints(newHP);
         return defendMessage;
-
     }
 
     @Override

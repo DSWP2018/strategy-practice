@@ -56,9 +56,10 @@ public class CyndaquillTest {
 
     @Test
     public void defend(){
+        when(pokemonType.defenseAdjustment(pokemonType)).thenReturn(0.2);
         when(mainAttack.getAttackDamage()).thenReturn(20);
-        Assert.assertEquals("Defending attack, damage caused is 12 new HP is 48",
-                cyndaquill.defend(mainAttack));
+        Assert.assertEquals("Defending attack, damage caused is 16 new HP is 44",
+                cyndaquill.defend(mainAttack, pokemonType, pokemonType));
     }
 
     @Test

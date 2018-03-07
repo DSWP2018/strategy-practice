@@ -58,7 +58,7 @@ public class SquirtleTest {
     public void defend(){
         when(mainAttack.getAttackDamage()).thenReturn(20);
         Assert.assertEquals("Defending attack, damage caused is 8 new HP is 92",
-                squirtle.defend(mainAttack));
+                squirtle.defend(mainAttack, pokemonType, pokemonType));
     }
 
     @Test

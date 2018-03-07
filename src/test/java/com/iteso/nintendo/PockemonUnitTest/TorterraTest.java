@@ -56,9 +56,10 @@ public class TorterraTest {
 
     @Test
     public void defend(){
+        when(pokemonType.defenseAdjustment(pokemonType)).thenReturn(0.2);
         when(mainAttack.getAttackDamage()).thenReturn(20);
-        Assert.assertEquals("Defending attack, damage caused is 2 new HP is 98",
-                torterra.defend(mainAttack));
+        Assert.assertEquals("Defending attack, damage caused is 6 new HP is 94",
+                torterra.defend(mainAttack, pokemonType, pokemonType));
     }
 
     @Test

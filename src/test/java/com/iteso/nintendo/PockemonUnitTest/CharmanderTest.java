@@ -56,9 +56,10 @@ public class CharmanderTest {
 
     @Test
     public void defend(){
+        when(pokemonType.defenseAdjustment(pokemonType)).thenReturn(0.2);
         when(mainAttack.getAttackDamage()).thenReturn(20);
-        Assert.assertEquals("Defending attack, damage caused is 6 new HP is 71",
-                charmander.defend(mainAttack));
+        Assert.assertEquals("Defending attack, damage caused is 10 new HP is 67",
+                charmander.defend(mainAttack, pokemonType, pokemonType));
     }
 
     @Test
