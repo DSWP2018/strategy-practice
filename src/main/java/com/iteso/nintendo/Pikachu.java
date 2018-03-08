@@ -5,13 +5,17 @@ package com.iteso.nintendo;
  */
 public class Pikachu extends PokemonCharacter {
     /**
+     * tipo.
+     */
+    private final Type electric = new Electric();
+    /**
      * First attack.
      */
-    public final Sparks sparks = new Sparks();
+    private final Attack sparks = new Sparks();
     /**
      * Second attack.
      */
-    public final Tackle tackle = new Tackle();
+    private final Attack tackle = new Tackle();
 
 
     /**
@@ -22,20 +26,12 @@ public class Pikachu extends PokemonCharacter {
      * Defense multiplier value between 0-1.
      */
     public static final double DEFENSE_MULTIPLIER = 0.4;
-    /**
-     * Damage from 1 - 20.
-     */
-    public static final int MAIN_ATTACK_DAMAGE = 5;
-    /**
-     * Damage from 1 -25.
-     */
-    public static final int SECOND_ATTACK_DAMAGE = 15;
 
     /**
      * Pikachu constructor.
      */
     public Pikachu() {
-        setType("electric");
+        setType(electric);
         setName("Pikachu");
         setHasEvolution(true);
         setSecondAttack(tackle);
@@ -50,12 +46,22 @@ public class Pikachu extends PokemonCharacter {
     }
 
     @Override
-    public final String defend(final int attack) {
-        int damage;
+    public final String defend(final Attack attack) {
 
-        damage = (int) (attack * getDefenseMultiplier());
-        int newHP = getHitPoints() - damage;
+        //0.4*12*2 = 9.6    SuperEfectivo
+        //0.4*16*0.5 = 3.2  No efectivo
+        //0.4*7*1 =2.8      neutral
 
+        int damage =  (int) (getDefenseMultiplier()
+                * attack.getAttackDamage()
+                * this.getType().defends(attack));
+
+        //   damage = (int) (attack * getDefenseMultiplier());
+        int newHP = (int) (getHitPoints() - damage);
+
+        //100- 10 = 90      SuperEfectivo
+        //100-3 = 97        noefectivo
+        //100-2 = 98        neutral
         String defendMessage = new String("Defending attack, damage caused is "
                 + damage + " new HP is " + newHP);
 
@@ -64,19 +70,69 @@ public class Pikachu extends PokemonCharacter {
 
     }
 
+    /**
+     * Hace el 2do ataque.
+     * @return mensaje del ataque.
+     */
     @Override
     public final String secondAttack() {
         return getSecondAttack().attackOpponent();
     }
 
+    /**
+     * Hace el ataque principal.
+     * @return mensaje de ataque.
+     */
     @Override
     public final String mainAttack() {
         return getMainAttack().attackOpponent();
 
     }
 
+    /**
+     * no hace nada.
+     * @return nada.
+     */
     @Override
-    public String attackOpponent() {
+    public final String attackOpponent() {
         return null;
     }
+
+    /**
+     * nada.
+     * @return nada.
+     */
+    @Override
+    public final String getAttackType() {
+        return null;
+    }
+
+    /**
+     * nada.
+     * @return nada.
+     */
+    @Override
+    public final String getAttackName() {
+        return null;
+    }
+
+    /**
+     * nada.
+     * @return nada.
+     */
+    @Override
+    public final int getAttackDamage() {
+        return 0;
+    }
+
+    /**
+     * nada.
+     * @param attack n/a.
+     * @return nada.
+     */
+    @Override
+    public final double defends(final Attack attack) {
+        return 0;
+    }
 }
+
