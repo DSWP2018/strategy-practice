@@ -56,13 +56,13 @@ public class PikachuTest {
     public void setTypeTest(){
         Type electricType = mock(ElectricType.class);
         pikachu.setType(electricType);
-        Assert.assertEquals("Fighting",pikachu.getType());
+        Assert.assertEquals("Electric",pikachu.getType());
     }
 
     @Test
     public void defend() {
         Assert.assertEquals("Defending attack, damage caused is 3 new HP is 97", pikachu.defend(10));
-        Assert.assertEquals(95, pikachu.getHitPoints());
+        Assert.assertEquals(97, pikachu.getHitPoints());
     }
 
     @Test
@@ -80,16 +80,16 @@ public class PikachuTest {
 
     @Test
     public void getAndSetMainAttackTest(){
-        Attack newMockedMainAttack = mock(SoundAttack.class);
+        SoundAttack newMockedMainAttack = mock(SoundAttack.class);
         pikachu.setMainAttack(newMockedMainAttack);
-        Assert.assertEquals("Sound Attack", pikachu.getMainAttack());
+        Assert.assertEquals("Sound Attack", pikachu.getMainAttackName());
     }
 
     @Test
     public void getAndSetSecondAttackTest(){
-        Attack newMockedSecondAttack = mock(WaterAttack.class);
+        WaterAttack newMockedSecondAttack = mock(WaterAttack.class);
         pikachu.setSecondAttack(newMockedSecondAttack);
-        Assert.assertEquals("Water Attack", pikachu.getSecondAttack());
+        Assert.assertEquals("Water Attack", pikachu.getSecondAttackName());
     }
 
 }
