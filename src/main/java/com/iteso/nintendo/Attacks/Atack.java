@@ -1,4 +1,4 @@
-package com.iteso.nintendo;
+package com.iteso.nintendo.Attacks;
 
 public interface Atack {
 
@@ -7,17 +7,17 @@ public interface Atack {
      * Get the attack
      * @return
      */
-    public String attackOpponent();
+    String attackOpponent();
 
     /**
      * Get damage of main attack.
      * @return main attack damage.
      */
-    public int getAttackDamage();
+    int getAttackDamage();
 
     /**
      * Get name of the attack
      * @return
      */
-    public String getAttackName();
+    String getAttackName();
 }

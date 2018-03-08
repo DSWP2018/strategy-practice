@@ -1,4 +1,7 @@
-package com.iteso.nintendo;
+package com.iteso.nintendo.Pokemon;
+
+import com.iteso.nintendo.Attacks.Atack;
+import com.iteso.nintendo.PokemonTypes.PokemonType;
 
 /**
  * Created by rvillalobos on 2/24/18.
@@ -12,7 +15,7 @@ public abstract class PokemonCharacter {
     /**
      * Pokemon type.
      */
-    private String type = null;
+    private PokemonType type = null;
     /**
      * Indicator of evolution.
      */
@@ -59,10 +62,10 @@ public abstract class PokemonCharacter {
 
     /**
      * Method to defend an attack.
-     * @param attackDamage Amount of damage to defend.
+     * @param attack attack to defend.
      * @return Result of defense.
      */
-    public abstract String defend(int attackDamage);
+    public abstract String defend(Atack attack);
 
     /**
      * Method to perform second attack.
@@ -88,7 +91,7 @@ public abstract class PokemonCharacter {
      * Pokemon type.
      * @return water, fire, normal, electric, plant, bug, etc.
      */
-    public final String getType() {
+    public final PokemonType getType() {
         return type;
     }
 
@@ -96,7 +99,7 @@ public abstract class PokemonCharacter {
      * Set new pokemon type.
      * @param newType new pokemon type.
      */
-    public final void setType(final String newType) {
+    public final void setType(final PokemonType newType) {
         this.type = newType;
     }
 
@@ -179,4 +182,5 @@ public abstract class PokemonCharacter {
     public final void setHitPoints(final int newHitPoints) {
         this.hitPoints = newHitPoints;
     }
+
 }

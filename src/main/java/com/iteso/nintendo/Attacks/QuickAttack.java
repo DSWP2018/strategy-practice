@@ -1,4 +1,4 @@
-package com.iteso.nintendo;
+package com.iteso.nintendo.Attacks;
 
 public class QuickAttack implements Atack
 {
@@ -11,7 +11,7 @@ public class QuickAttack implements Atack
     }
 
     @Override
-    public String attackOpponent() {
+    public final String attackOpponent() {
         String attackMessage = new String("Attacking opponent with "
                 + name
                 + " causing a damage of " + attackDamage);
@@ -19,12 +19,12 @@ public class QuickAttack implements Atack
     }
 
     @Override
-    public int getAttackDamage() {
+    public final int getAttackDamage() {
         return attackDamage;
     }
 
     @Override
-    public String getAttackName() {
+    public final String getAttackName() {
         return name;
     }
 }
