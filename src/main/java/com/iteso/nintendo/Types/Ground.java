@@ -22,7 +22,7 @@ public class Ground implements PokemonType {
      */
     @Override
     public final String getTypeName() {
-        return "Water";
+        return "Ground";
     }
 
     /**
