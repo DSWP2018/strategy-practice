@@ -1,9 +1,11 @@
 package com.iteso.nintendo.Pokemon;
 
-import com.iteso.nintendo.Attack;
+import com.iteso.nintendo.PokemonAttack;
 import com.iteso.nintendo.Moves.FireBlast;
 import com.iteso.nintendo.Moves.Flamethrower;
 import com.iteso.nintendo.PokemonCharacter;
+import com.iteso.nintendo.PokemonType;
+import com.iteso.nintendo.Types.Fire;
 
 /**
  * Created by rvillalobos on 2/24/18.
@@ -22,7 +24,7 @@ public class Vulpix extends PokemonCharacter {
      * Psyduck constructor.
      */
     public Vulpix() {
-        setType("Fire");
+        setType(new Fire());
         setName("Vulpix");
         setHasEvolution(true);
         setMainAttack(new FireBlast());
@@ -37,10 +39,10 @@ public class Vulpix extends PokemonCharacter {
     }
 
     @Override
-    public final String defend(final int attack) {
+    public final String defend(final int attack, final PokemonType opponentType) {
         int damage;
 
-        damage = (int) (attack * getDefenseMultiplier());
+        damage = (int) (attack * getDefenseMultiplier(opponentType));
         int newHP = getHitPoints() - damage;
 
         String defendMessage = new String("Defending attack, damage caused is "
@@ -66,7 +68,7 @@ public class Vulpix extends PokemonCharacter {
     }
 
     @Override
-    public final void setNewAttack(final int attack, final Attack newAttack) {
+    public final void setNewAttack(final int attack, final PokemonAttack newAttack) {
         if (attack == 1) {
             setMainAttack(newAttack);
         } else {

@@ -1,11 +1,11 @@
 package com.iteso.nintendo.Moves;
 
-import com.iteso.nintendo.Attack;
+import com.iteso.nintendo.PokemonAttack;
 
 /**
  *
  */
-public class Confusion implements Attack {
+public class Confusion implements PokemonAttack {
 
     /**
      *

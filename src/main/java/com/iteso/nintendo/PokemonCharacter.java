@@ -12,7 +12,7 @@ public abstract class PokemonCharacter {
     /**
      * Pokemon type.
      */
-    private String type = null;
+    private PokemonType type = null;
     /**
      * Indicator of evolution.
      */
@@ -20,11 +20,11 @@ public abstract class PokemonCharacter {
     /**
      * Main attack.
      */
-    private Attack mainAttack = null;
+    private PokemonAttack mainAttack = null;
     /**
      * Second attack.
      */
-      private Attack secondAttack = null;
+      private PokemonAttack secondAttack = null;
     /**
      * defense Multiplier.
      */
@@ -61,7 +61,7 @@ public abstract class PokemonCharacter {
      * @param attackDamage Amount of damage to defend.
      * @return Result of defense.
      */
-    public abstract String defend(int attackDamage);
+    public abstract String defend(int attackDamage, PokemonType opponentType );
 
     /**
      * Method to perform second attack.
@@ -81,13 +81,13 @@ public abstract class PokemonCharacter {
      * @param newAttack New attack.
      */
     public abstract void setNewAttack(int attack,
-                                      Attack newAttack);
+                                      PokemonAttack newAttack);
 
     /**
      * Pokemon type.
      * @return water, fire, normal, electric, plant, bug, etc.
      */
-    public final String getType() {
+    public final PokemonType getType() {
         return type;
     }
 
@@ -95,7 +95,7 @@ public abstract class PokemonCharacter {
      * Set new pokemon type.
      * @param newType new pokemon type.
      */
-    public final void setType(final String newType) {
+    public final void setType(final PokemonType newType) {
         this.type = newType;
     }
 
@@ -119,7 +119,7 @@ public abstract class PokemonCharacter {
      * Get instance of main attack.
      * @return main attack instance.
      */
-    public final Attack getMainAttack() {
+    public final PokemonAttack getMainAttack() {
         return mainAttack;
     }
 
@@ -135,7 +135,7 @@ public abstract class PokemonCharacter {
      * Set name of main attack.
      * @param newMainAttack new main attack name.
      */
-    public final void setMainAttack(final Attack newMainAttack) {
+    public final void setMainAttack(final PokemonAttack newMainAttack) {
         this.mainAttack = newMainAttack;
     }
 
@@ -151,14 +151,14 @@ public abstract class PokemonCharacter {
      * Get instance of second attack.
      * @return instance of second attack.
      */
-    public final Attack getSecondAttack() {
+    public final PokemonAttack getSecondAttack() {
         return secondAttack;
     }
     /**
      * Set name of second attack.
      * @param newSecondAttack new second attack name.
      */
-    public final void setSecondAttack(final Attack newSecondAttack) {
+    public final void setSecondAttack(final PokemonAttack newSecondAttack) {
         this.secondAttack = newSecondAttack;
     }
 
@@ -182,12 +182,12 @@ public abstract class PokemonCharacter {
      * Get defense multiplier.
      * @return defense multiplier.
      */
-    public final double getDefenseMultiplier() {
-        return defenseMultiplier;
+    public final double getDefenseMultiplier(PokemonType opponentType) {
+        return defenseMultiplier * type.getDefenseAccordingToType(opponentType);
     }
 
     /**
-     * Set new defense mul;tiplier.
+     * Set new defense multiplier.
      * @param newDefenseMultiplier new defense multiplier.
      */
     public final void setDefenseMultiplier(final double newDefenseMultiplier) {

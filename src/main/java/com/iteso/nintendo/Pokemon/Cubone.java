@@ -1,11 +1,11 @@
 package com.iteso.nintendo.Pokemon;
 
-import com.iteso.nintendo.Attack;
-import com.iteso.nintendo.Moves.Confusion;
-import com.iteso.nintendo.Moves.HydroPump;
+import com.iteso.nintendo.PokemonAttack;
 import com.iteso.nintendo.Moves.StompingTantrum;
 import com.iteso.nintendo.Moves.Thrash;
 import com.iteso.nintendo.PokemonCharacter;
+import com.iteso.nintendo.PokemonType;
+import com.iteso.nintendo.Types.Ground;
 
 /**
  * Created by rvillalobos on 2/24/18.
@@ -24,7 +24,7 @@ public class Cubone extends PokemonCharacter {
      * Psyduck constructor.
      */
     public Cubone() {
-        setType("Ground");
+        setType(new Ground());
         setName("Cubone");
         setHasEvolution(true);
         setMainAttack(new StompingTantrum());
@@ -39,10 +39,10 @@ public class Cubone extends PokemonCharacter {
     }
 
     @Override
-    public final String defend(final int attack) {
+    public final String defend(final int attack, final PokemonType opponentType) {
         int damage;
 
-        damage = (int) (attack * getDefenseMultiplier());
+        damage = (int) (attack * getDefenseMultiplier(opponentType));
         int newHP = getHitPoints() - damage;
 
         String defendMessage = new String("Defending attack, damage caused is "
@@ -68,7 +68,7 @@ public class Cubone extends PokemonCharacter {
     }
 
     @Override
-    public final void setNewAttack(final int attack, final Attack newAttack) {
+    public final void setNewAttack(final int attack, final PokemonAttack newAttack) {
         if (attack == 1) {
             setMainAttack(newAttack);
         } else {

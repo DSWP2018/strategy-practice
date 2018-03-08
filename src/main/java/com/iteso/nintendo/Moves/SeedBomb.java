@@ -1,11 +1,11 @@
 package com.iteso.nintendo.Moves;
 
-import com.iteso.nintendo.Attack;
+import com.iteso.nintendo.PokemonAttack;
 
 /**
  *
  */
-public class SeedBomb implements Attack {
+public class SeedBomb implements PokemonAttack {
 
     /**
      *

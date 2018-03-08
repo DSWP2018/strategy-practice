@@ -3,7 +3,7 @@ package com.iteso.nintendo;
 /**
  *
  */
-public interface Attack {
+public interface PokemonAttack {
     /**
      *
      * @return the string of the attack

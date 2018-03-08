@@ -1,11 +1,11 @@
 package com.iteso.nintendo.Moves;
 
-import com.iteso.nintendo.Attack;
+import com.iteso.nintendo.PokemonAttack;
 
 /**
  *
  */
-public class Spark implements Attack {
+public class Spark implements PokemonAttack {
     /**
      *
      */

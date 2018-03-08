@@ -1,11 +1,11 @@
 package com.iteso.nintendo.Moves;
 
-import com.iteso.nintendo.Attack;
+import com.iteso.nintendo.PokemonAttack;
 
 /**
  *
  */
-public class HydroPump implements Attack {
+public class HydroPump implements PokemonAttack {
 
     /**
      *

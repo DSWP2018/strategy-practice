@@ -1,11 +1,11 @@
 package com.iteso.nintendo.Moves;
 
-import com.iteso.nintendo.Attack;
+import com.iteso.nintendo.PokemonAttack;
 
 /**
  *
  */
-public class Flamethrower implements Attack {
+public class Flamethrower implements PokemonAttack {
 
     /**
      *
