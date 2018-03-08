@@ -5,22 +5,17 @@ public class Sylveon extends PokemonCharacter {
      * Hit Points are the maximum life of pokemon.
      */
     public static final int HIT_POINTS = 100;
-    /**
-     * Defense multiplier value between 0-1.
-     */
-    public static final double DEFENSE_MULTIPLIER = 0.8;
 
     /**
      * Pikachu constructor.
      */
     public Sylveon() {
-        setType("electric");
+        setType(new PsychicType());
         setName("Sylveon");
         setHasEvolution(true);
         setMainAttack(new SoundAttack());
         setSecondAttack(new WaterAttack());
         setHitPoints(HIT_POINTS);
-        setDefenseMultiplier(DEFENSE_MULTIPLIER);
     }
 
     @Override

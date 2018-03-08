@@ -5,22 +5,17 @@ public class Gardevoir extends PokemonCharacter {
      * Hit Points are the maximum life of pokemon.
      */
     public static final int HIT_POINTS = 100;
-    /**
-     * Defense multiplier value between 0-1.
-     */
-    public static final double DEFENSE_MULTIPLIER = 0.4;
 
     /**
      * Pikachu constructor.
      */
     public Gardevoir() {
-        setType("electric");
+        setType(new GroundType());
         setName("Gardevoir");
         setHasEvolution(true);
         setMainAttack(new GroundAttack());
         setSecondAttack(new AirAttack());
         setHitPoints(HIT_POINTS);
-        setDefenseMultiplier(DEFENSE_MULTIPLIER);
     }
 
     @Override
@@ -45,21 +40,13 @@ public class Gardevoir extends PokemonCharacter {
 
     @Override
     public final String secondAttack() {
-
-        String attackMessage = new String("Attacking opponent with "
-                + getSecondAttack()
-                + " causing a damage of " + getSecondAttackDamage());
-        return attackMessage;
-
-
+        return getSecondAttack().attackOpponent();
     }
 
     @Override
     public final String mainAttack() {
-        String attackMessage = new String("Attacking opponent with "
-                + getMainAttack()
-                + " causing a damage of " + getMainAttackDamage());
-        return attackMessage;
+        return getMainAttack().attackOpponent();
 
     }
+
 }

@@ -1,7 +1,7 @@
 package com.iteso.nintendo;
 
 public class GroundAttack implements Attack{
-    private static final String ATTACK_NAME = "Ground Attack";
+    private static final String ATTACK_NAME = "Ground";
     private static final int ATTACK_DAMAGE = 30;
 
     @Override

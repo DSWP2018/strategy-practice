@@ -8,22 +8,17 @@ public class Pikachu extends PokemonCharacter {
      * Hit Points are the maximum life of pokemon.
      */
     public static final int HIT_POINTS = 100;
-    /**
-     * Defense multiplier value between 0-1.
-     */
-    public static final double DEFENSE_MULTIPLIER = 0.2;
 
     /**
      * Pikachu constructor.
      */
     public Pikachu() {
-        setType("electric");
+        setType(new ElectricType());
         setName("Pikachu");
         setHasEvolution(true);
         setMainAttack(new FireAttack());
         setSecondAttack(new AirAttack());
         setHitPoints(HIT_POINTS);
-        setDefenseMultiplier(DEFENSE_MULTIPLIER);
     }
 
     @Override
