@@ -5,4 +5,5 @@ public interface Attack {
     String attackName();
     String attackType();
     int attackDamage();
+    String attackOpponent();
 }

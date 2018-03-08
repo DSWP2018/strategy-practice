@@ -1,5 +1,8 @@
 package com.iteso.nintendo;
 
+import com.iteso.nintendo.attacks.Attack;
+import com.iteso.nintendo.types.PokemonType;
+
 /**
  * Created by rvillalobos on 2/24/18.
  */
@@ -35,6 +38,7 @@ public class Pikachu extends PokemonCharacter {
         setMainAttackDamage(MAIN_ATTACK_DAMAGE);
         setSecondAttackDamage(SECOND_ATTACK_DAMAGE);
     }
+
 
     @Override
     public final String evolve() {

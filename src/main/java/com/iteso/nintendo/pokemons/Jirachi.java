@@ -1,5 +1,6 @@
 package com.iteso.nintendo.pokemons;
 
+import com.iteso.nintendo.PokemonCharacter;
 import com.iteso.nintendo.attacks.Attack;
 import com.iteso.nintendo.attacks.FlashCannon;
 import com.iteso.nintendo.attacks.ZenHeadbutt;
@@ -15,25 +16,17 @@ public class Jirachi {
     private PokemonType type;
     private boolean evolve;
 
-    public Jirachi() {
+    public Jirachi(PokemonType pokemonType, Attack mainAttack, Attack secondAttack) {
         lifePoints = 200;
         defense = 0.20;
         type = new Steel();
-        mainAttack = new FlashCannon();
-        secondAttack = new ZenHeadbutt();
+        this.mainAttack = new FlashCannon();
+        this.secondAttack = new ZenHeadbutt();
         evolve = false;
 
     }
 
-    public String attackWithMain() {
-        return mainAttack.attack();
-    }
-
-    public String attackWithSecond() {
-        return secondAttack.attack();
-    }
-
-    public final String defend(final Attack attack, final PokemonType Type) {
+    public String defend(final Attack attack, final PokemonType Type, int attackDamage) {
         int damage;
         double typeAdv = 1;
 
@@ -52,5 +45,29 @@ public class Jirachi {
 
         lifePoints = HP;
         return Message;
+    }
+
+    public final String evolve() {
+        return null;
+    }
+
+    public FlashCannon getMainAttack() {
+        return null;
+    }
+
+    public FlashCannon getSecondAttack() {
+        return null;
+    }
+
+    public String getName() {
+        return "Jirachi";
+    }
+
+    public double getDefense() {
+        return defense;
+    }
+
+    public String getType() {
+        return "Steel";
     }
 }

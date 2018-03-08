@@ -5,11 +5,13 @@ public class FlashCannon implements Attack {
     private static String attackName;
     private String attackType;
     private static int damage;
+    private static String attackOpponent;
 
     public FlashCannon(){
         attackName = "Flash Cannon";
         attackType = "Steel";
         damage = 80;
+        attackOpponent = "";
     }
 
     public static final int getAttackDamage() {
@@ -34,6 +36,9 @@ public class FlashCannon implements Attack {
     public String attackType() {
         return attackType;
     }
+
+    @Override
+    public String attackOpponent(){ return attackOpponent();}
 
     @Override
     public int attackDamage() {

@@ -32,6 +32,9 @@ public class ZenHeadbutt implements Attack {
     }
 
     @Override
+    public String attackOpponent(){ return attackOpponent();}
+
+    @Override
     public int attackDamage() {
         return damage;
     }

@@ -1,5 +1,6 @@
 package com.iteso.nintendo;
 
+import com.iteso.nintendo.attacks.Attack;
 import com.iteso.nintendo.types.PokemonType; /**
  * Created by rvillalobos on 2/24/18.
  */
@@ -57,6 +58,8 @@ public abstract class PokemonCharacter {
     public final void setName(final String newName) {
         this.name = newName;
     }
+
+    public abstract String defend(Attack attack, PokemonType Type, int attackDamage);
 
     /**
      * Method to perform evolution.
