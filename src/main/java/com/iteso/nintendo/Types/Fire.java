@@ -23,6 +23,6 @@ public class Fire implements PokemonType {
     }
     /**@return Type. */
     public final String getTypeName() {
-        return "Electric";
+        return "Fire";
     }
 }

@@ -22,6 +22,6 @@ public class Fighting implements PokemonType {
     }
     /**@return Type. */
     public final String getTypeName() {
-        return "Electric";
+        return "Fighting";
     }
 }

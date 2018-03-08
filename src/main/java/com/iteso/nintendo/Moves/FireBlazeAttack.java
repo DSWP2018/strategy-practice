@@ -6,7 +6,7 @@ import com.iteso.nintendo.Attack;
 public class FireBlazeAttack implements Attack {
     /**Declarar variables. */
     private static final String
-            ATTACK_NAME = "fire blaze"; /**Nombre del ataque. */
+            ATTACK_NAME = "Fire Blaze"; /**Nombre del ataque. */
     private  static final int ATTACK_DAMAGE = 20; /**Damage del ataque. */
     private static final String TYPE = "fire"; /**Tipo de ataque. */
 

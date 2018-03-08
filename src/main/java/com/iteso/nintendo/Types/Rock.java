@@ -24,6 +24,6 @@ public class Rock implements PokemonType {
     }
     /**@return Type. */
     public final String getTypeName() {
-        return "Electric";
+        return "Rock";
     }
 }
