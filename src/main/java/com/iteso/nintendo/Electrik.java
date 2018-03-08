@@ -34,7 +34,7 @@ public class Electrik extends PokemonCharacter {
      */
     public Electrik() {
         setType("electric");
-        setName("Electrike");
+        setName("Electrik");
         setHasEvolution(true);
         setHitPoints(HIT_POINTS);
         setDefenseMultiplier(DEFENSE_MULTIPLIER);
