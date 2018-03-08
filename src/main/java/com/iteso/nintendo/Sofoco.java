@@ -1,17 +1,18 @@
 package com.iteso.nintendo;
-
+/**Class sofoco.**/
 public class Sofoco implements Attack {
-
-	public int getDamage() {
-		// TODO Auto-generated method stub
-		return 20;
-	}
-
-	public String getAttack() {
-		// TODO Auto-generated method stub
-		String attackMessage = new String(
-				"Attacking opponent with " + "	Sofoco" + " causing a damage of " + getDamage());
-		return attackMessage;
-	}
-
+/**VAR.**/
+private final int i = 20;
+/**@return int.**/
+public final int getDamage() {
+return i;
+}
+/**@return string.
+**/
+public final String getAttack() {
+String attackMessage = new String(
+"Attacking opponent with " + " Sofoco"
++ " causing a damage of " + getDamage());
+return attackMessage;
+}
 }

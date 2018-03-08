@@ -1,15 +1,17 @@
 package com.iteso.nintendo;
-
+/**Class combate.**/
 public class Combate implements Attack {
-	public int getDamage() {
-		// TODO Auto-generated method stub
-		return 4;
-	}
-
-	public String getAttack() {
-		// TODO Auto-generated method stub
-		String attackMessage = new String(
-				"Attacking opponent with " + "Combate" + " causing a damage of " + getDamage());
-		return attackMessage;
-	}
+/**VAR.**/
+private final int i = 4;
+/**@return int.**/
+public final int getDamage() {
+return i;
+}
+/**@return string.**/
+public final String getAttack() {
+String attackMessage = new String(
+"Attacking opponent with " + "Combate"
++ " causing a damage of " + getDamage());
+return attackMessage;
+}
 }

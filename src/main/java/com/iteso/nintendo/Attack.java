@@ -1,6 +1,10 @@
 package com.iteso.nintendo;
-
+/**Interface attack.**/
 public interface Attack {
-	public String getAttack();
-	public int getDamage();
+/**Método getAttack.
+ * @return String.**/
+String getAttack();
+/**Método getDamage.
+ @return int.**/
+int getDamage();
 }

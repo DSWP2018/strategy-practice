@@ -1,50 +1,42 @@
 package com.iteso.nintendo;
-
-public class Morelull extends PokemonCharacter{
-	Attack ventisca=new Ventisca();
-	Attack cascada=new Cascada();
-    /**
-     * Hit Points are the maximum life of pokemon.
-     */
-    public static final int HIT_POINTS = 77;
-    /**
-     * Defense multiplier value between 0-1.
-     */
-    public static final double DEFENSE_MULTIPLIER = 0.3;
-    /**
-     * Damage from 1 - 20.
-     */
-    public static final int MAIN_ATTACK_DAMAGE = 3;
-    /**
-     * Damage from 1 -25.
-     */
-    public static final int SECOND_ATTACK_DAMAGE = 17;
-
-    /**
-     * Pikachu constructor.
-     */
+/**
+ */
+public class Morelull extends PokemonCharacter {
+/**Attack.*/
+private Attack ventisca = new Ventisca();
+/**Attack.*/
+private Attack cascada = new Cascada();
+/**PokemonType.*/
+private PokemonType bug = new Bug();
+/**Hit Points are the maximum life of pokemon.
+*/
+public static final int HIT_POINTS = 77;
+/** constructor.
+*/
     public Morelull() {
-        setType("fire");
+        //setType(bug);
         setName("Morelull");
         setHasEvolution(true);
         setSecondAttack(cascada);
         setMainAttack(ventisca);
         setHitPoints(HIT_POINTS);
-        setDefenseMultiplier(DEFENSE_MULTIPLIER);
+      //  setDefenseMultiplier(DEFENSE_MULTIPLIER);
         setMainAttackDamage();
         setSecondAttackDamage();
     }
-
+    /**
+     */
     @Override
     public final String evolve() {
         return null;
     }
-
+    /**
+     */
     @Override
-    public final String defend(final int attack) {
+    public final String defend(final int attack, final PokemonType attackedby) {
         int damage;
-
-        damage = (int) (attack * getDefenseMultiplier());
+        bug.setDefenseMultiplier(attackedby);
+        damage = (int) (attack * bug.getDefenseMultiplier());
         int newHP = getHitPoints() - damage;
 
         String defendMessage = new String("Defending attack, damage caused is "
@@ -54,28 +46,30 @@ public class Morelull extends PokemonCharacter{
         return defendMessage;
 
     }
-
+    /**
+     * @return String.
+     */
     public final String secondAttack() {
         return ventisca.getAttack();
     }
-
+    /**
+     *  * @return String.
+     */
     @Override
     public final String mainAttack() {
         return cascada.getAttack();
     }
 
+    /**@param newAttack.*/
     @Override
     public final void setNewAttack(final int attack,
-                                   final Attack newAttack) {
-        if (attack == 1) {
-            setMainAttack(newAttack);
-            setMainAttackDamage();
-        } else {
-            setSecondAttack(newAttack);
-            setSecondAttackDamage();
-        }
+    final Attack newAttack) {
+    if (attack == 1) {
+    setMainAttack(newAttack);
+    setMainAttackDamage();
+    } else {
+    setSecondAttack(newAttack);
+    setSecondAttackDamage();
     }
-
-
-
+    }
 }
