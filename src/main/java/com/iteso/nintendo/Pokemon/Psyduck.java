@@ -14,11 +14,11 @@ public class Psyduck extends PokemonCharacter {
     /**
      * Hit Points are the maximum life of pokemon.
      */
-    public static final int HIT_POINTS = 77;
+    public static final int HIT_POINTS = 120;
     /**
      * Defense multiplier value between 0-1.
      */
-    public static final double DEFENSE_MULTIPLIER = 0.3;
+    public static final double DEFENSE_MULTIPLIER = 0.2;
 
     /**
      * Psyduck constructor.
@@ -35,7 +35,7 @@ public class Psyduck extends PokemonCharacter {
 
     @Override
     public final String evolve() {
-        return "";
+        return null;
     }
 
     @Override
@@ -45,7 +45,9 @@ public class Psyduck extends PokemonCharacter {
 
         damage = (int) (attack * getDefenseMultiplier(opponentType));
         int newHP = getHitPoints() - damage;
-
+        if (newHP < 0) {
+            newHP = 0;
+        }
         String defendMessage = new String("Defending attack, damage caused is "
                 + damage + " new HP is " + newHP);
 

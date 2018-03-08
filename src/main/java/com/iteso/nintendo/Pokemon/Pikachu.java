@@ -14,7 +14,7 @@ public class Pikachu extends PokemonCharacter {
     /**
      * Hit Points are the maximum life of pokemon.
      */
-    public static final int HIT_POINTS = 100;
+    public static final int HIT_POINTS = 40;
     /**
      * Defense multiplier value between 0-1.
      */
@@ -48,7 +48,9 @@ public class Pikachu extends PokemonCharacter {
 
         damage = (int) (attack * getDefenseMultiplier(opponentType));
         int newHP = getHitPoints() - damage;
-
+        if (newHP < 0) {
+            newHP = 0;
+        }
         String defendMessage = new String("Defending attack, damage caused is "
                 + damage + " new HP is " + newHP);
 

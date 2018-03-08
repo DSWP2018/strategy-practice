@@ -35,7 +35,7 @@ public class Vulpix extends PokemonCharacter {
 
     @Override
     public final String evolve() {
-        return "";
+        return getName() + " is evolving into Ninetales";
     }
 
     @Override
@@ -45,6 +45,9 @@ public class Vulpix extends PokemonCharacter {
 
         damage = (int) (attack * getDefenseMultiplier(opponentType));
         int newHP = getHitPoints() - damage;
+        if (newHP < 0) {
+            newHP = 0;
+        }
 
         String defendMessage = new String("Defending attack, damage caused is "
                 + damage + " new HP is " + newHP);

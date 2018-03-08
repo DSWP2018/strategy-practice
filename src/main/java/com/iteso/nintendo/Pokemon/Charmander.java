@@ -14,7 +14,7 @@ public class Charmander extends PokemonCharacter {
     /**
      * Hit Points are the maximum life of pokemon.
      */
-    public static final int HIT_POINTS = 77;
+    public static final int HIT_POINTS = 60;
     /**
      * Defense multiplier value between 0-1.
      */
@@ -45,7 +45,9 @@ public class Charmander extends PokemonCharacter {
 
         damage = (int) (attack * getDefenseMultiplier(opponentType));
         int newHP = getHitPoints() - damage;
-
+        if (newHP < 0) {
+            newHP = 0;
+        }
         String defendMessage = new String("Defending attack, damage caused is "
                 + damage + " new HP is " + newHP);
 
