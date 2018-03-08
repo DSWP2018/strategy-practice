@@ -32,8 +32,8 @@ public class PikachuTest {
 
     @Test
     public void getMainAttack(){
-        when(mainAttack.getAttackName()).thenReturn("Impaktrueno");
-        Assert.assertEquals("Impaktrueno", pikachu.getMainAttack().getAttackName());
+        when(mainAttack.getAttackName()).thenReturn("ElectroBall");
+        Assert.assertEquals("ElectroBall", pikachu.getMainAttack().getAttackName());
     }
 
     @Test
@@ -69,8 +69,8 @@ public class PikachuTest {
 
     @Test
     public void getType(){
-        when(type.getType()).thenReturn("Steel");
-        Assert.assertEquals("Steel", pikachu.getType().getType());
+        when(type.getType()).thenReturn("Electric");
+        Assert.assertEquals("Electric", pikachu.getType().getType());
     }
 
     @Test

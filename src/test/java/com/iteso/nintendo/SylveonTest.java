@@ -29,8 +29,8 @@ public class SylveonTest {
 
     @Test
     public void getMainAttack() {
-        when(mainAttack.getAttackName()).thenReturn("Fire Breath");
-        Assert.assertEquals("Fire Breath", sylveon.getMainAttack().getAttackName());
+        when(mainAttack.getAttackName()).thenReturn("QuickAttack");
+        Assert.assertEquals("QuickAttack", sylveon.getMainAttack().getAttackName());
     }
 
     @Test

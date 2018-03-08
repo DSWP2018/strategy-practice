@@ -28,8 +28,8 @@ public class CharmanderTest {
 
     @Test
     public void getMainAttack(){
-        when(mainAttack.getAttackName()).thenReturn("Fire Breath");
-        Assert.assertEquals("Fire Breath", charmander.getMainAttack().getAttackName());
+        when(mainAttack.getAttackName()).thenReturn("quickAttack");
+        Assert.assertEquals("quickAttack", charmander.getMainAttack().getAttackName());
     }
 
     @Test

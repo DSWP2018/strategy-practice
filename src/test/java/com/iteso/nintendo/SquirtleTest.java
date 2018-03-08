@@ -29,14 +29,14 @@ public class SquirtleTest {
 
     @Test
     public void getMainAttack() {
-        when(mainAttack.getAttackName()).thenReturn("Fire Breath");
-        Assert.assertEquals("Fire Breath", squirtle.getMainAttack().getAttackName());
+        when(mainAttack.getAttackName()).thenReturn("MegaKick");
+        Assert.assertEquals("MegaKick", squirtle.getMainAttack().getAttackName());
     }
 
     @Test
     public void performMainAttack() {
-        when(mainAttack.attackOpponent(type, character)).thenReturn("Charmander Attacked!");
-        Assert.assertEquals("Charmander Attacked!", squirtle.mainAttack(character));
+        when(mainAttack.attackOpponent(type, character)).thenReturn("Squirtle Attacked!");
+        Assert.assertEquals("Squirtle Attacked!", squirtle.mainAttack(character));
     }
 
     @Test
@@ -47,8 +47,8 @@ public class SquirtleTest {
 
     @Test
     public void performSecondAttack() {
-        when(secondAttack.attackOpponent(type, character)).thenReturn("Charmander Attacked!");
-        Assert.assertEquals("Charmander Attacked!", squirtle.secondAttack(character));
+        when(secondAttack.attackOpponent(type, character)).thenReturn("Squirtle Attacked!");
+        Assert.assertEquals("Squirtle Attacked!", squirtle.secondAttack(character));
     }
 
     @Test

@@ -26,14 +26,14 @@ public class BlastoiseTest {
 
     @Test
     public void getMainAttack(){
-        when(mainAttack.getAttackName()).thenReturn("Impaktrueno");
-        Assert.assertEquals("Impaktrueno", blastoise.getMainAttack().getAttackName());
+        when(mainAttack.getAttackName()).thenReturn("MegaKick");
+        Assert.assertEquals("MegaKick", blastoise.getMainAttack().getAttackName());
     }
 
     @Test
     public void performMainAttack(){
-        when(mainAttack.attackOpponent(type, character)).thenReturn("Pikachu Attacked!");
-        Assert.assertEquals("Pikachu Attacked!", blastoise.mainAttack(character));
+        when(mainAttack.attackOpponent(type, character)).thenReturn("Blastoise Attacked!");
+        Assert.assertEquals("Blastoise Attacked!", blastoise.mainAttack(character));
     }
 
     @Test
@@ -44,8 +44,8 @@ public class BlastoiseTest {
 
     @Test
     public void performSecondAttack(){
-        when(secondAttack.attackOpponent(type, character)).thenReturn("Pikachu Attacked!");
-        Assert.assertEquals("Pikachu Attacked!", blastoise.secondAttack(character));
+        when(secondAttack.attackOpponent(type, character)).thenReturn("Blastoise Attacked!");
+        Assert.assertEquals("Blastoise Attacked!", blastoise.secondAttack(character));
     }
 
     @Test
@@ -63,8 +63,8 @@ public class BlastoiseTest {
 
     @Test
     public void getType(){
-        when(type.getType()).thenReturn("Steel");
-        Assert.assertEquals("Steel", blastoise.getType().getType());
+        when(type.getType()).thenReturn("Fighting");
+        Assert.assertEquals("Fighting", blastoise.getType().getType());
     }
 
     @Test

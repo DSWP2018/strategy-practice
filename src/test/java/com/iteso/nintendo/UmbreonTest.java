@@ -29,14 +29,14 @@ public class UmbreonTest {
 
     @Test
     public void getMainAttack() {
-        when(mainAttack.getAttackName()).thenReturn("Fire Breath");
-        Assert.assertEquals("Fire Breath", umbreon.getMainAttack().getAttackName());
+        when(mainAttack.getAttackName()).thenReturn("ThunderPunch");
+        Assert.assertEquals("ThunderPunch", umbreon.getMainAttack().getAttackName());
     }
 
     @Test
     public void performMainAttack() {
-        when(mainAttack.attackOpponent(type, character)).thenReturn("Charmander Attacked!");
-        Assert.assertEquals("Charmander Attacked!", umbreon.mainAttack(character));
+        when(mainAttack.attackOpponent(type, character)).thenReturn("Umbreon Attacked!");
+        Assert.assertEquals("Umbreon Attacked!", umbreon.mainAttack(character));
     }
 
     @Test
@@ -47,8 +47,8 @@ public class UmbreonTest {
 
     @Test
     public void performSecondAttack() {
-        when(secondAttack.attackOpponent(type, character)).thenReturn("Charmander Attacked!");
-        Assert.assertEquals("Charmander Attacked!", umbreon.secondAttack(character));
+        when(secondAttack.attackOpponent(type, character)).thenReturn("Umbreon Attacked!");
+        Assert.assertEquals("Umbreon Attacked!", umbreon.secondAttack(character));
     }
 
     @Test

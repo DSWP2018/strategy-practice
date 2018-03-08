@@ -27,14 +27,14 @@ public class EeveeTest {
 
     @Test
     public void getMainAttack() {
-        when(mainAttack.getAttackName()).thenReturn("Fire Breath");
-        Assert.assertEquals("Fire Breath", eevee.getMainAttack().getAttackName());
+        when(mainAttack.getAttackName()).thenReturn("ThunderPunch");
+        Assert.assertEquals("ThunderPunch", eevee.getMainAttack().getAttackName());
     }
 
     @Test
     public void performMainAttack() {
-        when(mainAttack.attackOpponent(type, character)).thenReturn("Charmander Attacked!");
-        Assert.assertEquals("Charmander Attacked!", eevee.mainAttack(character));
+        when(mainAttack.attackOpponent(type, character)).thenReturn("Eevee Attacked!");
+        Assert.assertEquals("Eevee Attacked!", eevee.mainAttack(character));
     }
 
     @Test
@@ -45,8 +45,8 @@ public class EeveeTest {
 
     @Test
     public void performSecondAttack() {
-        when(secondAttack.attackOpponent(type, character)).thenReturn("Charmander Attacked!");
-        Assert.assertEquals("Charmander Attacked!", eevee.secondAttack(character));
+        when(secondAttack.attackOpponent(type, character)).thenReturn("Eevee Attacked!");
+        Assert.assertEquals("Eevee Attacked!", eevee.secondAttack(character));
     }
 
     @Test
