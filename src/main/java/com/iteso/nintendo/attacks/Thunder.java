@@ -1,29 +1,38 @@
 package com.iteso.nintendo.attacks;
 
-import com.iteso.nintendo.attacks.Attack;
-
+/**
+ * Created by Diego Galindo.
+ */
 public class Thunder implements Attack {
 
+    /**
+     * Its for the name of the attack.
+     */
     private String attackName;
-    private int damage;
+    /**
+     * Its for the damage of the attack.
+     */
+    private static final int DAMAGE = 15;
 
-    public Thunder(){
+    /**
+     * Thunder Contructor.
+     */
+    public Thunder() {
         attackName = "Thunder";
-        damage = 15;
     }
 
     @Override
-    public String attack() {
-        return "Pokemon used " + attackName + ", making a damage of " + damage + ".";
+    public final String attack() {
+        return "Pokemon used " + attackName + ".";
     }
 
     @Override
-    public String attackName() {
+    public final String attackName() {
         return attackName;
     }
 
     @Override
-    public int attackDamage() {
-        return damage;
+    public final int attackDamage() {
+        return DAMAGE;
     }
 }

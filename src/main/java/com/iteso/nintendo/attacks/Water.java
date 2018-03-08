@@ -1,27 +1,40 @@
 package com.iteso.nintendo.attacks;
 
+/**
+ * Created by Diego Galindo.
+ */
 public class Water implements Attack {
 
+    /**
+     * Its for the name of the attack.
+     */
     private String attackName;
-    private int damage;
 
-    public Water(){
+    /**
+     * Its for the damage of the attack.
+     */
+    private static final int DAMAGE = 12;
+
+    /**
+     * Water Contructor.
+     */
+    public Water() {
         attackName = "Water";
-        damage = 12;
     }
 
     @Override
-    public String attack() {
-        return "Pokemon used " + attackName + ", making a damage of " + damage + ".";
+    public final String attack() {
+        return "Pokemon used " + attackName + ".";
     }
 
     @Override
-    public String attackName() {
+    public final String attackName() {
         return attackName;
     }
 
     @Override
-    public int attackDamage() {
-        return damage;
+    public final int attackDamage() {
+        return DAMAGE;
     }
+
 }

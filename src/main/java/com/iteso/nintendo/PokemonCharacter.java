@@ -1,6 +1,5 @@
 package com.iteso.nintendo;
 
-import com.iteso.nintendo.attacks.Attack;
 
 /**
  * Created by rvillalobos on 2/24/18.
@@ -91,7 +90,9 @@ public abstract class PokemonCharacter {
      * @param attackDamage New damage.
      * @param newAttack New attack name.
      */
-    public abstract void setNewAttack(int attack, int attackDamage, String newAttack);
+    public abstract void setNewAttack(int attack,
+                                      int attackDamage,
+                                      String newAttack);
 
     /**
      * Pokemon type.
