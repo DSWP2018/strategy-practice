@@ -1,6 +1,4 @@
 package com.iteso.nintendo;
-
-import com.iteso.nintendo.Pokemon.Pikachu;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -8,12 +6,8 @@ import org.junit.Test;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
-
-/**
- * Created by rvillalobos on 2/24/18.
- */
-public class PikachuTest {
-    PokemonCharacter pikachu, character;
+public class BlastoiseTest {
+    PokemonCharacter blastoise, character;
     Attack mainAttack, secondAttack;
     PokemonType type;
 
@@ -22,36 +16,36 @@ public class PikachuTest {
         mainAttack = mock(Attack.class);
         secondAttack = mock(Attack.class);
         type = mock(PokemonType.class);
-        pikachu = new Pikachu(type, mainAttack, secondAttack);
+        blastoise = new com.iteso.nintendo.Pokemon.Blastoise(type,mainAttack,secondAttack);
     }
 
     @Test
     public void evolve(){
-        Assert.assertEquals(null, pikachu.evolve());
+        Assert.assertEquals(null, blastoise.evolve());
     }
 
     @Test
     public void getMainAttack(){
         when(mainAttack.getAttackName()).thenReturn("Impaktrueno");
-        Assert.assertEquals("Impaktrueno", pikachu.getMainAttack().getAttackName());
+        Assert.assertEquals("Impaktrueno", blastoise.getMainAttack().getAttackName());
     }
 
     @Test
     public void performMainAttack(){
         when(mainAttack.attackOpponent(type, character)).thenReturn("Pikachu Attacked!");
-        Assert.assertEquals("Pikachu Attacked!", pikachu.mainAttack(character));
+        Assert.assertEquals("Pikachu Attacked!", blastoise.mainAttack(character));
     }
 
     @Test
     public void getSecondAttack(){
         when(secondAttack.getAttackName()).thenReturn("Tackle");
-        Assert.assertEquals("Tackle", pikachu.getSecondAttack().getAttackName());
+        Assert.assertEquals("Tackle", blastoise.getSecondAttack().getAttackName());
     }
 
     @Test
     public void performSecondAttack(){
         when(secondAttack.attackOpponent(type, character)).thenReturn("Pikachu Attacked!");
-        Assert.assertEquals("Pikachu Attacked!", pikachu.secondAttack(character));
+        Assert.assertEquals("Pikachu Attacked!", blastoise.secondAttack(character));
     }
 
     @Test
@@ -59,34 +53,32 @@ public class PikachuTest {
         when(type.setDefense(type)).thenReturn(0.2);
         when(mainAttack.getAttackDamage()).thenReturn(20);
         Assert.assertEquals("Defending attack, damage caused is 12 new HP is 88",
-                pikachu.defend(mainAttack, type, type));
+                blastoise.defend(mainAttack, type, type));
     }
 
     @Test
     public void hasEvolution(){
-        Assert.assertEquals(true, pikachu.isHasEvolution());
+        Assert.assertEquals(true, blastoise.isHasEvolution());
     }
 
     @Test
     public void getType(){
         when(type.getType()).thenReturn("Steel");
-        Assert.assertEquals("Steel", pikachu.getType().getType());
+        Assert.assertEquals("Steel", blastoise.getType().getType());
     }
 
     @Test
     public void getName(){
-        Assert.assertEquals("Pikachu", pikachu.getName());
+        Assert.assertEquals("Blastoise", blastoise.getName());
     }
 
     @Test
     public void getDefense(){
-        Assert.assertEquals(0.4, pikachu.getDefenseMultiplier(), 0.01);
+        Assert.assertEquals(0.4, blastoise.getDefenseMultiplier(), 0.01);
     }
 
     @Test
     public void getHitPoints(){
-        Assert.assertEquals(100, pikachu.getHitPoints());
+        Assert.assertEquals(100, blastoise.getHitPoints());
     }
-
-
 }
