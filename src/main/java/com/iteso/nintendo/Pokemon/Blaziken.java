@@ -4,6 +4,8 @@ import com.iteso.nintendo.Attack;
 import com.iteso.nintendo.Moves.FireBlazeAttack;
 import com.iteso.nintendo.Moves.LowKickAttack;
 import com.iteso.nintendo.PokemonCharacter;
+import com.iteso.nintendo.PokemonType;
+import com.iteso.nintendo.Types.Fire;
 
 /**
  * Created by rvillalobos on 2/24/18.
@@ -30,7 +32,7 @@ public class Blaziken extends PokemonCharacter {
      * Pikachu constructor.
      */
     public Blaziken() {
-        setType("fire");
+        //setType("fire");
         setName("Blaziken");
         setHasEvolution(true);
         Attack attackfb = new LowKickAttack();
@@ -39,6 +41,9 @@ public class Blaziken extends PokemonCharacter {
         setMainAttack(attackAP);
         setHitPoints(HIT_POINTS);
         setDefenseMultiplier(DEFENSE_MULTIPLIER);
+        PokemonType fire = new Fire();
+        setType(fire);
+
     }
 
     @Override
@@ -47,10 +52,10 @@ public class Blaziken extends PokemonCharacter {
     }
 
     @Override
-    public final String defend(final int attack) {
+    public final String defend(final int attack, final String typePok) {
         int damage;
 
-        damage = (int) (attack * getDefenseMultiplier());
+        damage = (int) (attack * getDefenseMultiplier(typePok));
         int newHP = getHitPoints() - damage;
 
         String defendMessage = new String("Defending attack, damage caused is "

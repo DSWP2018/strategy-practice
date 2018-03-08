@@ -2,27 +2,24 @@ package com.iteso.nintendo.Moves;
 
 import com.iteso.nintendo.Attack;
 
+/**Clase ancientpower. */
 public class IceBeamAttack implements Attack {
-    private static final String ATTACK_NAME = "Ice Beam";
-    private  static final int ATTACK_DAMAGE= 23;
+    /**Declarar variables. */
+    private static final String
+            ATTACK_NAME = "Ice Beam"; /**Nombre del ataque. */
+    private  static final int ATTACK_DAMAGE = 23; /**Damage del ataque. */
     private static final String TYPE = "Ice"; /**Tipo de ataque. */
-    @Override
-    public String attackOpponent() {
-        return "Attacking opponent with " + ATTACK_NAME + " causing a damage of " + ATTACK_DAMAGE;
-    }
 
     @Override
-    public String defenseTurn() {
-        return null;
-    }
-
-    @Override
-    public String getAttackName() {
+    /**@return nombre de ataque. */
+    public final String getAttackName() {
         return this.ATTACK_NAME;
     }
 
     @Override
-    public int getAttackDamage() {
+    /**@return damage del ataque. */
+    public final int getAttackDamage() {
         return this.ATTACK_DAMAGE;
     }
+
 }

@@ -6,7 +6,6 @@ import com.iteso.nintendo.Moves.LowKickAttack;
 import com.iteso.nintendo.PokemonCharacter;
 import com.iteso.nintendo.PokemonType;
 import com.iteso.nintendo.Types.Fighting;
-import com.iteso.nintendo.Types.Fire;
 
 /**
  * Created by rvillalobos on 2/24/18.

@@ -4,21 +4,22 @@ import com.iteso.nintendo.PokemonType;
 
 /**Class Fire. */
 public class Electric implements PokemonType {
+    /**Constants. */
+    private static final double HALF = 0.5; /**Multiplicador a la mitad. */
     /**Functins. **/
     @Override
-    public Double getDefenseTypes(String typeAttack) {
-        if(typeAttack.equals("Ground")) {
+    public final Double getDefenseTypes(final String typeAttack) {
+        if (typeAttack.equals("Ground")) {
             return 2.0;
-        }
-        else if(typeAttack.equals("Electric") || typeAttack.equals("Flying")
+        } else if (typeAttack.equals("Electric") || typeAttack.equals("Flying")
                 || typeAttack.equals("Steel")
                 ) {
-            return 0.5;
+            return HALF;
         }
         return 1.0;
     }
     /**@return Type. */
-    public String getTypeName() {
+    public final String getTypeName() {
         return "Electric";
     }
 }

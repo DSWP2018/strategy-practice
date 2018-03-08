@@ -67,3 +67,4 @@ public class Pikachu extends PokemonCharacter {
 
 
 }
+

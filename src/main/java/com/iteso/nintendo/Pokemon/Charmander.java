@@ -67,3 +67,4 @@ public class Charmander extends PokemonCharacter {
     }
 
 }
+
