@@ -39,7 +39,8 @@ public class Bulbasaur extends PokemonCharacter {
     }
 
     @Override
-    public final String defend(final int attack, final PokemonType opponentType) {
+    public final String defend(final int attack,
+                               final PokemonType opponentType) {
         int damage;
 
         damage = (int) (attack * getDefenseMultiplier(opponentType));
@@ -65,7 +66,8 @@ public class Bulbasaur extends PokemonCharacter {
     }
 
     @Override
-    public final void setNewAttack(final int attack, final PokemonAttack newAttack) {
+    public final void setNewAttack(final int attack,
+                                   final PokemonAttack newAttack) {
         if (attack == 1) {
             setMainAttack(newAttack);
         } else {

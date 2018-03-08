@@ -42,7 +42,7 @@ public class Water implements PokemonType {
             return resistanceValue;
         } else if (oType.getTypeName().equals("Steel")) {
             return resistanceValue;
-        } else if (oType.getTypeName().equals("Water")){
+        } else if (oType.getTypeName().equals("Water")) {
             return resistanceValue;
         } else if (oType.getTypeName().equals("Ice")) {
             return resistanceValue;

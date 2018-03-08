@@ -42,7 +42,7 @@ public class Ground implements PokemonType {
             return resistanceValue;
         } else if (oType.getTypeName().equals("Rock")) {
             return resistanceValue;
-        } else if (oType.getTypeName().equals("Water")){
+        } else if (oType.getTypeName().equals("Water")) {
             return weaknessValue;
         } else if (oType.getTypeName().equals("Ice")) {
             return weaknessValue;

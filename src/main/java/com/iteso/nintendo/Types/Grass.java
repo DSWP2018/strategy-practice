@@ -42,7 +42,7 @@ public class Grass implements PokemonType {
             return resistanceValue;
         } else if (oType.getTypeName().equals("Grass")) {
             return resistanceValue;
-        } else if (oType.getTypeName().equals("Water")){
+        } else if (oType.getTypeName().equals("Water")) {
             return resistanceValue;
         } else if (oType.getTypeName().equals("Electric")) {
             return resistanceValue;

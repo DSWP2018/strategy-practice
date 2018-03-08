@@ -59,9 +59,10 @@ public abstract class PokemonCharacter {
     /**
      * Method to defend an attack.
      * @param attackDamage Amount of damage to defend.
+     * @param opponentType gives the type of the opponent.
      * @return Result of defense.
      */
-    public abstract String defend(int attackDamage, PokemonType opponentType );
+    public abstract String defend(int attackDamage, PokemonType opponentType);
 
     /**
      * Method to perform second attack.
@@ -180,9 +181,10 @@ public abstract class PokemonCharacter {
 
     /**
      * Get defense multiplier.
+     * @param  opponentType the type of the opponent.
      * @return defense multiplier.
      */
-    public final double getDefenseMultiplier(PokemonType opponentType) {
+    public final double getDefenseMultiplier(final PokemonType opponentType) {
         return defenseMultiplier * type.getDefenseAccordingToType(opponentType);
     }
 
