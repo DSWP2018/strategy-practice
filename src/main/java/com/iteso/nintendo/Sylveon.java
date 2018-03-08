@@ -1,5 +1,8 @@
 package com.iteso.nintendo;
 
+/**
+ * Personaje de Pokemon.
+ */
 public class Sylveon extends PokemonCharacter {
     /**
      * Hit Points are the maximum life of pokemon.

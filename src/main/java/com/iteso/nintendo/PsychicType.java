@@ -1,5 +1,8 @@
 package com.iteso.nintendo;
 
+/**
+ * Tipo de Pokemon.
+ */
 public class PsychicType implements Type {
     /**Nombre del tipo. */
     private static final String TYPE_NAME = "Psychic";
@@ -9,17 +12,17 @@ public class PsychicType implements Type {
     private static final double DAMAGE_MULTIPLIER = 0.5;
 
     @Override
-    public String getType() {
+    public final String getType() {
         return TYPE_NAME;
     }
 
     @Override
-    public double getDamageMultiplier() {
+    public final double getDamageMultiplier() {
         return DAMAGE_MULTIPLIER;
     }
 
     @Override
-    public double getDefenseMultiplier() {
+    public final double getDefenseMultiplier() {
         return DEFENSE_MULTIPLIER;
     }
 }

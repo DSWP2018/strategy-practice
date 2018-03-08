@@ -1,5 +1,8 @@
 package com.iteso.nintendo;
 
+/**
+ * Interfaz de Tipo de Pokemon.
+ */
 public interface Type {
     /**
      * @return regresa el tipo de Pokemon

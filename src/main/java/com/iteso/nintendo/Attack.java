@@ -1,20 +1,23 @@
 package com.iteso.nintendo;
 
+/**
+ * Interfaz del Ataque.
+ */
 public interface Attack {
     /**
      * @return regresa el ataque que se usa
      * y el daño que se causa
      */
-    public String attackOpponent();
+    String attackOpponent();
 
     /**
      * @return regresa el nombre del ataque
      */
-    public String getAttackName();
+    String getAttackName();
 
     /**
      * @return regresa el tipo de daño
      */
-    public int getAttackDamage();
+    int getAttackDamage();
 
 }

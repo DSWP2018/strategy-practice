@@ -1,5 +1,8 @@
 package com.iteso.nintendo;
 
+/**
+ * Personaje de Pokemon.
+ */
 public class Celebi extends PokemonCharacter {
     /**
      * Hit Points are the maximum life of pokemon.
@@ -37,7 +40,6 @@ public class Celebi extends PokemonCharacter {
         return defendMessage;
 
     }
-
 
     @Override
     public final String secondAttack() {

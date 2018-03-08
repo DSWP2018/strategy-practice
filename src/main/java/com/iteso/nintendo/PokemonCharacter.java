@@ -3,7 +3,7 @@ package com.iteso.nintendo;
 /**
  * Created by rvillalobos on 2/24/18.
  */
-public abstract class PokemonCharacter{
+public abstract class PokemonCharacter {
 
      /**
      * Pokemon name.
@@ -12,15 +12,18 @@ public abstract class PokemonCharacter{
     /**
      * Pokemon type.
      */
-    private Type type= null;
+    private Type type = null;
     /**
      * Indicator of evolution.
      */
     private boolean hasEvolution = false;
     /**
-     *
+     * Main attack.
      */
     private Attack mainAttack;
+    /**
+     * Second attack.
+     */
     private Attack secondAttack;
     /**
      * Pokemon life.
@@ -138,14 +141,16 @@ public abstract class PokemonCharacter{
      * @return main attack damage.
      */
     public final int getMainAttackDamage() {
-        return (int)(mainAttack.getAttackDamage()*type.getDamageMultiplier());
+        return (int) (mainAttack.getAttackDamage()
+                * type.getDamageMultiplier());
     }
     /**
      * Get second attack damage.
      * @return second attack damage.
      */
     public final int getSecondAttackDamage() {
-        return (int)(secondAttack.getAttackDamage()*type.getDamageMultiplier());
+        return (int) (secondAttack.getAttackDamage()
+                * type.getDamageMultiplier());
     }
 
     /**
