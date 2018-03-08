@@ -18,7 +18,10 @@ public class Umbreon extends PokemonCharacter {
     public static final double DEFENSE_MULTIPLIER = 0.3;
 
     /**
-     * Pikachu constructor.
+     * Constructor.
+     * @param type tipo.
+     * @param mainAttack ataque principal.
+     * @param secondAttack ataque secundario.
      */
     public Umbreon(final PokemonType type, final Attack mainAttack,
                    final Attack secondAttack) {
@@ -38,7 +41,8 @@ public class Umbreon extends PokemonCharacter {
 
     @Override
     public final String defend(final Attack attack,
-                               final PokemonType myType, final PokemonType enemyType) {
+                               final PokemonType myType,
+                               final PokemonType enemyType) {
         int damage;
 
         damage = (int) (attack.getAttackDamage() * (getDefenseMultiplier()

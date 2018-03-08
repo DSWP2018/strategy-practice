@@ -41,7 +41,8 @@ public class Charmander extends PokemonCharacter {
 
     @Override
     public final String defend(final Attack attack,
-                               final PokemonType myType, final PokemonType enemyType) {
+                               final PokemonType myType,
+                               final PokemonType enemyType) {
         int damage;
 
         damage = (int) (attack.getAttackDamage() * (getDefenseMultiplier()

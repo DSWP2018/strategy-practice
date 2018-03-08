@@ -2,11 +2,14 @@ package com.iteso.nintendo.Type;
 
 import com.iteso.nintendo.PokemonType;
 
+/**
+ * Pokemon Type Ground.
+ */
 public class Ground implements PokemonType {
     /**
      * Nombre del tipo de pokemon.
      */
-    private final String type = "Ground";
+    private static final String TYPE = "Ground";
 
     /**
      * Defensa maxima que puede obtener.
@@ -27,12 +30,12 @@ public class Ground implements PokemonType {
 
 
     @Override
-    public String getType() {
-        return type;
+    public final String getType() {
+        return TYPE;
     }
 
     @Override
-    public double setDamage(PokemonType type) {
+    public final double setDamage(final PokemonType type) {
         switch (type.getType()) {
             case "Electric":
                 return DAMMIN;
@@ -48,7 +51,7 @@ public class Ground implements PokemonType {
     }
 
     @Override
-    public double setDefense(PokemonType type) {
+    public final double setDefense(final PokemonType type) {
         switch (type.getType()) {
             case "Electric":
                 return DEFMAX;

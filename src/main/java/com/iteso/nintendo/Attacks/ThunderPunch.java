@@ -4,20 +4,31 @@ import com.iteso.nintendo.Attack;
 import com.iteso.nintendo.PokemonCharacter;
 import com.iteso.nintendo.PokemonType;
 
+/**
+ * Pokemon Attack.
+ */
 public class ThunderPunch implements Attack {
-    String name = "thunderPunch";
+    /**
+     * private variable to encapsulate the name of the attack.
+     */
+    private String name = "thunderPunch";
+    /**
+     * static final variable to indicate the damage of this attack.
+     */
     static final int DAMAGE = 10;
-
+    /**
+     * private variable that assigns the attackDamage to the static value.
+     */
     private int attackDamage = DAMAGE;
 
     @Override
     public final String attackOpponent(final PokemonType myType,
-                                       final PokemonCharacter pokemonCharacter) {
+                                       final PokemonCharacter character) {
         String attackMessage = new String("Attacking opponent with "
                 + getAttackName()
                 + " causing a damage of "
                 + (getAttackDamage()
-                + myType.setDamage(pokemonCharacter.getType())));
+                + myType.setDamage(character.getType())));
         return attackMessage;
     }
 

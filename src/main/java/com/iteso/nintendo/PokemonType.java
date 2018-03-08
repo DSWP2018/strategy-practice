@@ -1,7 +1,7 @@
 package com.iteso.nintendo;
 
 /**
- * Interfaz para establecer el tipo de un pokemon y sus comportamientos
+ * Interfaz para establecer el tipo de un pokemon y sus comportamientos.
  */
 public interface PokemonType {
     /**

@@ -19,7 +19,10 @@ public class Blastoise extends PokemonCharacter {
 
 
     /**
-     * Pikachu constructor.
+     * Constructor.
+     * @param type tipo de pokemon.
+     * @param mainAttack ataque principal.
+     * @param secondAttack segundo ataque.
      */
     public Blastoise(final PokemonType type, final Attack mainAttack,
                      final Attack secondAttack) {
@@ -39,7 +42,8 @@ public class Blastoise extends PokemonCharacter {
 
     @Override
     public final String defend(final Attack attack,
-                               final PokemonType myType, final PokemonType enemyType) {
+                               final PokemonType myType,
+                               final PokemonType enemyType) {
         int damage;
 
         damage = (int) (attack.getAttackDamage() * (getDefenseMultiplier()
