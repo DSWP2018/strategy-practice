@@ -1,14 +1,15 @@
-package com.iteso.nintendo.pokemons;
+package com.iteso.nintendo.pokemons.examples;
 
 import com.iteso.nintendo.attacks.Attack;
 import com.iteso.nintendo.attacks.AttackResult;
 import com.iteso.nintendo.attacks.FlameBurst;
 import com.iteso.nintendo.attacks.Growl;
+import com.iteso.nintendo.pokemons.types.GrassTypePokemon;
 
 /**
  * Created by rvillalobos on 2/24/18.
  */
-public class Bulbasaur extends PokemonCharacter {
+public class Ivysaur extends GrassTypePokemon {
     /**
      * Hit Points are the maximum life of pokemon.
      */
@@ -17,16 +18,15 @@ public class Bulbasaur extends PokemonCharacter {
      * Defense multiplier value between 0-1.
      */
     public static final double DEFENSE_MULTIPLIER = 0.3;
+
     /**
      * Damage from 1 - 20.
      */
 
-
     /**
      * Pikachu constructor.
      */
-    public Bulbasaur() {
-        setType("fire");
+    public Ivysaur() {
         setName("Charmander");
         setHasEvolution(true);
         setMainAttack(new FlameBurst());
@@ -48,8 +48,9 @@ public class Bulbasaur extends PokemonCharacter {
         damage = (int) (attack * getDefenseMultiplier());
         int newHP = getHitPoints() - damage;
 
-        String defendMessage = new String("Defending attack, damage caused is "
-                + damage + " new HP is " + newHP);
+        String defendMessage = new String(
+            "Defending attack, damage caused is "
+            + damage + " new HP is " + newHP);
 
         setHitPoints(newHP);
         return defendMessage;
@@ -58,24 +59,24 @@ public class Bulbasaur extends PokemonCharacter {
 
     @Override
     public final AttackResult secondAttack() {
-        AttackResult res =  this.getSecondAttack().attackOpponent();
+        AttackResult res = this.getSecondAttack().attackOpponent();
         return res;
     }
 
     @Override
     public final AttackResult mainAttack() {
-        AttackResult res =  this.getMainAttack().attackOpponent();
+        AttackResult res = this.getMainAttack().attackOpponent();
         return res;
     }
 
     @Override
-    public final void setNewAttack(final int attackNumber, Attack newAttack) {
+    public final void setNewAttack(final int attackNumber,
+        final Attack newAttack) {
         if (attackNumber == 1) {
             setMainAttack(newAttack);
         } else {
             setSecondAttack(newAttack);
         }
     }
-
 
 }

@@ -1,44 +1,55 @@
 package com.iteso.nintendo.attacks;
 
-public class AttackResult{
-    boolean criticalFail;
-    boolean criticalHit;
-    int damageGiven;
-    String attackName;
+/** */
+public class AttackResult {
+    /** */
+    private boolean criticalFail;
+    /** */
+    private boolean criticalHit;
+    /** */
+    private int damageGiven;
+    /** */
+    private String attackName;
+
     /**
      * @return the criticalFail
      */
-    public boolean isCriticalFail() {
+    public final boolean isCriticalFail() {
         return criticalFail;
     }
+
     /**
      * @return the criticalHit
      */
-    public boolean isCriticalHit() {
+    public final boolean isCriticalHit() {
         return criticalHit;
     }
+
     /**
-     * @param attackName the attackName to set
+     * @param an the attackName to set
      */
-    public void setAttackName(String attackName) {
-        this.attackName = attackName;
+    public final void setAttackName(final String an) {
+        this.attackName = an;
     }
+
     /**
-     * @param damageGiven the damageGiven to set
+     * @param dg the damageGiven to set
      */
-    public void setDamageGiven(int damageGiven) {
-        this.damageGiven = damageGiven;
+    public final void setDamageGiven(final int dg) {
+        this.damageGiven = dg;
     }
+
     /**
      * @return the attackName
      */
-    public String getAttackName() {
+    public final String getAttackName() {
         return attackName;
     }
+
     /**
      * @return the damageGiven
      */
-    public int getDamageGiven() {
+    public final int getDamageGiven() {
         return damageGiven;
     }
 

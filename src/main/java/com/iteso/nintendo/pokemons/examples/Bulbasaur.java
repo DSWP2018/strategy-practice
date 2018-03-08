@@ -1,14 +1,15 @@
-package com.iteso.nintendo.pokemons;
+package com.iteso.nintendo.pokemons.examples;
 
 import com.iteso.nintendo.attacks.Attack;
 import com.iteso.nintendo.attacks.AttackResult;
 import com.iteso.nintendo.attacks.FlameBurst;
 import com.iteso.nintendo.attacks.Growl;
+import com.iteso.nintendo.pokemons.types.WaterTypePokemon;
 
 /**
  * Created by rvillalobos on 2/24/18.
  */
-public class Wartortle extends PokemonCharacter {
+public class Bulbasaur extends WaterTypePokemon {
     /**
      * Hit Points are the maximum life of pokemon.
      */
@@ -17,16 +18,15 @@ public class Wartortle extends PokemonCharacter {
      * Defense multiplier value between 0-1.
      */
     public static final double DEFENSE_MULTIPLIER = 0.3;
+
     /**
      * Damage from 1 - 20.
      */
 
-
     /**
      * Pikachu constructor.
      */
-    public Wartortle() {
-        setType("fire");
+    public Bulbasaur() {
         setName("Charmander");
         setHasEvolution(true);
         setMainAttack(new FlameBurst());
@@ -49,7 +49,7 @@ public class Wartortle extends PokemonCharacter {
         int newHP = getHitPoints() - damage;
 
         String defendMessage = new String("Defending attack, damage caused is "
-                + damage + " new HP is " + newHP);
+            + damage + " new HP is " + newHP);
 
         setHitPoints(newHP);
         return defendMessage;
@@ -58,24 +58,24 @@ public class Wartortle extends PokemonCharacter {
 
     @Override
     public final AttackResult secondAttack() {
-        AttackResult res =  this.getSecondAttack().attackOpponent();
+        AttackResult res = this.getSecondAttack().attackOpponent();
         return res;
     }
 
     @Override
     public final AttackResult mainAttack() {
-        AttackResult res =  this.getMainAttack().attackOpponent();
+        AttackResult res = this.getMainAttack().attackOpponent();
         return res;
     }
 
     @Override
-    public final void setNewAttack(final int attackNumber, Attack newAttack) {
+    public final void setNewAttack(final int attackNumber,
+        final Attack newAttack) {
         if (attackNumber == 1) {
             setMainAttack(newAttack);
         } else {
             setSecondAttack(newAttack);
         }
     }
-
 
 }

@@ -1,20 +1,28 @@
 package com.iteso.nintendo.attacks;
 
-public class QuickAttack extends BaseAttack{
-    
-    public QuickAttack(){
-        this.attackName = "FlameBurst";
-        this.attackDamage = 10;
-        this.criticalFailProbablity = 0;
-        this.criticalHitProbability = 0;
+/** */
+public class QuickAttack extends BaseAttack {
+    /** */
+    public static final int BASEATTACKDAMAGE = 10;
+    /** */
+    public static final int BASECRITICALFAILPROB = 0;
+    /** */
+    public static final int BASECRITICALHITPROB = 0;
+    /** */
+    public QuickAttack() {
+        setAttackName("FlameBurst");
+        setAttackDamage(BASEATTACKDAMAGE);
+        setCriticalFailProbablity(BASECRITICALFAILPROB);
+        setCriticalHitProbability(BASECRITICALHITPROB);
     }
 
-
-	public AttackResult attackOpponent() {
+    /**
+     * @return AttackResult
+     */
+    public final AttackResult attackOpponent() {
         AttackResult attackResult = new AttackResult();
-        attackResult.setAttackName(this.attackName);
-        attackResult.setDamageGiven(this.attackDamage);
+        attackResult.setAttackName(getAttackName());
+        attackResult.setDamageGiven(getAttackDamage());
         return attackResult;
-	}
-
+    }
 }

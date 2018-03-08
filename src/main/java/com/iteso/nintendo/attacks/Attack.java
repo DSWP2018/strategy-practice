@@ -1,5 +1,9 @@
 package com.iteso.nintendo.attacks;
 
-public interface Attack{
+/** */
+public interface Attack {
+    /**
+     * @return AttackResult
+     */
     AttackResult attackOpponent();
 }

@@ -2,24 +2,21 @@ package com.iteso.nintendo.pokemons;
 
 import com.iteso.nintendo.attacks.Attack;
 import com.iteso.nintendo.attacks.AttackResult;
+import com.iteso.nintendo.pokemons.types.PokemonType;
 
 /**
  * Created by rvillalobos on 2/24/18.
  */
-public abstract class PokemonCharacter {
+public abstract class PokemonCharacter implements PokemonType {
 
     /**
      * Pokemon name.
      */
-      private String name = null;
-    /**
-     * Pokemon type.
-     */
-    private String type = null;
+    private String name = null;
     /**
      * Indicator of evolution.
      */
-      private boolean hasEvolution = false;
+    private boolean hasEvolution = false;
     /**
      * Main attack name.
      */
@@ -36,7 +33,7 @@ public abstract class PokemonCharacter {
     /**
      * Pokemon life.
      */
-      private int hitPoints = 0;
+    private int hitPoints = 0;
 
     /**
      * Get pokemon name.
@@ -82,27 +79,9 @@ public abstract class PokemonCharacter {
     /**
      * Method to change pokemon attack.
      * @param attackNumber Which attack to change.
-     * @param attackDamage New damage.
      * @param newAttack New attack name.
      */
-    public abstract void setNewAttack(int attackNumber,
-                                      Attack newAttack);
-
-    /**
-     * Pokemon type.
-     * @return water, fire, normal, electric, plant, bug, etc.
-     */
-    public final String getType() {
-        return type;
-    }
-
-    /**
-     * Set new pokemon type.
-     * @param newType new pokemon type.
-     */
-    public final void setType(final String newType) {
-        this.type = newType;
-    }
+    public abstract void setNewAttack(int attackNumber, Attack newAttack);
 
     /**
      * Indicate if pokemon can be evolved.
@@ -151,6 +130,7 @@ public abstract class PokemonCharacter {
     public final void setSecondAttack(final Attack newSecondAttack) {
         this.secondAttack = newSecondAttack;
     }
+
     /**
      * Get defense multiplier.
      * @return defense multiplier.

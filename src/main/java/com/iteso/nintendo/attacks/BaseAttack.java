@@ -1,61 +1,69 @@
 package com.iteso.nintendo.attacks;
 
-public abstract class BaseAttack implements Attack{
-    int attackDamage;
-    String attackName;
-
-    double criticalFailProbablity;
-    double criticalHitProbability;
+/** */
+public abstract class BaseAttack implements Attack {
+    /** */
+    private int attackDamage;
+    /** */
+    private String attackName;
+    /** */
+    private double criticalFailProbablity;
+    /** */
+    private double criticalHitProbability;
 
     /**
-     * @param criticalFailProbablity the criticalFailProbablity to set
+     * @param cfp the criticalFailProbablity to set
      */
-    public void setCriticalFailProbablity(double criticalFailProbablity) {
-        this.criticalFailProbablity = criticalFailProbablity;
+    public final void setCriticalFailProbablity(final double cfp) {
+        this.criticalFailProbablity = cfp;
     }
+
     /**
-     * @param criticalHitProbability the criticalHitProbability to set
+     * @param chp the criticalHitProbability to set
      */
-    public void setCriticalHitProbability(double criticalHitProbability) {
-        this.criticalHitProbability = criticalHitProbability;
+    public final void setCriticalHitProbability(final double chp) {
+        this.criticalHitProbability = chp;
     }
+
     /**
      * @return the criticalFailProbablity
      */
-    public double getCriticalFailProbablity() {
+    public final double getCriticalFailProbablity() {
         return criticalFailProbablity;
     }
+
     /**
      * @return the criticalHitProbability
      */
-    public double getCriticalHitProbability() {
+    public final double getCriticalHitProbability() {
         return criticalHitProbability;
     }
-    
 
     /**
-     * @param attackDamage the attackDamage to set
+     * @param ad the attackDamage to set
      */
-    public void setAttackDamage(int attackDamage) {
-        this.attackDamage = attackDamage;
+    public final void setAttackDamage(final int ad) {
+        this.attackDamage = ad;
     }
+
     /**
-     * @param attackName the attackName to set
+     * @param an the attackName to set
      */
-    public void setAttackName(String attackName) {
-        this.attackName = attackName;
+    public final void setAttackName(final String an) {
+        this.attackName = an;
     }
 
     /**
      * @return the attackDamage
      */
-    public int getAttackDamage() {
+    public final int getAttackDamage() {
         return attackDamage;
     }
+
     /**
      * @return the attackName
      */
-    public String getAttackName() {
+    public final String getAttackName() {
         return attackName;
     }
 
