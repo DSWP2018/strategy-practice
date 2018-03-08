@@ -1,7 +1,15 @@
-package com.iteso.nintendo;
+package com.iteso.nintendo.pokemones;
+
+import com.iteso.nintendo.tipos.Agua;
+import com.iteso.nintendo.PokemonCharacter;
+import com.iteso.nintendo.tipos.PokemonType;
+import com.iteso.nintendo.ataques.AtaqueRapido;
+import com.iteso.nintendo.ataques.Attacks;
+import com.iteso.nintendo.ataques.Terremoto;
+
 /**
  * */
-public class Totodile extends PokemonCharacter {
+public class Squirtle extends PokemonCharacter {
     /**
      * Hit Points are the maximum life of pokemon.
      */
@@ -26,19 +34,20 @@ public class Totodile extends PokemonCharacter {
     private Attacks terremoto;
     /**
      * */
-    private PokemonType totodile;
+    private PokemonType squirtle;
     /**
      * */
     private Attacks enemyAttack;
+
     /**
      * Pikachu constructor.
      */
-    public Totodile() {
-        totodile = new Agua();
+    public Squirtle() {
+        squirtle = new Agua();
         quickAttack = new AtaqueRapido();
         terremoto = new Terremoto();
-        setType(totodile.type());
-        setName("Totodile");
+        setType(squirtle.type());
+        setName("Squirtle");
         setHasEvolution(true);
         setSecondAttack(quickAttack); //
         setMainAttack(terremoto); //
@@ -59,11 +68,11 @@ public class Totodile extends PokemonCharacter {
     public final String defend(final int attack) {
         int damage;
 
-        damage = (int) (attack * totodile.recievedDamage(
+        damage = (int) (attack * squirtle.recievedDamage(
                 enemyAttack.attackType(), getDefenseMultiplier()));
         int newHP = getHitPoints() - damage;
 
-        String defendMessage = new String(totodile.defendMessage()
+        String defendMessage = new String(squirtle.defendMessage()
                 + damage
                 + " new HP is "
                 + newHP);

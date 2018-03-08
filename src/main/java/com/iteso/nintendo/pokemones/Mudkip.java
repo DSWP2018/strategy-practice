@@ -1,7 +1,16 @@
-package com.iteso.nintendo;
+package com.iteso.nintendo.pokemones;
+
+import com.iteso.nintendo.tipos.Agua;
+import com.iteso.nintendo.PokemonCharacter;
+import com.iteso.nintendo.tipos.PokemonType;
+import com.iteso.nintendo.ataques.AtaqueRapido;
+import com.iteso.nintendo.ataques.Attacks;
+import com.iteso.nintendo.ataques.Terremoto;
+
 /**
  * */
-public class Gyarados extends PokemonCharacter {
+
+public class Mudkip extends PokemonCharacter {
     /**
      * Hit Points are the maximum life of pokemon.
      */
@@ -26,19 +35,19 @@ public class Gyarados extends PokemonCharacter {
     private Attacks terremoto;
     /**
      * */
-    private PokemonType gyarados;
+    private PokemonType mudkip;
     /**
      * */
     private Attacks enemyAttack;
     /**
      * Pikachu constructor.
      */
-    public Gyarados() {
-        gyarados = new Agua();
+    public Mudkip() {
+        mudkip = new Agua();
         quickAttack = new AtaqueRapido();
         terremoto = new Terremoto();
-        setType(gyarados.type());
-        setName("Gyarados");
+        setType(mudkip.type());
+        setName("Mudkip");
         setHasEvolution(true);
         setSecondAttack(quickAttack); //
         setMainAttack(terremoto); //
@@ -59,11 +68,11 @@ public class Gyarados extends PokemonCharacter {
     public final String defend(final int attack) {
         int damage;
 
-        damage = (int) (attack * gyarados.recievedDamage(
+        damage = (int) (attack * mudkip.recievedDamage(
                 enemyAttack.attackType(), getDefenseMultiplier()));
         int newHP = getHitPoints() - damage;
 
-        String defendMessage = new String(gyarados.defendMessage()
+        String defendMessage = new String(mudkip.defendMessage()
                 + damage
                 + " new HP is "
                 + newHP);

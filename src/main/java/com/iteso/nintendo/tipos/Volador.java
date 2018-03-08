@@ -1,16 +1,16 @@
-package com.iteso.nintendo;
+package com.iteso.nintendo.tipos;
 /**
  * */
-public class Electricidad implements PokemonType {
+public class Volador implements PokemonType {
     /**
      * */
-    private final String pokeTipo = "Electric";
+    private final String pokeTipo = "Flying";
     /**
      * */
     private final String notEffectiveIn = "Sand";
     /**
      * */
-    private final String superEffectiveIn = "Water";
+    private final String superEffectiveIn = "Grass";
     /**
      * */
     private final String defendingMessage = "Defending... damage caused is:";
@@ -30,7 +30,7 @@ public class Electricidad implements PokemonType {
      * */
     @Override
     public final double recievedDamage(final String ataqueTipo,
-                                 final double defenseMultiplier) {
+                                       final double defenseMultiplier) {
 
         if (ataqueTipo.equals(superEffectiveIn)) {
             return defenseUp * defenseMultiplier;
@@ -46,5 +46,4 @@ public class Electricidad implements PokemonType {
     public final String defendMessage() {
         return this.defendingMessage;
     }
-
 }

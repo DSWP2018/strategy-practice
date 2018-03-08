@@ -1,5 +1,7 @@
 package com.iteso.nintendo;
 
+import com.iteso.nintendo.ataques.Attacks;
+
 /**
  * Created by rvillalobos on 2/24/18.
  */

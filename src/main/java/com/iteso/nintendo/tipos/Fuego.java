@@ -1,4 +1,4 @@
-package com.iteso.nintendo;
+package com.iteso.nintendo.tipos;
 /**
  * */
 public class Fuego implements PokemonType {

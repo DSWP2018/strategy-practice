@@ -1,4 +1,12 @@
-package com.iteso.nintendo;
+package com.iteso.nintendo.pokemones;
+
+import com.iteso.nintendo.tipos.Agua;
+import com.iteso.nintendo.PokemonCharacter;
+import com.iteso.nintendo.tipos.PokemonType;
+import com.iteso.nintendo.ataques.AtaqueRapido;
+import com.iteso.nintendo.ataques.Attacks;
+import com.iteso.nintendo.ataques.Terremoto;
+
 /**
  * */
 public class Lugia extends PokemonCharacter {

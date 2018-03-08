@@ -1,16 +1,16 @@
-package com.iteso.nintendo;
+package com.iteso.nintendo.tipos;
 /**
  * */
-public class Volador implements PokemonType {
+public class Sand implements PokemonType {
     /**
      * */
-    private final String pokeTipo = "Flying";
+    private final String pokeTipo = "Sand";
     /**
      * */
-    private final String notEffectiveIn = "Sand";
+    private final String notEffectiveIn = "Grass";
     /**
      * */
-    private final String superEffectiveIn = "Grass";
+    private final String superEffectiveIn = "Flying";
     /**
      * */
     private final String defendingMessage = "Defending... damage caused is:";
@@ -30,7 +30,7 @@ public class Volador implements PokemonType {
      * */
     @Override
     public final double recievedDamage(final String ataqueTipo,
-                                       final double defenseMultiplier) {
+                                 final double defenseMultiplier) {
 
         if (ataqueTipo.equals(superEffectiveIn)) {
             return defenseUp * defenseMultiplier;

@@ -1,4 +1,11 @@
-package com.iteso.nintendo;
+package com.iteso.nintendo.pokemones;
+
+import com.iteso.nintendo.tipos.Electricidad;
+import com.iteso.nintendo.PokemonCharacter;
+import com.iteso.nintendo.tipos.PokemonType;
+import com.iteso.nintendo.ataques.AtaqueRapido;
+import com.iteso.nintendo.ataques.Attacks;
+import com.iteso.nintendo.ataques.Impactrueno;
 
 /**
  * Created by rvillalobos on 2/24/18.

@@ -1,7 +1,15 @@
-package com.iteso.nintendo;
+package com.iteso.nintendo.pokemones;
+
+import com.iteso.nintendo.tipos.Agua;
+import com.iteso.nintendo.PokemonCharacter;
+import com.iteso.nintendo.tipos.PokemonType;
+import com.iteso.nintendo.ataques.AtaqueRapido;
+import com.iteso.nintendo.ataques.Attacks;
+import com.iteso.nintendo.ataques.Terremoto;
+
 /**
  * */
-public class Squirtle extends PokemonCharacter {
+public class Gyarados extends PokemonCharacter {
     /**
      * Hit Points are the maximum life of pokemon.
      */
@@ -26,20 +34,19 @@ public class Squirtle extends PokemonCharacter {
     private Attacks terremoto;
     /**
      * */
-    private PokemonType squirtle;
+    private PokemonType gyarados;
     /**
      * */
     private Attacks enemyAttack;
-
     /**
      * Pikachu constructor.
      */
-    public Squirtle() {
-        squirtle = new Agua();
+    public Gyarados() {
+        gyarados = new Agua();
         quickAttack = new AtaqueRapido();
         terremoto = new Terremoto();
-        setType(squirtle.type());
-        setName("Squirtle");
+        setType(gyarados.type());
+        setName("Gyarados");
         setHasEvolution(true);
         setSecondAttack(quickAttack); //
         setMainAttack(terremoto); //
@@ -60,11 +67,11 @@ public class Squirtle extends PokemonCharacter {
     public final String defend(final int attack) {
         int damage;
 
-        damage = (int) (attack * squirtle.recievedDamage(
+        damage = (int) (attack * gyarados.recievedDamage(
                 enemyAttack.attackType(), getDefenseMultiplier()));
         int newHP = getHitPoints() - damage;
 
-        String defendMessage = new String(squirtle.defendMessage()
+        String defendMessage = new String(gyarados.defendMessage()
                 + damage
                 + " new HP is "
                 + newHP);

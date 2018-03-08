@@ -1,16 +1,16 @@
-package com.iteso.nintendo;
+package com.iteso.nintendo.tipos;
 /**
  * */
-public class Sand implements PokemonType {
+public class Electricidad implements PokemonType {
     /**
      * */
-    private final String pokeTipo = "Sand";
+    private final String pokeTipo = "Electric";
     /**
      * */
-    private final String notEffectiveIn = "Grass";
+    private final String notEffectiveIn = "Sand";
     /**
      * */
-    private final String superEffectiveIn = "Flying";
+    private final String superEffectiveIn = "Water";
     /**
      * */
     private final String defendingMessage = "Defending... damage caused is:";
@@ -46,4 +46,5 @@ public class Sand implements PokemonType {
     public final String defendMessage() {
         return this.defendingMessage;
     }
+
 }

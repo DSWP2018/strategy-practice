@@ -1,8 +1,15 @@
-package com.iteso.nintendo;
+package com.iteso.nintendo.pokemones;
+
+import com.iteso.nintendo.tipos.Agua;
+import com.iteso.nintendo.PokemonCharacter;
+import com.iteso.nintendo.tipos.PokemonType;
+import com.iteso.nintendo.ataques.AtaqueRapido;
+import com.iteso.nintendo.ataques.Attacks;
+import com.iteso.nintendo.ataques.Terremoto;
+
 /**
  * */
-
-public class Mudkip extends PokemonCharacter {
+public class Totodile extends PokemonCharacter {
     /**
      * Hit Points are the maximum life of pokemon.
      */
@@ -27,19 +34,19 @@ public class Mudkip extends PokemonCharacter {
     private Attacks terremoto;
     /**
      * */
-    private PokemonType mudkip;
+    private PokemonType totodile;
     /**
      * */
     private Attacks enemyAttack;
     /**
      * Pikachu constructor.
      */
-    public Mudkip() {
-        mudkip = new Agua();
+    public Totodile() {
+        totodile = new Agua();
         quickAttack = new AtaqueRapido();
         terremoto = new Terremoto();
-        setType(mudkip.type());
-        setName("Mudkip");
+        setType(totodile.type());
+        setName("Totodile");
         setHasEvolution(true);
         setSecondAttack(quickAttack); //
         setMainAttack(terremoto); //
@@ -60,11 +67,11 @@ public class Mudkip extends PokemonCharacter {
     public final String defend(final int attack) {
         int damage;
 
-        damage = (int) (attack * mudkip.recievedDamage(
+        damage = (int) (attack * totodile.recievedDamage(
                 enemyAttack.attackType(), getDefenseMultiplier()));
         int newHP = getHitPoints() - damage;
 
-        String defendMessage = new String(mudkip.defendMessage()
+        String defendMessage = new String(totodile.defendMessage()
                 + damage
                 + " new HP is "
                 + newHP);
