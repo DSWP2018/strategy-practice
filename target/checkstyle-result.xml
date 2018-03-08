@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="6.18">
+<file name="C:\Users\manci\Desktop\DisSw\strategy-practice\src\main\java\com\iteso\nintendo\Bug.java">
+<error line="24" column="20" severity="error" message="&apos;0.5&apos; es un número mágico." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+</file>
+<file name="C:\Users\manci\Desktop\DisSw\strategy-practice\src\main\java\com\iteso\nintendo\Dark.java">
+<error line="23" column="20" severity="error" message="&apos;0.5&apos; es un número mágico." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+</file>
+<file name="C:\Users\manci\Desktop\DisSw\strategy-practice\src\main\java\com\iteso\nintendo\Dragon.java">
+<error line="25" column="20" severity="error" message="&apos;0.5&apos; es un número mágico." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+</file>
+<file name="C:\Users\manci\Desktop\DisSw\strategy-practice\src\main\java\com\iteso\nintendo\Electric.java">
+<error line="24" column="20" severity="error" message="&apos;0.5&apos; es un número mágico." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+</file>
+<file name="C:\Users\manci\Desktop\DisSw\strategy-practice\src\main\java\com\iteso\nintendo\Fairy.java">
+<error line="23" column="20" severity="error" message="&apos;0.5&apos; es un número mágico." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+</file>
+<file name="C:\Users\manci\Desktop\DisSw\strategy-practice\src\main\java\com\iteso\nintendo\Fighting.java">
+<error line="24" column="20" severity="error" message="&apos;0.5&apos; es un número mágico." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+</file>
+<file name="C:\Users\manci\Desktop\DisSw\strategy-practice\src\main\java\com\iteso\nintendo\Fire.java">
+<error line="27" column="20" severity="error" message="&apos;0.5&apos; es un número mágico." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+</file>
+<file name="C:\Users\manci\Desktop\DisSw\strategy-practice\src\main\java\com\iteso\nintendo\Flying.java">
+<error line="24" column="20" severity="error" message="&apos;0.5&apos; es un número mágico." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+</file>
+<file name="C:\Users\manci\Desktop\DisSw\strategy-practice\src\main\java\com\iteso\nintendo\Ghost.java">
+<error line="22" column="20" severity="error" message="&apos;0.5&apos; es un número mágico." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+</file>
+<file name="C:\Users\manci\Desktop\DisSw\strategy-practice\src\main\java\com\iteso\nintendo\Grass.java">
+<error line="27" column="20" severity="error" message="&apos;0.5&apos; es un número mágico." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+</file>
+<file name="C:\Users\manci\Desktop\DisSw\strategy-practice\src\main\java\com\iteso\nintendo\Ground.java">
+<error line="23" column="20" severity="error" message="&apos;0.5&apos; es un número mágico." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+</file>
+<file name="C:\Users\manci\Desktop\DisSw\strategy-practice\src\main\java\com\iteso\nintendo\Ice.java">
+<error line="25" column="20" severity="error" message="&apos;0.5&apos; es un número mágico." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+</file>
+<file name="C:\Users\manci\Desktop\DisSw\strategy-practice\src\main\java\com\iteso\nintendo\Poison.java">
+<error line="25" column="20" severity="error" message="&apos;0.5&apos; es un número mágico." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+</file>
+<file name="C:\Users\manci\Desktop\DisSw\strategy-practice\src\main\java\com\iteso\nintendo\Psychic.java">
+<error line="23" column="20" severity="error" message="&apos;0.5&apos; es un número mágico." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+</file>
+<file name="C:\Users\manci\Desktop\DisSw\strategy-practice\src\main\java\com\iteso\nintendo\Rock.java">
+<error line="27" column="20" severity="error" message="&apos;0.5&apos; es un número mágico." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+</file>
+<file name="C:\Users\manci\Desktop\DisSw\strategy-practice\src\main\java\com\iteso\nintendo\Steel.java">
+<error line="31" column="20" severity="error" message="&apos;0.5&apos; es un número mágico." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+</file>
+<file name="C:\Users\manci\Desktop\DisSw\strategy-practice\src\main\java\com\iteso\nintendo\Water.java">
+<error line="25" column="20" severity="error" message="&apos;0.5&apos; es un número mágico." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+</file>
+</checkstyle>
