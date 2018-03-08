@@ -33,7 +33,6 @@ public class LegendaryType implements PokemonType {
      * @return numero entre 1-10entre mas alto mas resistente es atque externo
      */
     public final int defenseFactor(final PokemonType attackedType) {
-        final int factor = FUERTE;
-        return factor;
+        return FUERTE;
     }
 }

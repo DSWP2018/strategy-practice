@@ -30,7 +30,7 @@ public class WaterType implements PokemonType {
 
     /**
      * @param attackedType el tipo del pokemon que ataco al tipo Water.
-     * @return numero entre 1-10entre mas alto mas resistente es atque externo
+     * @return numero entre 1-10 entre mas alto mas resistente es atque externo
      */
     public final int defenseFactor(final PokemonType attackedType) {
         final int factor;

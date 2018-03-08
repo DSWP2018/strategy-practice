@@ -1,15 +1,16 @@
 package com.iteso.nintendo;
 
 import org.junit.Before;
-import static org.junit.Assert.assertEquals;
 import org.junit.Test;
-import static org.junit.Assert.*;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNull;
 
 
 /**
  * Created by FedericoIbarra
  */
-public class PikachuTest {
+public class FroslassTest {
     Pikachu pikachu;
 
     @Before
