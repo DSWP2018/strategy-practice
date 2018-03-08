@@ -14,14 +14,10 @@ public class Cyndaquil extends PokemonCharacter {
     /**
      * Hit Points are the maximum life of pokemon.
      */
-    public static final int HIT_POINTS = 116;
-    /**
-     * Defense multiplier value between 0-1.
-     */
-    public static final double DEFENSE_MULTIPLIER = 0.96;
+    public static final int HIT_POINTS = 100;
 
     /**
-     * Pikachu constructor.
+     * Cyndaquil constructor.
      */
     public Cyndaquil() {
         setName("Cyndaquil");

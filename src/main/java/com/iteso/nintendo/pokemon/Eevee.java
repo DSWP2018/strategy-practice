@@ -14,14 +14,11 @@ public class Eevee extends PokemonCharacter {
     /**
      * Hit Points are the maximum life of pokemon.
      */
-    public static final int HIT_POINTS = 104;
+    public static final int HIT_POINTS = 100;
     /**
-     * Defense multiplier value between 0-1.
-     */
-    public static final double DEFENSE_MULTIPLIER = 1.1;
 
     /**
-     * Bulbasaur constructor.
+     * Eevee constructor.
      */
     public Eevee() {
         setName("Eevee");

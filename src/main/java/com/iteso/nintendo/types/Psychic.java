@@ -7,9 +7,9 @@ public class Psychic implements PokemonType {
     /**Declare variables. */
     private static final String TYPE_NAME = "Psychic"; /**Type of Pokemon. */
     /**Defense multiplier. */
-    private static final double DEFENSE_MULTIPLIER = 8.9;
+    private static final double DEFENSE_MULTIPLIER = 0.9;
     /**Defense multiplier. */
-    private static final double DAMAGE_MULTIPLIER = 8.9;
+    private static final double DAMAGE_MULTIPLIER = 0.9;
 
     @Override
     public final String getType() {

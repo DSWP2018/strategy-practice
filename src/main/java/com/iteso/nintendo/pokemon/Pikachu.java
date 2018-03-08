@@ -5,6 +5,7 @@ import com.iteso.nintendo.PokemonCharacter;
 import com.iteso.nintendo.PokemonType;
 import com.iteso.nintendo.impl.attacks.ElectroBall;
 import com.iteso.nintendo.impl.attacks.Thunder;
+import com.iteso.nintendo.types.Electric;
 import com.iteso.nintendo.types.Psychic;
 
 /**
@@ -24,7 +25,7 @@ public class Pikachu extends PokemonCharacter {
         setName("Pikachu");
         setHasEvolution(true);
         setHitPoints(HIT_POINTS);
-        PokemonType type = new Psychic();
+        PokemonType type = new Electric();
         setType(type);
         Attack mainAttack = new ElectroBall();
         setMainAttack(mainAttack);

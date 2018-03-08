@@ -7,9 +7,9 @@ public class Plants implements PokemonType {
     /**Declare variables. */
     private static final String TYPE_NAME = "Plants"; /**Type of Pokemon. */
     /**Defense multiplier. */
-    private static final double DEFENSE_MULTIPLIER = 3.0;
+    private static final double DEFENSE_MULTIPLIER = 0.3;
     /**Defense multiplier. */
-    private static final double DAMAGE_MULTIPLIER = 7.0;
+    private static final double DAMAGE_MULTIPLIER = 0.7;
 
     @Override
     public final String getType() {

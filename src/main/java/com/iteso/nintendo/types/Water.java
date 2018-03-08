@@ -7,9 +7,9 @@ public class Water implements PokemonType {
     /**Declare variables. */
     private static final String TYPE_NAME = "Water"; /**Type of Pokemon. */
     /**Defense multiplier. */
-    private static final double DEFENSE_MULTIPLIER = 6.0;
+    private static final double DEFENSE_MULTIPLIER = 0.6;
     /**Defense multiplier. */
-    private static final double DAMAGE_MULTIPLIER = 5.1;
+    private static final double DAMAGE_MULTIPLIER = 0.51;
 
     @Override
     public final String getType() {

@@ -14,7 +14,7 @@ public class Bulbasaur extends PokemonCharacter {
     /**
      * Hit Points are the maximum life of pokemon.
      */
-    public static final int HIT_POINTS = 118;
+    public static final int HIT_POINTS = 100;
 
     /**
      * Bulbasaur constructor.
