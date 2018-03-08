@@ -10,7 +10,7 @@ public class Tackle implements Attack {
     /**
      * private variable to encapsulate the name of the attack.
      */
-    private String name = "electroBall";
+    private String name = "Tackle";
     /**
      * static final variable to indicate the damage of this attack.
      */
