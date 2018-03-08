@@ -8,15 +8,15 @@ public abstract class PokemonCharacter {
     /**
      * Pokemon name.
      */
-      private String name = null;
+    private String name = null;
     /**
      * Pokemon type.
      */
-    private String type = null;
+    private PokemonType type = null;
     /**
      * Indicator of evolution.
      */
-      private boolean hasEvolution = false;
+    private boolean hasEvolution = false;
     /**
      * Main attack name.
      */
@@ -24,15 +24,7 @@ public abstract class PokemonCharacter {
     /**
      * Second attack name.
      */
-      private Attack secondAttack = null;
-    /**
-     * Damage caused by main attack.
-     */
-    private int mainAttackDamage = 0;
-    /**
-     * Damage caused by second attack.
-     */
-      private int secondAttackDamage = 0;
+    private Attack secondAttack = null;
     /**
      * Multiplier to calculate damage received.
      */
@@ -40,7 +32,7 @@ public abstract class PokemonCharacter {
     /**
      * Pokemon life.
      */
-      private int hitPoints = 0;
+    private int hitPoints = 0;
 
     /**
      * Get pokemon name.
@@ -66,37 +58,33 @@ public abstract class PokemonCharacter {
 
     /**
      * Method to defend an attack.
-     * @param attackDamage Amount of damage to defend.
+     * @param attack Amount of damage to defend.
+     * @param  myType tipo del pokemon que defiende
+     * @param  enemyType tipo del pokemon que ataca.
      * @return Result of defense.
      */
-    public abstract String defend(int attackDamage);
+    public abstract String defend(Attack attack,
+                                  PokemonType myType, PokemonType enemyType);
 
     /**
      * Method to perform second attack.
      * @return Result of attack.
+     * @param pokemonCharacter pokemon que se va a atacar.
      */
-    public abstract String secondAttack();
+    public abstract String secondAttack(PokemonCharacter pokemonCharacter);
 
     /**
      * Method to perform main attack.
      * @return Result of main attack.
+     * @param pokemonCharacter pokemon que se va a atacar.
      */
-    public abstract String mainAttack();
-
-    /**
-     * Method to change pokemon attack.
-     * @param attack Which attack to change.
-     * @param attackDamage New damage.
-     * @param newAttack New attack name.
-     */
-    public abstract void setNewAttack(int attack,
-                                      int attackDamage, Attack newAttack);
+    public abstract String mainAttack(PokemonCharacter pokemonCharacter);
 
     /**
      * Pokemon type.
      * @return water, fire, normal, electric, plant, bug, etc.
      */
-    public final String getType() {
+    public final PokemonType getType() {
         return type;
     }
 
@@ -104,7 +92,7 @@ public abstract class PokemonCharacter {
      * Set new pokemon type.
      * @param newType new pokemon type.
      */
-    public final void setType(final String newType) {
+    public final void setType(final PokemonType newType) {
         this.type = newType;
     }
 
@@ -154,38 +142,6 @@ public abstract class PokemonCharacter {
      */
     public final void setSecondAttack(final Attack newSecondAttack) {
         this.secondAttack = newSecondAttack;
-    }
-
-    /**
-     * Get damage of main attack.
-     * @return main attack damage.
-     */
-    public final int getMainAttackDamage() {
-        return mainAttackDamage;
-    }
-
-    /**
-     * Set main attack new damage.
-     * @param newMainAttackDamage new main attack damage.
-     */
-    public final void setMainAttackDamage(final int newMainAttackDamage) {
-        this.mainAttackDamage = newMainAttackDamage;
-    }
-
-    /**
-     * Get second attack damage.
-     * @return second attack damage.
-     */
-    public final int getSecondAttackDamage() {
-        return secondAttackDamage;
-    }
-
-    /**
-     * Set new second attack damage.
-     * @param newSecondAttackDamage new second attack damage.
-     */
-    public final void setSecondAttackDamage(final int newSecondAttackDamage) {
-        this.secondAttackDamage = newSecondAttackDamage;
     }
 
     /**
