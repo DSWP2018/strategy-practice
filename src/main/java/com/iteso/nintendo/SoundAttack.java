@@ -7,7 +7,7 @@ public class SoundAttack implements Attack {
     /**
      * Declaración de nombre.
      */
-    private static final String ATTACK_NAME = "Bubble Attack";
+    private static final String ATTACK_NAME = "Sound Attack";
     /**
      * Declaración del daño.
      */
